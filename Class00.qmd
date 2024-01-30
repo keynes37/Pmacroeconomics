@@ -1,0 +1,238 @@
+---
+title: "Principios de Macroeconomía 🫣"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/tit1.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(scales)
+library(gapminder)
+library(ggiraph)
+library(patchwork)
+```
+
+## Quién soy?
+
+- Profesor del Departamento de Economía
+- Preferencia por temas de innovación, data sciene, economía de la decisión y economía laboral
+- Correo: `cayanes@uninorte.edu.co`
+
+![](images/CYimge.png){fig-align="right"}
+
+## Esquema del Curso
+
+- Clases presenciales [la asistencia es importante]{.bg style="--col: #FFFF00"}
+- Notas y calificaciones:
+
+::: fragment
+Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
+
+|Requerimientos            |Fechas           |Ponderador      |
+|--------------------------|-----------------|----------------|
+| Parciales 1 y 2          | Referenciadas   | 25% (cada uno) |
+| Trabajo en clases        | A solicitud     | 20%            |
+| Examen final             | Por registro    | 30%            |
+
+♠ Las [notas]{.fg style="--col: #FF8000"} son individuales. Es muy raro, a no ser que los estudiantes decidan ser *irresponsables* con el curso. No cumpla con los compromisos académicos y apruebe la materia
+:::
+
+## Esquema del Curso
+
+- Dedicado a analizar y presentar datos e información macroeconómica.
+- Las clases de la complementaria tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* y desde luego la parte de [Trabajos en clases]{.fg style="--col: #FF8000"}.
+- Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tomar decisiones con conocimiento de causa.
+
+## Fuentes de información
+
+::: .fragment
+![](images/fuentesvarias.png)
+:::
+
+
+## {background-image="images/bean.jpg"}
+
+### Conceptos básicos {.r-fit-text}
+
+## Conceptos básicos
+
+- Una buena guía de abordaje de este tema esta en : [libro Openstax Cap 1](https://openstax.org/books/principles-macroeconomics-3e/pages/1-introduction)
+- No se puede olvidar la [definición de economía]{.fg style="--col: #e64173"}
+
+::: fragment
+::: callout-warning
+La economía analiza las decisiones de la sociedad y cómo esas decisiones del presente y del pasado se reflejan en los resultados del futuro.
+:::
+:::
+
+- Independientemente de la definición que usted elija, lo más importante es que estudiar **Economía** proporciona un conjunto de herramientas para analizar *críticamente* los [problemas sociales]{.fg style="--col: #FF8000"} en sus aspectos económicos cuantitativos y cualitativos.
+
+## Conceptos básicos
+
+- Tenga en cuenta el siguiente ejercicio:
+
+::: fragment
+::: callout-important
+## Ejercicio
+Hace unos 30 años, una cesta de bienes tales como (huevos, leche, pollo y mantequilla) costaban unos $500. Hoy, esa misma cesta puede costar unos 290 mil COP.
+:::
+:::
+
+::: fragment
+[*¿Por qué es mas caro ahora todo?*]{.bg style="--col: #dcdcdc"}
+:::
+
+## Inflación en la región
+
+```{r}
+#| label: fig-inflaction
+#| fig-cap: "Comparación ranking País"
+#| warning: false
+#| echo: false
+# Crear un conjunto de datos de ejemplo
+inflacion <- data.frame(
+  Pais = c("Colombia", "Colombia", "Brasil", "Brasil", "Perú", "Perú",
+           "Chile", "Chile", "Argentina", "Argentina", "Ecuador", "Ecuador", "Bolivia", "Bolivia",
+           "Mexico", "Mexico"),
+  periodo <- rep(c(2022, 2023), each = 1,8),
+  Valor = c(10.18,10.85, 9.28,5.03, 7.87, 5.69, 11.65, 7.88, 72.43, 98.59,
+            3.47,2.47, 1.75, 3.98, 7.9, 6.7)  # Datos actualizados
+)
+inflacion$Pais <- factor(inflacion$Pais)
+
+p1 <- ggplot(inflacion[inflacion$periodo == 2022,], 
+             aes(y = reorder(Pais, Valor), 
+                 x=Valor,
+                 tooltip = Valor,
+                 data_id = Pais)) +
+  geom_bar_interactive(stat="identity", 
+                       fill="steelblue") +
+  labs(y="", x="2022") + 
+  theme_minimal()
+
+p2 <- ggplot(inflacion[inflacion$periodo == 2023,], 
+             aes(y = reorder(Pais, Valor), 
+                 x=Valor,
+                 tooltip = Valor,
+                 data_id = Pais)) +
+  geom_bar_interactive(stat="identity", 
+                       fill="steelblue") +
+  labs(y="", x="2023") + 
+  theme_minimal()
+
+p3 <- (p1 | p2) +
+  plot_annotation(title = "Inflación en la región")
+girafe(code = print (p3)) 
+```
+
+## Referentes (indicadores)
+
+- Es [muy importante]{.bg style="--col: #FFFF00"} que siempre este mirando los indicadores económicos.
+- Una fuente muy importante es la de distintos diarios del país y entonces ir viendo si no es *día* a *día* si al menos a la semana.
+- Una pagina de este **estilo** es por ejemplo: [Indicadores diarios](https://www.larepublica.co/indicadores-economicos/macro)
+
+::: fragment
+::: callout-warning
+En el caso para inflación hay que tener en cuenta:
+
+- Variación mensual
+- Variación doce meses
+- Variación año corrido
+:::
+:::
+
+## Primeros cálculos
+
+- Hay múltiples formulas que encontrará en el [DANE](https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica)
+
+::: fragment
+::: callout-important
+## Variación Mensual (VM)
+
+<font size="+2">$$\text{VM}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mes anterior}}-1\right]\times 100$$</font>
+:::
+:::
+
+## Primeros cálculos
+
+- Para la parte anual (gran componente de la parte de inflación)
+
+::: fragment
+::: callout-note
+## Variación Anual (VA)
+<font size="+2">$$\text{VA}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mismo mes año anterior}}-1\right]\times 100$$</font>
+:::
+:::
+
+::: fragment
+::: callout-note
+## Variación Año Corrido (VAC)
+<font size="+2">$$\text{VAC}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mes diciembre año anterior}}-1\right]\times 100$$</font>
+:::
+:::
+
+## {background-image="images/bean.jpg"}
+
+### Microeconomía vs Macroeconomía {.r-fit-text}
+
+## Comparación entre ramas
+
+::: fragment
+::: callout-note
+## Microeconomía
+Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados
+:::
+:::
+
+:::fragment
+[Ejemplo: ¿Qué sucede si disminuye los impuestos para autos importados?]{.bg style="--col: #dcdcdc"}
+:::
+
+:::fragment
+::: callout-tip
+## Macroeconomía
+Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros
+:::
+:::
+
+::: fragment
+[Ejemplo: ¿Qué sucede si el gobierno aumenta la inversión en infraestructura física?]{.bg style="--col: #dcdcdc"}
+:::
+
+::: fragment
+Microeconomía → [macroeconomía]{.fg style="--col: #FF0000"} → microeconomía
+:::
+
+## Comparación entre ramas
+### Qué estudia la Macroeconomía?
+
+- ¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la [pobreza]{.fg style="--col: #FF8000"}?
+
+- ¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los [precios]{.fg style="--col: #FF8000"}?
+
+- ¿Por qué todos los países experimentan [recesiones]{.fg style="--col: #FF8000"} y [depresiones]{.fg style="--col: #314f4f"} –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?
+
+## {background-image="images/tit1.jpg"}
+
+### Gracias por su atención!!{.r-fit-text}
+#### cayanes@uninorte.edu.co
+
+
+
+
+
