@@ -29,50 +29,49 @@ library(patchwork)
 
 ## Quién soy?
 
-- Profesor del Departamento de Economía
-- Preferencia por temas de innovación, data sciene, economía de la decisión y economía laboral
-- Correo: `cayanes@uninorte.edu.co`
+-   Profesor del Departamento de Economía
+-   Preferencia por temas de innovación, data sciene, economía de la decisión y economía laboral
+-   Correo: `cayanes@uninorte.edu.co`
 
 ![](images/CYimge.png){fig-align="right"}
 
 ## Esquema del Curso
 
-- Clases presenciales [la asistencia es importante]{.bg style="--col: #FFFF00"}
-- Notas y calificaciones:
+-   Clases presenciales [la asistencia es importante]{.bg style="--col: #FFFF00"}
+-   Notas y calificaciones:
 
 ::: fragment
 Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
-|Requerimientos            |Fechas           |Ponderador      |
-|--------------------------|-----------------|----------------|
-| Parciales 1 y 2          | Referenciadas   | 25% (cada uno) |
-| Trabajo en clases        | A solicitud     | 20%            |
-| Examen final             | Por registro    | 30%            |
+| Requerimientos    | Fechas        | Ponderador     |
+|-------------------|---------------|----------------|
+| Parciales 1 y 2   | Referenciadas | 25% (cada uno) |
+| Trabajo en clases | A solicitud   | 20%            |
+| Examen final      | Por registro  | 30%            |
 
 ♠ Las [notas]{.fg style="--col: #FF8000"} son individuales. Es muy raro, a no ser que los estudiantes decidan ser *irresponsables* con el curso. No cumpla con los compromisos académicos y apruebe la materia
 :::
 
 ## Esquema del Curso
 
-- Dedicado a analizar y presentar datos e información macroeconómica.
-- Las clases de la complementaria tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* y desde luego la parte de [Trabajos en clases]{.fg style="--col: #FF8000"}.
-- Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tomar decisiones con conocimiento de causa.
+-   Dedicado a analizar y presentar datos e información macroeconómica.
+-   Las clases de la complementaria tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* y desde luego la parte de [Trabajos en clases]{.fg style="--col: #FF8000"}.
+-   Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tomar decisiones con conocimiento de causa.
 
 ## Fuentes de información
 
-::: .fragment
+::: fragment
 ![](images/fuentesvarias.png)
 :::
 
-
-## {background-image="images/bean.jpg"}
+##  {background-image="images/bean.jpg"}
 
 ### Conceptos básicos {.r-fit-text}
 
 ## Conceptos básicos
 
-- Una buena guía de abordaje de este tema esta en : [libro Openstax Cap 1](https://openstax.org/books/principles-macroeconomics-3e/pages/1-introduction)
-- No se puede olvidar la [definición de economía]{.fg style="--col: #e64173"}
+-   Una buena guía de abordaje de este tema esta en : [libro Openstax Cap 1](https://openstax.org/books/principles-macroeconomics-3e/pages/1-introduction)
+-   No se puede olvidar la [definición de economía]{.fg style="--col: #e64173"}
 
 ::: fragment
 ::: callout-warning
@@ -80,16 +79,17 @@ La economía analiza las decisiones de la sociedad y cómo esas decisiones del p
 :::
 :::
 
-- Independientemente de la definición que usted elija, lo más importante es que estudiar **Economía** proporciona un conjunto de herramientas para analizar *críticamente* los [problemas sociales]{.fg style="--col: #FF8000"} en sus aspectos económicos cuantitativos y cualitativos.
+-   Independientemente de la definición que usted elija, lo más importante es que estudiar **Economía** proporciona un conjunto de herramientas para analizar *críticamente* los [problemas sociales]{.fg style="--col: #FF8000"} en sus aspectos económicos cuantitativos y cualitativos.
 
 ## Conceptos básicos
 
-- Tenga en cuenta el siguiente ejercicio:
+-   Tenga en cuenta el siguiente ejercicio:
 
 ::: fragment
 ::: callout-important
 ## Ejercicio
-Hace unos 30 años, una cesta de bienes tales como (huevos, leche, pollo y mantequilla) costaban unos $500. Hoy, esa misma cesta puede costar unos 290 mil COP.
+
+Hace unos 30 años, una cesta de bienes tales como (huevos, leche, pollo y mantequilla) costaban unos \$500. Hoy, esa misma cesta puede costar unos 290 mil COP.
 :::
 :::
 
@@ -140,12 +140,8 @@ p3 <- (p1 | p2) +
 girafe(code = print (p3)) 
 ```
 
-## {background-image="images/tit1.jpg"}
+##  {background-image="images/tit1.jpg"}
 
-### Gracias por su atención!!{.r-fit-text}
-#### cayanes@uninorte.edu.co
+### Gracias por su atención!! {.r-fit-text}
 
-
-
-
-
+#### cayanes\@uninorte.edu.co
