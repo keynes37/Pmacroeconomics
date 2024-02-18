@@ -1,0 +1,305 @@
+---
+title: "Principios de Macroeconomía 🙂"
+subtitle: "PIB y PIB per Cápita"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/tit1.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome)
+```
+
+## PIB
+
+- Antes de continuar... debemos tener presente la [importancia]{.bg style="--col: #FFFF00"} de conocer porque es necesario tener un [Indice de precios]{.fg style="--col: #FF8000}
+
+- Un [índice]{.fg style="--col: #FF8000"} es un número que permite realizar [comparaciones]{.fg style="--col: #FF0000"} entre distintos momentos del tiempo o distintas entidades.
+
+- Para nuestros efectos, un [índice de precios]{.fg style="--col: #FF8000"} es un número de referencia que nos permite comparar estadísticas económicas en distintos momentos, sirviendo como cambio medio global de los [precios relativos]{.fg style="--col: #e64173"} a lo largo del tiempo.
+
+- Teniendo en cuenta que el [tiempo]{.under}, la cantidad de bienes y servicios producidos por una economía aumenta, y también lo hacen sus [precios]{.fg style="--col: #e64173"}.
+
+- Para ello, el [deflactor del PIB]{.under} es un índice de precios que incluye todos los bienes y servicios que se contabilizan en el [PIB]{.fg style="--col: #FF8000} mediante una metodología de **media ponderada**.
+
+## PIB
+
+:::: {.columns}
+
+::: {.column width="30%"}
+- El PIB Nominal no tiene en cuenta la variación de precios
+- El PIB Real si lo hace, aparte nos muestra en pleno cuanto realmente hemos [crecido]{.under}
+- Siempre en el [año base]{.under} tanto el PIB nominal como el Real serán **similares**
+:::
+
+::: {.column width="70%"}
+```{r pib-cas1, fig.cap='Calculo de PIB Real y Nominal', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/c3g1.png")
+```
+:::
+
+::::
+
+## PIB
+
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1gYXq&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+
+## PIB
+
+Considere los siguientes datos (en Billones de US$) para EEUU, entre Q1 2008 and Q4 2009 (año base = 2005) y halle el [PIB real]{.bg style="--col: #9f9f9f"} correspondiente:
+
+```{r, echo=F}
+pib_real <- tibble(
+  "Trimestre" = c("Q1 2008", "Q2 2008", "Q3 2008", "Q4 2008", "Q1 2009", "Q2 2009", "Q3 2009", "Q4 2009"),
+  "PIB Nominal" = c(14373.9, 14497.8, 14546.7, 14347.3, 14178.0, 14151.2, 14242.1, 14453.8), 
+  "PIB Real" = c(13366.9, 13415.3, 13324.6, 13141.9, 12925.4, 12901.5, 12973.0, 13149.5)
+)
+
+pib_real <- pib_real %>% 
+  mutate("Deflactor PIB" = `PIB Nominal`/`PIB Real`)
+
+pib_real %>% 
+  select(-`PIB Real`) %>% 
+  kable(digits = 2)
+```
+
+
+## PIB
+
+- Miremos la relación existente entre el [deflactor]{.blut} y la propia [inflación]{.oranger} (IPC)
+
+::: fragment
+```{r, echo=FALSE}
+# Crear el data frame con los datos proporcionados
+datos <- data.frame(
+  fecha = 2000:2020,
+  Deflactor = c(33.66, 6.52, 5.97, 6.82, 7.28, 4.76, 5.80, 5.21, 7.68, 4.05, 
+                3.81, 6.39, 3.62, 1.90, 2.24, 2.45, 5.15, 5.14, 4.63, 4.00, 1.41),
+  Inflacion = c(8.75, 7.65, 6.99, 6.49, 5.5, 4.85, 4.48, 5.69, 7.67, 2.00,
+                3.17, 3.73, 2.44, 1.94, 3.66, 6.77, 5.75, 4.09, 3.18, 3.8, 1.61)
+)
+
+# Convertir la columna de fechas en un objeto de serie de tiempo
+datos$fecha <- as.Date(paste0(datos$fecha, "-01-01"))  # Convertir a formato fecha
+serie_tiempo <- ts(datos[, -1], start = c(2000), frequency = 1)  # Crear la serie de tiempo excluyendo la columna de fechas
+# Asignar nombres a las columnas
+colnames(serie_tiempo) <- colnames(datos[, -1])
+# Mostrar el objeto de serie de tiempo
+# print(serie_tiempo)
+
+ts_plot(serie_tiempo,
+         title = "Inflación vs Deflactor PIB en Colombia", 
+         Ytitle = "Crecimiento porcentual (%)", 
+         slider = FALSE
+ )
+```
+:::
+
+
+##  {background-image="images/Polwave2.jpg"}
+
+### Ingreso total {.r-fit-text}
+
+## Ingreso total
+
+- Necesitamos medir la [salud de una economía]{.bg style="--col: #FFFF00"}. A la hora de juzgar si una economía va bien o mal, es natural fijarse en el [ingreso total]{.oranger} que obtienen sus habitantes.
+
+- El [ingreso total]{.oranger} no siempre está estrechamente ligado al [bienestar económico]{.alert}. Por ejemplo, la población de un país puede aumentar temporalmente su nivel de vida [pidiendo prestado]{.under} a otros países. -*Pero no se puede seguir pidiendo prestado para siempre*-. Por eso, el nivel de vida de una nación depende en gran medida de su propia renta total.
+
+::: fragment
+### Ingreso = Gasto = Producción{.r-fit-text}
+:::
+
+
+## Ingreso total
+
+- Podríamos medir tanto el [ingreso total]{.oranger} como el [gasto total]{.alert} o la [producción total]{.bg style="--col: #FFFF00"}. Obtendríamos la misma cifra en todos los casos.
+
+- Para una economía en su conjunto, el [ingreso]{.oranger} debe ser igual al gasto porque:
+
+::: fragment
+
+> Cada transacción tiene un comprador y un vendedor.
+
+:::
+
+- Cada peso ($) de gasto de algún comprador es un peso de ingreso para algún vendedor.
+
+- Además, el gasto total es también el [valor monetario]{.alert} de la producción que se produce y se vende.
+
+- Esta [igualdad]{.under} entre ingresos, gastos y producción tiene consecuencias prácticas. Ofrece a los estadísticos gubernamentales más opciones sobre cómo medir el [ingreso total]{.oranger}. 
+
+## Ingreso total
+
+- [P]{.alert}: ¿Y el _ahorro_? La gente suele ahorrar parte de lo que gana. ¿Cómo es posible entonces que el [ingreso]{.oranger} sea igual al [gasto]{.alert} en el conjunto de la economía?
+
+- [*R/*]{.blut}: Lo que la gente ahorra suele prestarse a [las empresas]{.under}, que luego **gastan** el dinero prestado. Por tanto, para el conjunto de la economía, los ingresos deben seguir siendo iguales a los gastos.
+
+## Ingreso total
+
+- [P]{.alert}: ¿Y el comercio internacional? Compramos bienes fabricados en el extranjero y los [extranjeros]{.blut} compran bienes fabricados por nosotros. En ese caso, ¿cómo pueden nuestros [ingresos totales]{.oranger} ser iguales a nuestros gastos totales?
+
+- [*R/*]{.blut}: Así es. Por tanto, es mejor decir que el [ingreso total]{.oranger} de los residentes nacionales es igual al gasto total en bienes y servicios de producción nacional.
+
+## Ingreso total
+
+- El Producto Interno Bruto (PIB) es una medida del [ingreso total]{.oranger} de un país. Existen otras medidas del [ingreso total]{.oranger}, pero el PIB es la más popular.
+
+- El [PIB]{.alert} es el valor total de mercado de todos los bienes y servicios finales producidos en un país en un periodo de tiempo determinado.
+
+- No se trata de un concepto *teórico abstracto*. Podemos ponerle una cifra. Por ejemplo, el PIB de Colombia en 2023 fue de 978 250 miles de millones de pesos (978 Billones), según el Departamento Nacional de Estadística DANE. (Para más datos, consulta [esto](https://www.dane.gov.co/files/operaciones/PIB/cp-PIB-IVtrim2023.pdf)).
+
+## Ingreso en finales
+
+- El PIB mide el valor de los [bienes finales]{.bg style="--col: #FFFF00"}, no de los bienes intermedios.
+
+- Los [bienes intermedios]{.under} son aquellos bienes que desaparecen dentro de otros bienes que se producen para la venta. Los [bienes finales]{.blut} son bienes que no son intermedios. Son bienes vendidos a sus usuarios finales. El PIB se define de forma que el valor de los bienes intermedios se contabilice una sola vez, no dos o tres veces.
+
+- Los bienes intermedios son bienes que sus productores venden a los productores de otros bienes. Ejemplos:
+
+  - Leche vendida por una central lechera a una empresa de helados,
+  - Uvas vendidas por un viñedo a un vinicultor,
+  - papel de impresora vendido a Norma.
+  
+## Ingreso en finales
+
+- Los bienes finales son los que se venden a los usuarios finales de esos bienes. Ejemplos:
+
+  - Leche que compras en un supermercado,
+  - Uvas de mesa que compras en el mercado del agricultor,
+  - Papel de impresora que compra para la impresora de su computador.
+  
+- Todos los bienes fabricados [este año]{.under} pero que **no** se han vendido a final de año se consideran bienes finales (y se etiquetan como "existencias").
+
+- *Nota*: Aunque los [servicios]{.alert} de su Broker, que dedica su tiempo a negociar acciones para usted, se contabilizan en el PIB, el comercio de activos en sí no afecta al PIB. ¿Por qué? Este comercio no es más que la transferencia de la propiedad de un activo de una persona a otra.
+
+##  {background-image="images/Polwave2.jpg"}
+
+### Valor Agregado {.r-fit-text}
+
+## Valor Agregado
+
+- Mire una especie de contabilidad en el PIB con enfoque de Valor Agregado:
+
+::: fragment
+```{r, echo=FALSE}
+vito <- tibble(
+  "Procesos" = c("Agricultor siembra trigo y vende a comercio en $", "Comercio transforma trigo en harina y vende a $", "Panadero hace pan con harina y vende a $"),
+  "Compra" = c(100, 300, 480),
+  "Valor agregado" = c(100, 200, 180)
+)  
+vito %>% 
+  kable()
+```
+:::
+
+- Note que:
+
+:::fragment
+$$\text{PIB}=100+200+180=\color{red}{480}$$
+:::
+
+- La [suma de valor agregado]{.under} es el **PIB** cuando por ejemplo el solo panadero como venta final ha vendido a $480 su producto. 
+
+##  {background-image="images/Polwave2.jpg"}
+
+### PIB per Cápita {.r-fit-text}
+
+## PIB per Cápita
+
+- Cuando individualizamos el **PIB** dividiendoel PIB sobre el [tamaño de la población]{.bg style="--col: #FFFF00"} vamos encontrar lo que se denomina [PIB per cápita]{.oranger}:
+
+:::fragment
+$$
+\begin{aligned}
+\text{PIB} \ per \ cápita = \dfrac{\text{PIB Nominal o Real}}{\text{Población}}
+\end{aligned}
+$$
+:::
+
+- Así que si en Colombia el PIB es de 978 Billones de pesos, el *PIB per capita* viene a ser:
+
+::: fragment
+$$\text{PIB per cápita}_{Col}=\frac{978 \ \text{Billones}}{52 \ \text{Millones}}=18 \;807\;692$$
+:::
+
+## PIB per Cápita
+
+- Sirve para comparar entre países y nos da idea de como un País es mas rico que otro. Tomemos por ejemplo: Japón y Colombia.
+
+- [Purchasing Power Parity (PPP)]{.bg style="--col: #FFFF00"} una forma para homologar que lo que se consume en cierto sitio también se hace en otro.
+
+:::fragment
+::: callout-note
+## PPP
+$$\begin{aligned}
+\text{Tasa de cambio PPP}=\dfrac{\text{Precio del bien en moneda local}}{\text{Precio del bien en moneda extranjera}}
+\end{aligned}$$
+:::
+:::
+
+## PIB per Cápita
+
+- Suponga que un (1) peso colombiano en febrero de 2024 equivale a 0.038 YENES
+  - Así que, la **tasa de cambio** YEN/COP es de 26.04, cuando (1)  YEN se iguala a COP.
+  
+::: fragment
+::: callout-note
+## Tasa de cambio
+Aquella que expresa el valor de una moneda en términos de otra
+:::
+:::
+
+## PIB per Cápita
+
+- Resolviendo el PIB en términos de YENES:
+
+::: fragment
+$$\begin{aligned}
+\text{PIB COLOMBIA en Yen\$} = \dfrac{\text{PIB COL en COP}}{\text{tasa de cambio Yen/Pesos}} = \dfrac{970 \; \text{Billones de pesos}}{26.04 \; \text{pesos}}
+\end{aligned}$$
+:::
+
+- Esto nos da $\text{Yen(\$)}= \; 37.2 \; \text{Billones de Yenes}$
+
+- Con dolares nos da: $\text{Dolar(\$)}= \; 244 \; \text{Mil millones de dolares}$
+
+- Lo que es en téminos de [PIB per cápita]{.alert} un total de 4.743 US Dolares.
+
+
+
+
+## Bibliografía
+
+`r fa('book')` Udayan R. (2022) *Introduction to Macroeconomics*. Bookdown
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+
+##  {background-image="images/tit1.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](carlosyanes.netlify.app)
+
+
