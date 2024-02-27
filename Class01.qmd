@@ -31,23 +31,23 @@ library(kableExtra)
 
 ## Referentes (indicadores)
 
-- Es [muy importante]{.bg style="--col: #FFFF00"} que siempre este mirando los indicadores económicos.
-- Una fuente muy importante es la de distintos diarios del país y entonces ir viendo si no es *día* a *día* si al menos a la semana.
-- Una pagina de este **estilo** es por ejemplo: [Indicadores diarios](https://www.larepublica.co/indicadores-economicos/macro)
+-   Es [muy importante]{.bg style="--col: #FFFF00"} que siempre este mirando los indicadores económicos.
+-   Una fuente muy importante es la de distintos diarios del país y entonces ir viendo si no es *día* a *día* si al menos a la semana.
+-   Una pagina de este **estilo** es por ejemplo: [Indicadores diarios](https://www.larepublica.co/indicadores-economicos/macro)
 
 ::: fragment
 ::: callout-warning
 En el caso para inflación hay que tener en cuenta:
 
-- Variación mensual
-- Variación doce meses
-- Variación año corrido
+-   Variación mensual
+-   Variación doce meses
+-   Variación año corrido
 :::
 :::
 
 ## Primeros cálculos
 
-- Hay múltiples formulas que encontrará en el [DANE](https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica)
+-   Hay múltiples formulas que encontrará en el [DANE](https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica)
 
 ::: fragment
 ::: callout-important
@@ -59,11 +59,12 @@ En el caso para inflación hay que tener en cuenta:
 
 ## Primeros cálculos
 
-- Para la parte anual (gran componente de la parte de inflación)
+-   Para la parte anual (gran componente de la parte de inflación)
 
 ::: fragment
 ::: callout-note
 ## Variación Anual (VA)
+
 <font size="+2">$$\text{VA}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mismo mes año anterior}}-1\right]\times 100$$</font>
 :::
 :::
@@ -71,11 +72,12 @@ En el caso para inflación hay que tener en cuenta:
 ::: fragment
 ::: callout-note
 ## Variación Año Corrido (VAC)
+
 <font size="+2">$$\text{VAC}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mes diciembre año anterior}}-1\right]\times 100$$</font>
 :::
 :::
 
-## {background-image="images/bean.jpg"}
+##  {background-image="images/bean.jpg"}
 
 ### Microeconomía vs Macroeconomía {.r-fit-text}
 
@@ -84,17 +86,19 @@ En el caso para inflación hay que tener en cuenta:
 ::: fragment
 ::: callout-note
 ## Microeconomía
+
 Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados
 :::
 :::
 
-:::fragment
+::: fragment
 [Ejemplo: ¿Qué sucede si disminuye los impuestos para autos importados?]{.bg style="--col: #dcdcdc"}
 :::
 
-:::fragment
+::: fragment
 ::: callout-tip
 ## Macroeconomía
+
 Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros
 :::
 :::
@@ -108,67 +112,66 @@ Microeconomía → [macroeconomía]{.fg style="--col: #FF0000"} → microeconom�
 :::
 
 ## Comparación entre ramas
+
 ### Qué estudia la Macroeconomía?
 
-- ¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la [pobreza]{.fg style="--col: #FF8000"}?
+-   ¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la [pobreza]{.fg style="--col: #FF8000"}?
 
-- ¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los [precios]{.fg style="--col: #FF8000"}?
+-   ¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los [precios]{.fg style="--col: #FF8000"}?
 
-- ¿Por qué todos los países experimentan [recesiones]{.fg style="--col: #FF8000"} y [depresiones]{.fg style="--col: #314f4f"} –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?
+-   ¿Por qué todos los países experimentan [recesiones]{.fg style="--col: #FF8000"} y [depresiones]{.fg style="--col: #314f4f"} –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?
 
 ## Comparación entre ramas
 
-- Del libro guía es hora de consultar el capitulo: [libro Openstax Cap 6](https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective)
+-   Del libro guía es hora de consultar el capitulo: [libro Openstax Cap 6](https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective)
 
-- Tambien es bueno consultar la importancia de: [Recesión, fluctuación y desempleo](https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib)
+-   Tambien es bueno consultar la importancia de: [Recesión, fluctuación y desempleo](https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib)
 
-- Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el *objeto* de este curso.
+-   Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el *objeto* de este curso.
 
-- En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar [Macroeconomía]{.bg style="--col: #FFFF00"}.
+-   En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar [Macroeconomía]{.bg style="--col: #FFFF00"}.
 
-- La **macroeconomía** se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).
+-   La **macroeconomía** se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).
 
-- Por tanto, no nos centramos en el [ingreso]{.fg style="--col: #0000FF"} de un solo hogar, sino en el [ingreso nacional]{.fg style="--col: #0000FF"}; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.
+-   Por tanto, no nos centramos en el [ingreso]{.fg style="--col: #0000FF"} de un solo hogar, sino en el [ingreso nacional]{.fg style="--col: #0000FF"}; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.
 
-## {background-image="images/arb.jpg"}
+##  {background-image="images/arb.jpg"}
 
 ### Cuentas Nacionales {.r-fit-text}
 
 ## Cuentas Nacionales
 
-- Los economistas utilizan las [estadísticas agregadas]{.fg style="--col: #FF0000"} para describir los fenómenos macroeconómicos.
+-   Los economistas utilizan las [estadísticas agregadas]{.fg style="--col: #FF0000"} para describir los fenómenos macroeconómicos.
 
-- Aquí, agregado significa simplemente [suma]{.bg style="--col: #FFFF00"}.
+-   Aquí, agregado significa simplemente [suma]{.bg style="--col: #FFFF00"}.
 
-- Entre ellos, el Producto Interno Bruto (PIB) es la principal medida de los [resultados económicos globales]{.fg style="--col: #0000FF"} y del tamaño de un país.
+-   Entre ellos, el Producto Interno Bruto (PIB) es la principal medida de los [resultados económicos globales]{.fg style="--col: #0000FF"} y del tamaño de un país.
 
-- Se define como la [suma]{.bg style="--col: #FFFF00"} (en valor monetario) de todos los bienes y servicios finales producidos en una economía en un periodo determinado. Como lo describe la economista Diane Coyle:
+-   Se define como la [suma]{.bg style="--col: #FFFF00"} (en valor monetario) de todos los bienes y servicios finales producidos en una economía en un periodo determinado. Como lo describe la economista Diane Coyle:
 
 ::: fragment
 > Desde uñas a cepillos de dientes, tractores, zapatos, cortes de pelo, asesoría de empresas, limpieza de calles, enseñanza del yoga, planchas, vendas, libros y los millones de servicios y productos de la economía.
 :::
 
-
 ## Evolución PIB {.r-fit-text}
 
-[PIB](https://fred.stlouisfed.org/series/COLNAEXKP01STSAQ)  
+[PIB](https://fred.stlouisfed.org/series/COLNAEXKP01STSAQ)
 
 ## Evolución PIB
 
-- Una distinción crucial en Economía es entre valores [reales]{.bg style="--col: #FFFF00"} y [nominales]{.bg style="--col: #FFFF00"}.
+-   Una distinción crucial en Economía es entre valores [reales]{.bg style="--col: #FFFF00"} y [nominales]{.bg style="--col: #FFFF00"}.
 
-- En el caso del PIB, esto es especialmente importante cuando la [inflación]{.bg style="--col: #FFFF00"} es un componente tan importante de la economía.
+-   En el caso del PIB, esto es especialmente importante cuando la [inflación]{.bg style="--col: #FFFF00"} es un componente tan importante de la economía.
 
-- La inflación es un aumento sostenido del [nivel de precios]{.fg style="--col: #0000FF"} de una economía.
+-   La inflación es un aumento sostenido del [nivel de precios]{.fg style="--col: #0000FF"} de una economía.
 
-- El valor **nominal** de cualquier medida económica implica una estadística en términos de [precios reales]{.fg style="--col: #FF0000"} que existen en ese momento.
+-   El valor **nominal** de cualquier medida económica implica una estadística en términos de [precios reales]{.fg style="--col: #FF0000"} que existen en ese momento.
 
-- En cambio, los [valores reales]{.fg style="--col: #FF0000"} se refieren a la misma estadística una vez ajustada a la inflación.
+-   En cambio, los [valores reales]{.fg style="--col: #FF0000"} se refieren a la misma estadística una vez ajustada a la inflación.
 
 ## PIB
 
 ::: fragment
-
 $$
 \begin{aligned}
 \text{PIB} \ = \text{Consumo + Inversión + Gasto Público + Exportaciones netas}
@@ -187,7 +190,6 @@ $$
 :::
 
 ## PIB
-
 
 ::: fragment
 ```{r, echo=FALSE}
@@ -209,7 +211,7 @@ Clave la distinción de lo nominal. Si queremos entonces tener el **REAL** neces
 
 ## PIB
 
-- Supongamos que nuestro año base es [2016]{.bg style="--col: #FFFF00"}
+-   Supongamos que nuestro año base es [2016]{.bg style="--col: #FFFF00"}
 
 ::: fragment
 ```{r, echo=F}
@@ -223,7 +225,6 @@ toy2 <- tibble(
 toy2 %>% 
   kable()
 ```
-
 :::
 
 ## Comparación
@@ -240,7 +241,7 @@ toy3 %>%
 ```
 :::
 
-- Podemos entonces tener a consideración
+-   Podemos entonces tener a consideración
 
 ::: fragment
 $$
@@ -250,11 +251,10 @@ $$
 $$
 :::
 
-- Una vista [Gráfica](https://fred.stlouisfed.org/series/COLNAGIGP01IXOBSAQ)
+-   Una vista [Gráfica](https://fred.stlouisfed.org/series/COLNAGIGP01IXOBSAQ)
 
 ##  {background-image="images/tit1.jpg"}
 
 ### Gracias por su atención!! {.r-fit-text}
 
 #### cayanes\@uninorte.edu.co
-

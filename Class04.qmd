@@ -1,0 +1,227 @@
+---
+title: "Principios de Macroeconomía 🫢"
+subtitle: "Crecimiento Económico"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/baqw.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl)
+```
+
+## Antes de empezar
+
+::: fragment
+<iframe src="https://ourworldindata.org/grapher/national-poverty-lines-vs-gdp-per-capita" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+:::
+
+
+## Crecimiento
+
+### Para la casa
+
+**Se requiere leer** 
+ 
+ <br>
+
+* [`OpenStax, el capitulo 7`](https://openstax.org/books/principles-macroeconomics-3e/pages/7-introduction-to-economic-growth).
+
+<br>
+
+### Si le gustan los podcast en ingles y practicar:
+
+* [`Planet Money podcast: Booms, Busts & Us`](https://www.npr.org/2022/07/27/1114130282/planet-money-summer-school-3-booms-busts-us)
+
+## Crecimiento
+
+- Tres focos de la [Macroeconomía]{.alert}:
+
+  - Inflación
+  - Crecimiento económico
+  - Desempleo
+
+- Los [hacedores de políticas]{.under} siempre tienen presente que *recomendar* a los gobiernos de turno como hacerle a la apuesta del [crecimiento de la economía]{.under}
+
+- Es por ello que debemos definir:
+
+::: fragment
+> El aumento **sostenido** y *continuo* en la producción de bienes y servicios de una economía durante un período de tiempo determinado. Este crecimiento se refleja típicamente en un incremento en el Producto Interno Bruto (PIB) real.
+:::
+
+## Crecimiento
+
+- Miremos algo a tener en cuenta:
+
+::: fragment
+```{r pib-growth, fig.cap='Momentos de la economía', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Grcicle01.png")
+```
+:::
+
+## Crecimiento
+
+- Estos periodos de altibajos que experimenta una [economía nacional]{.bg style="--col: #00FFFF"} se conocen como [ciclos económicos]{.bg style="--col: #FFFF00"}.
+
+- El punto más [alto]{.alert} del ciclo económico se conoce como **pico**. El más bajo, le denominaremos [valle]{.oranger}.
+
+- Una [expansión económica]{.under} es el periodo que va de un mínimo a un máximo.
+
+- Cuando vamos -nos movemos- de pico a depresión tenemos [recesiones económicas]{.alert}.
+
+- La mayoría de los ciclos económicos no son [simétricos]{.under}.
+
+## Crecimiento
+
+:::fragment
+<iframe src="https://ourworldindata.org/grapher/gdp-per-capita-worldbank" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+:::
+
+## Crecimiento
+
+#### Causas
+
+- Aunque las posibles explicaciones de los "sube" y "baja" macroeconómicos se estudiarán en los próximos temas, siempre vamos a tener que decir que siempre habrá opiniones diversas sobre sus [causas]{.under} y [consecuencias]{.alert}.
+
+- Desde luego, algunos indicadores pueden utilizarse como [señales]{.bg style="--col: #FFFF00"} que nos digan cuándo pueden producirse recesiones.
+
+:::fragment
+Algunos ejemplos:
+:::
+
+:::fragment
+::: callout-tip
+## Indicadores
+- Nuevos pedidos de bienes de consumo y materiales de los fabricantes;
+- Índice de expectativas de los consumidores;
+- Precios de las acciones [Colcap](https://es.investing.com/indices/colcap-chart)
+:::
+:::
+
+## Crecimiento
+
+:::fragment
+![](images/gifty1.gif)
+:::
+
+:::fragment
+Recomendado ver informes de Prices Waterhouse Cooper[PWC](https://www.pwc.com/co/es/)
+:::
+
+## Crecimiento
+
+:::fragment
+```{r pib-confidence, fig.cap='Confianza consumidor. Portafolio', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/confidence01.png")
+```
+:::
+
+##  {background-image="images/arb.jpg"}
+
+### Un fenómeno para estudiar {.r-fit-text}
+
+## Crecimiento económico
+
+:::fragment
+<iframe src="https://ourworldindata.org/grapher/gdp-per-capita-growth?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+:::
+
+## Crecimiento económico
+:::fragment
+```{r pib-grtyu, out.width='70%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Crecexercise.png")
+```
+:::
+:::fragment
+$$ \text{Crecimiento anual}=\frac{\text{PIB real 2024}}{\text{PIB real 2023}}-1\; \times 100\%$$
+:::
+
+## Crecimiento económico
+
+- Medir el [PIB per cápita]{.bg style="--col: #FFFF00"} (recuerde, PIB/población total) es una medida válida (pero aproximada) del [nivel de vida general]{.under} de una nación, ya que mide cuánta producción recibiría cada individuo en caso de que la producción total se repartiera por igual entre los miembros de la sociedad.
+
+- Si, en cambio, centramos nuestra atención en el [crecimiento económico]{.blut}, el concepto de [producción por trabajador]{.under} parece más atractivo.
+
+:::fragment
+> La producción por trabajador mide la producción media de cada trabajador.
+:::
+
+- No es lo mismo que la producción per cápita, ya que no todos los miembros de la población trabajan formalmente. También puede denominarse [productividad laboral]{.oranger}.
+
+##  {background-image="images/arb.jpg"}
+
+### Productividad por trabajador {.r-fit-text}
+
+## Productividad por trabajador
+
+:::fragment
+<iframe src="https://ourworldindata.org/grapher/labor-productivity-per-hour-pennworldtable?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+:::
+
+## Productividad por trabajador
+
+- El [crecimiento económico]{.blut} es más sostenible cuando existen condiciones para que [aumente]{.bg style="--col: #FFFF00"} la productividad del trabajo.
+
+- Adam Smith (1723-1790) reconoció tempranamente que una economía organizada a través de los mercados podía permitir:
+
+  - La especialización de los trabajadores (con individuos dedicados a determinados aspectos/etapas de la producción);
+
+  - La división del trabajo (dividiendo los procesos de producción en tareas más pequeñas).
+
+- En una [economía de mercado]{.bg style="--col: #00FFFF"}, los distintos mercados son interdependientes, lo que permite a los individuos aprovechar los aspectos anteriores y comerciar para satisfacer todas sus [necesidades]{.under}.
+
+
+## Productividad por trabajador
+:::fragment
+> Como consecuencia, la productividad de la economía y el nivel de vida tienden a aumentar.
+:::
+
+:::fragment
+[Opcional-ciudad-industria](https://www.youtube.com/watch?v=RAALEllnFJ4)
+:::
+
+##  {background-image="images/Plantis.jpg"}
+
+### Crecimiento y contaminación {.r-fit-text}
+
+## Crecimiento y contaminación
+
+:::fragment
+<iframe src="https://ourworldindata.org/explorers/co2?facet=none&Gas+or+Warming=CO%E2%82%82&Accounting=Territorial&Fuel+or+Land+Use+Change=All+fossil+emissions&Count=Per+capita&country=CHN~USA~IND~GBR~OWID_WRL&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+:::
+
+## Bibliografía
+
+`r fa('book')` Udayan R. (2022) *Introduction to Macroeconomics*. Bookdown
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+
+##  {background-image="images/baqw.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
+
+
+
