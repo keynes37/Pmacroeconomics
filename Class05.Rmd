@@ -389,7 +389,7 @@ $$\text{Tasa de desempleo}=\dfrac{\text{Desempleados}}{\text{PEA}}$$
 
 :::fragment
 ```{r unemployment, fig.cap='Tabla de clasificación', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
-knitr::include_graphics("images/p6.png")
+knitr::include_graphics("images/P6.png")
 ```
 :::
 
