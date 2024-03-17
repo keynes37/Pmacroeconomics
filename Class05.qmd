@@ -158,29 +158,32 @@ ic_slope <- function(x, k, constant = 1, alpha = 0.5, offset = 10) {
 
 ## Lo que vamos a ver
 
-- En esta parte del curso se mostrará las implicaciones del [Desempleo]{.oranger} en la Economía.
-- Se clasifica la estructura de desempleo en una economía.
-- ¿Qué determina al desempleo?.
-- Entender su dinámica.
+-   En esta parte del curso se mostrará las implicaciones del [Desempleo]{.oranger} en la Economía.
+-   Se clasifica la estructura de desempleo en una economía.
+-   ¿Qué determina al desempleo?.
+-   Entender su dinámica.
 
 ## Concepto
 
 ::: fragment
 ::: callout-note
 ## Desempleo
+
 Se refiere a la situación en la cual un trabajador quien tiene disposición a trabajar no consigue quien lo emplee.
 :::
 :::
 
-- En los mercados de trabajo (laborales), la [demanda]{.under} la conforman las [empresas]{.bg style="--col: #FFFF00"}, puesto que requieren de habilidades o mano de obra que le ofrecemos los seres humanos que hacemos parte de la fuerza laboral.
+-   En los mercados de trabajo (laborales), la [demanda]{.under} la conforman las [empresas]{.bg style="--col: #FFFF00"}, puesto que requieren de habilidades o mano de obra que le ofrecemos los seres humanos que hacemos parte de la fuerza laboral.
 
-- [P:]{.blut} Por qué necesitamos trabajar?
-- [R./1]{.alert} Las cuentas (*deudas*) no se pagan solas.
-- [R./2]{.alert} Tener dinero para comprar y satisfacer **necesidades** 
+-   [P:]{.blut} Por qué necesitamos trabajar?
+
+-   [R./1]{.alert} Las cuentas (*deudas*) no se pagan solas.
+
+-   [R./2]{.alert} Tener dinero para comprar y satisfacer **necesidades**
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 supply <- function(x) 1 + (4/5)*x
@@ -196,13 +199,14 @@ ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
 :::
 
 ::: {.column width="40%"}
-- La oferta aumenta $\uparrow$ en la medida que $w$ (Wages) Salarios lo hacen
-- Los trabajadores estarán [mas dispuestos]{.bg style="--col: #00FFFF"} a trabajar en la medida que la remuneración es [mayor]{.alert}
+-   La oferta aumenta $\uparrow$ en la medida que $w$ (Wages) Salarios lo hacen
+-   Los trabajadores estarán [mas dispuestos]{.bg style="--col: #00FFFF"} a trabajar en la medida que la remuneración es [mayor]{.alert}
 :::
-::::
+:::
 
 ## Mercado laboral
-::::{.columns}
+
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 demand <- function(x) 10 - x
@@ -218,14 +222,14 @@ ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
 :::
 
 ::: {.column width="40%"}
-- La demanda compuesta por [empresas]{.oranger} espera contratar a un menor precio $(w)$ a los trabajadores
-- En la medida que el salario $\downarrow$ hay un mayor número de empleos por ofrecer. 
+-   La demanda compuesta por [empresas]{.oranger} espera contratar a un menor precio $(w)$ a los trabajadores
+-   En la medida que el salario $\downarrow$ hay un mayor número de empleos por ofrecer.
 :::
-::::
+:::
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 market <- ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
@@ -242,14 +246,14 @@ market
 :::
 
 ::: {.column width="40%"}
-- En [Equilibrio]{.bg style="--col:  #e64173"} la cantidad de trabajo demandada es **igual** a la ofrecida, algo como $L_S=L_D$.
-- En ese punto los actores del mercado quedan satisfechos.
+-   En [Equilibrio]{.bg style="--col:  #e64173"} la cantidad de trabajo demandada es **igual** a la ofrecida, algo como $L_S=L_D$.
+-   En ese punto los actores del mercado quedan satisfechos.
 :::
-::::
+:::
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 market + 
@@ -260,14 +264,14 @@ market +
 :::
 
 ::: {.column width="40%"}
-- El ajuste por las fuerzas de demanda y oferta se da vía [conciliación/contrato]{.under}. 
-- Dependiendo de los [eventos]{.alert}, tendremos mas fuerza por un lado que por el otro. Sin embargo se sigue dando negociación
+-   El ajuste por las fuerzas de demanda y oferta se da vía [conciliación/contrato]{.under}.
+-   Dependiendo de los [eventos]{.alert}, tendremos mas fuerza por un lado que por el otro. Sin embargo se sigue dando negociación
 :::
-::::
+:::
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 market + geom_hline(yintercept = 3, linetype  = "dashed", color = met_slate) 
@@ -275,14 +279,14 @@ market + geom_hline(yintercept = 3, linetype  = "dashed", color = met_slate)
 :::
 
 ::: {.column width="40%"}
-- Algunas ocasiones tendremos [escasez]{.alert} de mano de obra, por ende habrá algún [desequilibrio]{.under} dentro del mercado.
-- Esto genera que los salarios entonces sean mas altos. P.e (Ucrania)
+-   Algunas ocasiones tendremos [escasez]{.alert} de mano de obra, por ende habrá algún [desequilibrio]{.under} dentro del mercado.
+-   Esto genera que los salarios entonces sean mas altos. P.e (Ucrania)
 :::
-::::
+:::
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 market + geom_hline(yintercept = 3, linetype  = "dashed", color = met_slate) +
@@ -294,14 +298,14 @@ market + geom_hline(yintercept = 3, linetype  = "dashed", color = met_slate) +
 :::
 
 ::: {.column width="40%"}
-- Cuando esto ocurre se da que $L_D>L_S$. 
-- Si en Colombia no tuviéramos demasiada [fuerza laboral]{.under} quizás los salarios fueran mas altos
+-   Cuando esto ocurre se da que $L_D>L_S$.
+-   Si en Colombia no tuviéramos demasiada [fuerza laboral]{.under} quizás los salarios fueran mas altos
 :::
-::::
+:::
 
 ## Mercado laboral
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
 market + geom_hline(yintercept = 7, linetype  = "dashed", color = met_slate) 
@@ -309,30 +313,30 @@ market + geom_hline(yintercept = 7, linetype  = "dashed", color = met_slate)
 :::
 
 ::: {.column width="40%"}
-- Mire ahora lo del [Desempleo]{.oranger} 
-- Es cuando $L_D<L_S$,
-- Tenemos mas personas dispuestas a trabajar mas pero menos demanda de ciertas ocupaciones especificas.
-- No sabemos si las maquinas inclusive puedan reemplazarnos.
+-   Mire ahora lo del [Desempleo]{.oranger}
+-   Es cuando $L_D<L_S$,
+-   Tenemos mas personas dispuestas a trabajar mas pero menos demanda de ciertas ocupaciones especificas.
+-   No sabemos si las maquinas inclusive puedan reemplazarnos.
 :::
-::::
+:::
 
 ## Mercado laboral
 
 ### Definiciones
 
-- $E=$ número de personas empleadas
+-   $E=$ número de personas empleadas
 
-- $D=$ número de desempleados
+-   $D=$ número de desempleados
 
-:::fragment
+::: fragment
 ::: callout-tip
 Estar "en desempleo" significa 1) desear un empleo y 2) estar buscando trabajo activamente.
 :::
 :::
 
-- $P=$ población de interés (por ejemplo, residentes en Colombia entre 24 y 64 años)
+-   $P=$ población de interés (por ejemplo, residentes en Colombia entre 24 y 64 años)
 
-- Población Económicamente activa $PEA=$ número total de individuos que desean un empleo
+-   Población Económicamente activa $PEA=$ número total de individuos que desean un empleo
 
 ## Mercado laboral
 
@@ -354,7 +358,7 @@ $$TGP=\dfrac{\text{Fuerza Laboral}}{\text{Población}} \times 100$$
 
 ## Mercado laboral
 
-:::fragment
+::: fragment
 ![](images/gyftasa.gif)
 :::
 
@@ -364,30 +368,32 @@ $$TGP=\dfrac{\text{Fuerza Laboral}}{\text{Población}} \times 100$$
 
 ## Desempleo
 
-:::fragment
+::: fragment
 > La tasa de desempleo es el número de desempleados que tiene la economia dividida sobre su fuerza laboral.
 :::
 
-- La tasa de desempleo viene a ser en formula
+-   La tasa de desempleo viene a ser en formula
 
 ::: fragment
 $$\text{Tasa de desempleo}=\dfrac{\text{Desempleados}}{\text{PEA}}$$
 :::
 
-- La PEA o **Población Económicamente Activa** depende de:
+-   La PEA o **Población Económicamente Activa** depende de:
 
-    - No incluye a los trabajadores desanimados que desean un empleo pero han dejado de buscarlo.
-    - No incluye a los trabajadores subempleados que trabajan a tiempo parcial, pero desean trabajar a tiempo completo.
-    
+    -   No incluye a los trabajadores desanimados que desean un empleo pero han dejado de buscarlo.
+    -   No incluye a los trabajadores subempleados que trabajan a tiempo parcial, pero desean trabajar a tiempo completo.
+
 ## Desempleo
 
 ::: fragment
-<iframe src="https://ourworldindata.org/grapher/unemployment-rate?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<iframe src="https://ourworldindata.org/grapher/unemployment-rate?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;">
+
+</iframe>
 :::
 
 ## Desempleo
 
-:::fragment
+::: fragment
 ```{r unemployment, fig.cap='Tabla de clasificación', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
 knitr::include_graphics("images/P6.png")
 ```
@@ -399,55 +405,37 @@ knitr::include_graphics("images/P6.png")
 
 La fuerza laboral viene a ser:
 
-> A. La suma de todas las personas empleadas <br>
-  B. La suma de todas las personas desempleadas <br>
-  C. La suma de las personas desempleadas mas las empleadas <br>
-  D. La suma de los ocupados mas los economicamente inactivos <br>
-  
+> A. La suma de todas las personas empleadas <br> B. La suma de todas las personas desempleadas <br> C. La suma de las personas desempleadas mas las empleadas <br> D. La suma de los ocupados mas los economicamente inactivos <br>
+
 ## Pregunta 1
 
 La fuerza laboral viene a ser:
 
-> A. La suma de todas las personas empleadas <br>
-  B. La suma de todas las personas desempleadas <br>
-  [C. La suma de las personas desempleadas mas las empleadas]{.alert} <br>
-  D. La suma de los ocupados mas los economicamente inactivos 
+> A. La suma de todas las personas empleadas <br> B. La suma de todas las personas desempleadas <br> [C. La suma de las personas desempleadas mas las empleadas]{.alert} <br> D. La suma de los ocupados mas los economicamente inactivos
 
 ## Pregunta 2
 
 Una persona cuenta como desempleada si:
 
-> A. Está por encima de los 12 años de edad <br>
-  B. No esta buscando trabajo <br>
-  C. Esta buscando empleo hace meses pero no en el último mes <br>
-  D. Busca trabajo y esta disponible para trabajar
+> A. Está por encima de los 12 años de edad <br> B. No esta buscando trabajo <br> C. Esta buscando empleo hace meses pero no en el último mes <br> D. Busca trabajo y esta disponible para trabajar
 
 ## Pregunta 2
 
 Una persona cuenta como desempleada si:
 
-> A. Está por encima de los 12 años de edad <br>
-  B. No esta buscando trabajo <br>
-  C. Esta buscando empleo hace meses pero no en el último mes <br>
-  [D. Busca trabajo y esta disponible para trabajar]{.alert}
-  
-## Pregunta 3
-
-Un médico que trabaja como mesero en un bar es considerado:
-
-> A. Subempleado <br>
-  B. Desempleado <br>
-  C. Desalentado <br>
-  D. Cesante
+> A. Está por encima de los 12 años de edad <br> B. No esta buscando trabajo <br> C. Esta buscando empleo hace meses pero no en el último mes <br> [D. Busca trabajo y esta disponible para trabajar]{.alert}
 
 ## Pregunta 3
 
 Un médico que trabaja como mesero en un bar es considerado:
 
-> [A. Subempleado]{.alert} <br>
-  B. Desempleado <br>
-  C. Desalentado <br>
-  D. Cesante
+> A. Subempleado <br> B. Desempleado <br> C. Desalentado <br> D. Cesante
+
+## Pregunta 3
+
+Un médico que trabaja como mesero en un bar es considerado:
+
+> [A. Subempleado]{.alert} <br> B. Desempleado <br> C. Desalentado <br> D. Cesante
 
 ##  {background-image="images/arb.jpg"}
 
@@ -455,22 +443,23 @@ Un médico que trabaja como mesero en un bar es considerado:
 
 ## Dilema del trabajo
 
-- En muchas ocasiones deseamos antes que [trabajar]{.blut}, hacer [ocio]{.under}
+-   En muchas ocasiones deseamos antes que [trabajar]{.blut}, hacer [ocio]{.under}
 
-- El ocio nos da placer y bienestar!!
-    - Sentarse en el sofá
-    - Irse de vacaciones
-    - Pasar tiempo con los amigos y la familia
-    - Hacer ejercicio
-    - Criar a los hijos
-    - Estudiar
-    - Comer
-    - Dormir
-    - Limpiar su apartamento
+-   El ocio nos da placer y bienestar!!
+
+    -   Sentarse en el sofá
+    -   Irse de vacaciones
+    -   Pasar tiempo con los amigos y la familia
+    -   Hacer ejercicio
+    -   Criar a los hijos
+    -   Estudiar
+    -   Comer
+    -   Dormir
+    -   Limpiar su apartamento
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -498,16 +487,16 @@ ggplot() +
 :::
 
 ::: {.column width="40%"}
-- Las elecciones de un trabajador individual se caracterizan por **cantidades observables:**.
+-   Las elecciones de un trabajador individual se caracterizan por **cantidades observables:**.
 
-    - Ingresos diarios, o renta total
-    - Horas diarias trabajadas $\Rightarrow$ horas de ocio
+    -   Ingresos diarios, o renta total
+    -   Horas diarias trabajadas $\Rightarrow$ horas de ocio
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -537,11 +526,11 @@ ggplot() +
 ::: {.column width="40%"}
 Los trabajadores tendrán [incentivos]{.bg style="--col: #FFFF00"}
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -603,11 +592,11 @@ ggplot() +
 ::: {.column width="40%"}
 Los trabajadores podran escoger entre ocio e ingreso
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -663,11 +652,11 @@ ggplot() +
 ::: {.column width="40%"}
 Su elección puede llevar algunos eventos desafortunados
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -724,17 +713,13 @@ ggplot() +
 $$\begin{align} 
 \color{#007935}{Y} &\color{#007935}{= wH + v} \\
 &\color{#007935}{= w(24 - L) + v}
-\end{align}$$
-- $H=$ Número de horas de trabajo <br>
-- $w=$ Mejor salario disponible para trabajador <br>
-- $v=$ Ingreso no laboral
-
+\end{align}$$ - $H=$ Número de horas de trabajo <br> - $w=$ Mejor salario disponible para trabajador <br> - $v=$ Ingreso no laboral
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -782,16 +767,13 @@ ggplot() +
 $$\begin{align} 
 \color{#007935}{Y} &\color{#007935}{= wH + v} \\
 &\color{#007935}{= w(24 - L) + v}
-\end{align}$$
-- $w=$ 3 <br>
-- $v=$ 0
-
+\end{align}$$ - $w=$ 3 <br> - $v=$ 0
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -839,15 +821,13 @@ ggplot() +
 $$\begin{align} 
 \color{#007935}{Y} &\color{#007935}{= wH + v} \\
 &\color{#007935}{= w(24 - L) + v}
-\end{align}$$
-- $w=$ 6 <br>
-- $v=$ 0
+\end{align}$$ - $w=$ 6 <br> - $v=$ 0
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -895,15 +875,13 @@ ggplot() +
 $$\begin{align} 
 \color{#007935}{Y} &\color{#007935}{= wH + v} \\
 &\color{#007935}{= w(24 - L) + v}
-\end{align}$$
-- $w=$ 6 <br>
-- $v=$ 15
+\end{align}$$ - $w=$ 6 <br> - $v=$ 15
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-::::{.columns}
+::: columns
 ::: {.column width="60%"}
 ```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
 # parameters
@@ -954,29 +932,27 @@ plot
 :::
 
 ::: {.column width="40%"}
-Es díficil esta parte <br>
-Ya tenemos un salario muy bajo para querer trabajar <br>
-Los [individuos]{.under} prefieren holgazanear que trabajar mas
+Es díficil esta parte <br> Ya tenemos un salario muy bajo para querer trabajar <br> Los [individuos]{.under} prefieren holgazanear que trabajar mas
 :::
-::::
+:::
 
 ## Dilema del trabajo
 
-- Las personas tienen [preferencias]{.oranger}
+-   Las personas tienen [preferencias]{.oranger}
 
-- La gente prefiere **más** a menos
+-   La gente prefiere **más** a menos
 
-- La gente está dispuesta [a sustituir]{.under}
+-   La gente está dispuesta [a sustituir]{.under}
 
-- La utilidad marginal es [decreciente]{.alert}
+-   La utilidad marginal es [decreciente]{.alert}
 
 ::: fragment
 ::: callout-note
 ## Clasificación
+
 La **Macroeconomía** define al desempleo como friccional, cíclico y estructural.
 :::
 :::
-
 
 ## Bibliografía
 
@@ -988,8 +964,6 @@ La **Macroeconomía** define al desempleo como friccional, cíclico y estructura
 
 `r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
 
-
-
 ##  {background-image="images/salt.jpg"}
 
 ### Gracias por su atención!! {.r-fit-text}
@@ -997,6 +971,3 @@ La **Macroeconomía** define al desempleo como friccional, cíclico y estructura
 #### cayanes\@uninorte.edu.co
 
 #### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
-
-
-

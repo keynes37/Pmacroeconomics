@@ -1,0 +1,197 @@
+---
+title: "Principios de Macroeconomía 😎"
+subtitle: "Desempleo II"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/input02.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio, fontawesome, readxl, ggthemes, xaringanExtra, ggdag, viridis, knitr, dslabs, gapminder, extrafont, Ecdat, tidyverse, magrittr, janitor, kableExtra)
+# Colores
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+# knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  #dpi = 300,
+  #cache = T,
+  warning = F,
+  message = F
+)  
+theme_simple <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 12),
+  axis.ticks = element_blank()
+)
+theme_market <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.title.x = element_text(hjust = 1, size = 17),
+  axis.title.y = element_text(hjust = 1, angle = 0, size = 17),
+  # axis.text.x = element_text(size = 12),
+  # axis.text.y = element_text(size = 12),
+  axis.ticks = element_blank()
+)
+theme_gif <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.text.x = element_text(size = 12),
+  axis.text.y = element_text(size = 12),
+  axis.ticks = element_blank()
+)
+wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
+shift_axis <- function(p, y=0){
+  g <- ggplotGrob(p)
+  dummy <- data.frame(y=y)
+  ax <- g[["grobs"]][g$layout$name == "axis-b"][[1]]
+  p + annotation_custom(grid::grobTree(ax, vp = grid::viewport(y=1, height=sum(ax$height))), 
+                        ymax=y, ymin=y) +
+    geom_hline(aes(yintercept=y), data = dummy, size = 0.5, color = met_slate) +
+    theme(axis.text.x = element_blank(), 
+          axis.ticks.x = element_blank())
+}
+#xaringanExtra::use_scribble()
+
+# budget line (for graphing)
+budget <- function(x, wage, non_labor_income) {
+  wage * (24 - x) + non_labor_income
+}
+
+# utility function = u(x, y) = C (x - A)^a (y - B)^(1-a)
+utility <- function(x, y, constant = 1, alpha = 0.5, offset = 10) {
+  if (offset == 0) {
+    utility <- constant * (x ^ alpha) * (y ^ (1 - alpha))
+  } else {
+    utility <-
+      constant * ((x - 1 / offset) ^ alpha) * ((y - 1 / offset) ^ (1 - alpha))
+  }
+  return(utility)
+}
+
+# optimal leisure hours
+optimize <-
+  function(non_labor_income = 0,
+           wage = 4,
+           alpha = 0.5,
+           offset = 10) {
+    if (offset == 0) {
+      marginal_utility <-
+        function(x) {
+          ((1 - alpha) / alpha) * wage * x
+        }
+    } else {
+      marginal_utility <- function(x) {
+        (offset * x * wage + wage - alpha * (offset * x * wage + wage + 1)) / (offset * alpha)
+      }
+    }
+    
+    budget <- function(x) {
+      wage * (24 - x) + non_labor_income
+    }
+    
+    optimal_x <-
+      uniroot(function(x)
+        budget(x) - marginal_utility(x), c(-100, 100))$root
+    
+    if (optimal_x > 24) {
+      optimal_x <- 24
+    }
+    
+    return(optimal_x)
+  }
+
+# indifference curve (k = utility level)
+ic <- function(x, k, constant = 1, alpha = 0.5, offset = 10) {
+  if (offset == 0) {
+    ic <- (k / (constant * x ^ alpha)) ^ (1 / (1 - alpha))
+  } else {
+    ic <- ((k * (x - 1/offset) ^ (-alpha)) / constant) ^ (1 / (1 - alpha)) + 1/offset
+  }
+  return(ic)
+}
+
+# not accurate enough for offset != 0
+ic_slope <- function(x, k, constant = 1, alpha = 0.5, offset = 10) {
+  if (offset == 0) {
+    ic_slope <- alpha * ((k * x ^ (-alpha)) / constant) ^ (1 / (1 - alpha)) / ((alpha - 1) * x)
+  } else {
+    ic_slope <- alpha * offset * ((k * (x - 1/offset) ^ (-alpha)) / constant) ^ (1 / (1 - alpha)) / ((alpha - 1) * (offset * x - 1))
+  }
+  return(ic_slope)
+}
+
+```
+
+## Lo que vamos a ver
+
+- Ya hemos hablado de consideraciones generales.
+- Hoy miraremos salario mínimo en valores
+- Analizamos la oferta de trabajo
+- *pensiente*.
+
+## Observe a continuación
+
+::: fragment
+```{r unemployment02, fig.cap='Tabla de salario', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/tabsal2024.png")
+```
+:::
+
+## Determinantes del desempleo
+
+
+## Disposición a trabajar
+
+```{r, echo = FALSE, fig.height = 5.5, fig.width = 5.5, dev = "svg"}
+x <- 0:10
+supply <- function(x) 3 + x
+
+base_a <- ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
+  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = c(q_1), labels = c(expression(L^"*"))) +
+  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = c(p_1), labels = c(expression(w^"*"))) +
+  theme_market +
+  labs(x = "L", y = "w") +
+  stat_function(fun = supply, color = red_pink, size = 1) +
+  geom_point(x = q_1, y = p_1, color = met_slate, size = 2) +
+  geom_segment(x = 0, xend = q_1, y = p_1, yend = p_1, color = met_slate, linetype = "dashed") +
+  geom_segment(x = q_1, xend = q_1, y = 0, yend = p_1, color = met_slate, linetype = "dashed") +
+  annotate("label", label = expression(S[1]), x = 6, y = supply(6), color = red_pink, family = "Fira Sans", size = 5) +
+  annotate("label", label = expression(D[1]), x = 9, y = demand(9), color = purple, family = "Fira Sans", size = 5)
+
+base_a
+```
+
