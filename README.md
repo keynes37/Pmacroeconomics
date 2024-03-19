@@ -12,6 +12,6 @@ Class 04 | [Crecimiento economico](https://raw.githack.com/keynes37/Pmacroeconom
 
 Class 05 | [Desempleo I](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class05.html)
 
-Class 06 | Desempleo A
+Class 06 | [Desempleo II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class06.html)
 
 
