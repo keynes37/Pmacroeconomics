@@ -14,4 +14,5 @@ Class 05 | [Desempleo I](https://raw.githack.com/keynes37/Pmacroeconomics/main/C
 
 Class 06 | [Desempleo II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class06.html)
 
+Class 07 | [Desempleo vs inflación](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class07.html)
 
