@@ -1,0 +1,67 @@
+---
+title: "Principios de Macroeconomía 🫢"
+subtitle: "Politica Monetaria"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/road01.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl, ggplot2, plotly, ggthemes, ggforce, viridis, knitr, hrbrthemes, ggeasy, ggrepel)
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F,
+  dpi=300
+)
+
+theme_set(theme_ipsum_rc())
+```
+
+## Antes de empezar
+::: fragment
+**Se requiere leer**
+:::
+
+- [Curva de Phillips](https://www.econlowdown.org/v3/public/inflation-expectations-the-phillips-curve-and-the-feds-dual-mandate)
+
+- [Core economics](https://www.core-econ.org/the-economy/v1/book/es/text/15.html).
+
+<br>
+
+::: fragment
+### Si le gusta la historia en general:
+:::
+
+-   [`Datos de la CIA`](https://www.cia.gov/the-world-factbook/)
+
+## Para hoy
+
+- Mezclamos **decisiones de política** (inflación y desempleo)
+- Aprendemos mas de [teoría]{.bg style="--col: #FFFF00"} con el asunto de la curva de Phillips 
+- Hacemos una comparación en el [tiempo]{.under} para la economía de EEUU
+- Entender los planes de `inflación objetivo` 
+- Prepararnos para la politica monetaria
+
+# Empecemos {background-image="images/nature1.jpg"} 
