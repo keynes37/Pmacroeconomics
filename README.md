@@ -16,3 +16,6 @@ Class 06 | [Desempleo II](https://raw.githack.com/keynes37/Pmacroeconomics/main/
 
 Class 07 | [Desempleo vs inflación](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class07.html)
 
+Class 08 | [Politica Monetaria](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class08.html)
+
+
