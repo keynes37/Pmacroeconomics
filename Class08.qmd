@@ -1,5 +1,5 @@
 ---
-title: "Principios de Macroeconomía 🫢"
+title: "Principios de Macroeconomía 🙃"
 subtitle: "Politica Monetaria"
 author:
   - name: Carlos Andrés Yanes
@@ -14,7 +14,7 @@ format:
     slide-number: c/t
     incremental: true
     title-slide-attributes:
-      data-background-image: images/road01.jpg
+      data-background-image: images/roadpk.jpg
       data-background-size: cover  
 editor: visual
 ---
@@ -44,24 +44,252 @@ theme_set(theme_ipsum_rc())
 **Se requiere leer**
 :::
 
-- [Curva de Phillips](https://www.econlowdown.org/v3/public/inflation-expectations-the-phillips-curve-and-the-feds-dual-mandate)
+- [Dinero y Banca](https://openstax.org/books/principles-macroeconomics-3e/pages/14-introduction-to-money-and-banking)
 
-- [Core economics](https://www.core-econ.org/the-economy/v1/book/es/text/15.html).
+- [Core economics](https://www.core-econ.org/the-economy/v1/book/es/text/15.html#158-pol%C3%ADtica-monetaria).
 
-<br>
-
-::: fragment
-### Si le gusta la historia en general:
-:::
-
--   [`Datos de la CIA`](https://www.cia.gov/the-world-factbook/)
 
 ## Para hoy
 
-- Mezclamos **decisiones de política** (inflación y desempleo)
-- Aprendemos mas de [teoría]{.bg style="--col: #FFFF00"} con el asunto de la curva de Phillips 
-- Hacemos una comparación en el [tiempo]{.under} para la economía de EEUU
-- Entender los planes de `inflación objetivo` 
-- Prepararnos para la politica monetaria
+- Mecanismos para resolver problemas Macroeconómicos
+- Política monetaria de expansión y contracción
+- Aprender un poco mas del banco de la Républica
+- Diferenciar los entornos del dinero
 
-# Empecemos {background-image="images/nature1.jpg"} 
+# Empecemos {background-image="images/university.jpg"}
+
+## Definición
+
+::: fragment
+> No se puede confiar en que el Gobierno tome buenas decisiones en materia económica.
+:::
+
+:::fragment
+::: callout-tip
+## Clave: Politica monetaria
+Cómo influye el **Banco central** en la [oferta de dinero]{.under} y saca a la nación de un periodo de *recesión* o de *inflación*.
+:::
+:::
+
+::: fragment
+[*¿Qué bancos hacen parte del Banco Central?*]{.bg style="--col: #dcdcdc"}
+:::
+
+::: fragment
+[NINGUNO!!]{.alert}
+:::
+
+::: fragment
+Los bancos privados y estatales (p.e *Banco Agrario*) deben funcionar independientemente y estar regulados por la superintendencia y seguir las decisiones de la junta del Banco Central
+:::
+
+## Definición
+
+::: fragment
+::::{.columns}
+::: {.column width="60%"}
+- La junta está conformada por [7 miembros]{.under}, quien encabeza es el Ministro de Hacienda y Crédito Público, le sigue el Gerente General del Banco de la República (Banrep) y cinco miembros denominados [Codirectores]{.slater} 
+- La regulación de la junta ha sido descrita en [Ley 31 de 1992](http://www.secretariasenado.gov.co/senado/basedoc/ley_0031_1992.html)
+- Este grupo de miembros tiene como interés nacional nuestra política monetaria 
+:::
+
+::: {.column width="40%"}
+<img style="border-radius: 40%;" src="images/brp.png" width="350px"/>
+:::
+::::
+:::
+
+## Definición
+
+::: fragment
+### Funciones del Banco de la República
+:::
+
+- Gran [Subastador]{.blut}: Vende, transfiere y redime bonos del Gobierno
+- Emite [Moneda]{.oranger} (Papel dinero)
+- Supervisa los prestamos de los demás [bancos]{.blut}
+- Cuida las **reservas monetarias** del país
+- Prestamista de última instancia (*en caso de emergencia*)
+- Establece la meta anual de [inflación]{.fg style="--col: #314f4f"}  
+
+# Como funciona la cosa? {background-image="images/coins.jpg"}
+
+## Política Monetaria
+
+::: fragment
+> Cuando se ajusta la **oferta de dinero** del país, el banco central puede [acelerar]{.under} o [ralentizar]{.under} a la Economía.
+:::
+
+::: fragment
+::: callout-warning
+## Recesión
+Para salir de una [recesión]{.alert}, el Banrep "anima" a la gente a gastar aumentando la oferta monetaria.
+:::
+:::
+
+::: fragment
+::: callout-important
+## Inflación
+Para atajar la inflación, el Banrep "disuade" a la gente de gastar disminuyendo la oferta monetaria.
+:::
+:::
+
+## Política Monetaria
+
+::: fragment
+### Como hace eso?
+:::
+
+::: fragment
+#### Herramientas de política monetaria
+:::
+
+- Requerimiento de reserva
+- Tasa de descuento
+- Operaciones de Mercado Abierto (OMA)
+
+## Política Monetaria
+
+::: fragment
+::: callout-note
+## Requerimiento de reserva
+El porcentaje (%) que todos los bancos deben mantener en sus bóvedas de acuerdo a los [depósitos]{.under} que hacen los clientes.
+:::
+:::
+
+::: fragment
+::: callout-important
+## Ejercicio 1
+Si un banco tiene en depósitos $100 millones de pesos y el *coeficiente de reserva* es del 10%. ¿Cuanto dinero debo guardar en la bóveda? ¿Cuanto puede prestar a otros clientes?
+:::
+:::
+
+::: fragment
+::: callout-important
+## Ejercicio 2
+Si un banco tiene en depósitos $100 millones de pesos y el *coeficiente de reserva* aumenta al 30%. ¿Cuanto dinero debo guardar en la bóveda? ¿Cuanto puede prestar a otros clientes?
+:::
+:::
+
+- Efectos: $\uparrow$ Coeficiente de reserva $\downarrow$ la [oferta de dinero]{.bg style="--col: #FFFF00"}
+
+- La relación es inversa entre estas variables.
+
+## Política Monetaria
+
+::: fragment
+::: callout-note
+## Tasa de descuento
+A veces, el Banrep presta dinero a los bancos. Al bajar o subir la [tasa de interés]{.oranger} que [cobra]{.under} a los bancos, pueden influir en el tipo de interés que éstos cobran a sus clientes.
+:::
+:::
+
+::: fragment
+::: callout-tip
+## Ejemplo 1
+Si el banco central decide establecer una tasa de descuento del 2%. La [banca comercial]{.blut} cobra por prestar a los demás clientes un 4%.
+:::
+:::
+
+::: fragment
+::: callout-tip
+## Ejemplo 2
+Si el banco central decide establecer una tasa de descuento del 1%. La [banca comercial]{.blut} cobra por prestar a los demás clientes un 2%.
+:::
+:::
+
+- Efectos: $\uparrow$ Tasa de descuento $\downarrow$ la [oferta de dinero]{.bg style="--col: #FFFF00"}
+
+- La relación es inversa entre estas variables.
+
+## Política Monetaria
+
+::: fragment
+### Inflación y Tasa de interés
+:::
+
+- Tasa de Interés Nominal = Tasa Real + Inflación
+
+- Efecto Fisher: La inflación $\rightarrow \; \uparrow$ la tasa de interés [nominal]{.blut}
+
+::: fragment
+$$(1+r)=\dfrac{(1+i)}{(1+ \pi)}$$
+:::
+
+## Política Monetaria
+
+::: fragment
+::: callout-note
+## OMA
+Las compras y ventas de bonos del gobierno por parte del estado.
+:::
+:::
+
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 1
+Si el banco central decide comprar bonos del gobierno, entonces aumenta la oferta monetaria al poner (+) [dinero en circulación]{.blut}
+:::
+:::
+
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 2
+Si el banco central decide vender bonos del gobierno, entonces disminuye la oferta monetaria al recoger (-) [dinero en circulación]{.alert}
+:::
+:::
+
+- Efectos: $\uparrow$ compra de bonos $\uparrow$ la [oferta de dinero]{.bg style="--col: #FFFF00"}
+
+- La relación es directa entre estas variables.
+
+# Tipo de política {background-image="images/coins.jpg"}
+
+## Política Expansiva
+
+- Cuando el banco central toma la decisión de:
+
+  - Disminuir el coeficiente de reserva
+  - Disminuir las tasas de descuento
+  - Comprar bonos del gobierno
+
+::: fragment
+Tendremos una política monetaria [expansiva]{.blut}
+:::
+
+::: fragment
+Esto se le llama "Dinero Fácil"
+:::
+
+## Política Expansiva
+
+- Cuando el banco central toma la decisión de:
+
+  - Aumentar el coeficiente de reserva
+  - Aumentar las tasas de descuento
+  - Vender bonos del gobierno
+
+::: fragment
+Tendremos una política monetaria [restrictiva]{.alert}
+:::
+
+::: fragment
+Esto se le llama restricción total "Contraciclica"
+:::
+
+## Bibliografía
+
+`r fa('book')` Rochester city School District (2023) *Monetary Policy*. Lectures
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+##  {background-image="images/roadpk.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
+
