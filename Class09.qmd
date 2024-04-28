@@ -1,0 +1,417 @@
+---
+title: "Principios de Macroeconomía 😬"
+subtitle: "Politica Monetaria II"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/jung1.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl, ggplot2, plotly, ggthemes, ggforce, viridis, knitr, hrbrthemes, ggeasy, ggrepel)
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F,
+  dpi=300
+)
+
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+red <- "#b92e34"
+
+theme_market <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.title.x = element_text(hjust = 1, size = 17),
+  axis.title.y = element_text(hjust = 1, angle = 0, size = 17),
+  axis.ticks = element_blank()
+)
+
+theme_set(theme_ipsum_rc())
+```
+
+## Antes de empezar
+::: fragment
+**Se requiere ver**
+:::
+
+- [Historia del dinero](https://www.youtube.com/watch?v=YCN2aTlocOw)
+
+- [Banrep|Politica Monetaria](https://www.banrep.gov.co/es/banrep-educa/econo-cimientos/politica-monetaria).
+
+## Antes de empezar
+
+::: fragment
+**Para hoy**
+:::
+
+- Intercambio (Voluntario) | directo e indirecto
+- Ventajas del uso del dinero
+- Transacciones (brutas y de ingreso)
+- Demanda de dinero
+- Apreciaciones hacia la banca privada
+
+# Empecemos {background-image="images/sunrise2.jpg"}
+
+## Política en teoría
+
+::::{.columns}
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height = 3.75, fig.width = 3.75, dev = "svg"}
+demand <- function(x) 21- 3*x
+inv_demand <- function(x) 3*(7-x)
+p_1 <- 7
+p_2 <- 6
+q_1 <- inv_demand(p_1) 
+q_2 <- inv_demand(p_2)
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
+  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  theme_market +
+  labs(x = "Dinero", y = "Interés") +
+  stat_function(fun = demand, color = red_pink, size = 1) +
+  annotate("text", label = "Demanda", x = 8, y = 2.65, color = red_pink, family = "Fira Sans", size = 4) 
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height = 3.75, fig.width = 3.75,  dev = "svg"}
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
+  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  theme_market +
+  labs(x = "Dinero", y = "Interés") +
+  geom_vline(xintercept = 5, color = purple, size = 1) +
+  annotate("text", label = "Oferta", x = 6, y = 5.5, color = purple, family = "Fira Sans", size = 4)
+```
+:::
+::::
+
+## Política en teoría
+
+- La [oferta de dinero]{.alert} es fija a razón de la cantidad que establece el **banco central**
+- Pero la [demanda de dinero]{.blut} ya depende de la tasa de interés. Es costoso tener dinero en "las manos" si el interés es alto. Es por ello que si tenemos tasas de interés [bajas]{.under} (vamos a querer tener mas dinero o líquidez)
+
+::: fragment
+::: callout-note
+## Líquidez
+La preferencia va con las tasas de interés. Todos vamos a preferir el dinero líquido antes de querer tenerlo en otros medios de Dinero como (M1, M2 y resto de cuasidineros)
+:::
+:::
+
+## Política en teoría
+
+::::{.columns}
+::: {.column width="60%"}
+::: fragment
+```{r, echo = FALSE, fig.height = 3.75, fig.width = 3.75,  dev = "svg"}
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
+  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  theme_market +
+  labs(x = "Dinero", y = "Interés") +
+  stat_function(fun = demand, color = red_pink, size = 1) +
+  annotate("text", label = "Demanda", x = 8, y = 2.65, color = red_pink, family = "Fira Sans", size = 4)+
+  geom_vline(xintercept = 5, color = purple, size = 1) +
+  annotate("text", label = "Oferta", x = 6.5, y = 6.5, color = purple, family = "Fira Sans", size = 4)+
+  geom_hline(yintercept = 6,linetype  = "dashed", color = met_slate, size = 0.2) +
+  annotate("text", color = purple, family = "Fira Sans", size = 4)
+```
+:::
+:::
+
+::: {.column width="40%"}
+::: fragment
+En [equilibrio]{.alert}, las personas consumen ([demandan]{.blut}) la misma cantidad de dinero que el **banco central** ha suministrado para la economía. 
+:::
+:::
+::::
+
+## Política en teoría
+
+::::{.columns}
+::: {.column width="60%"}
+```{r, echo = FALSE, fig.height = 3.75, fig.width = 3.75,  dev = "svg"}
+demand2 <- function(x) 24- 3*x
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
+  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = NULL) +
+  theme_market +
+  labs(x = "Dinero", y = "Interés") +
+  stat_function(fun = demand2, color = red_pink, size = 1) +
+  annotate("text", label = "D[2]", x = 7.5, y = 3.65, color = red_pink, family = "Fira Sans", size = 4)+
+  stat_function(fun = demand, color = red_pink, size = 1) +
+  annotate("text", label = "D[1]", x = 6.2, y = 0.4, color = red_pink, family = "Fira Sans", size = 4)+
+  geom_vline(xintercept = 5, color = purple, size = 1) +
+  annotate("text", label = "Oferta", x = 7, y = 8.5, color = purple, family = "Fira Sans", size = 4) +
+  geom_point(aes(x = 5, y = 6), color = met_slate, size = 2) +
+  geom_segment(aes(x = 5, y = 6, xend = 5, yend = 6), linetype = "dashed", color = met_slate, size = 1) +
+  geom_hline(yintercept = 6, linetype = "dashed", color = met_slate, size = 1)
+```
+:::
+
+::: {.column width="40%"}
+::: fragment
+Un $\uparrow$ de la [demanda de dinero]{.alert}, presiona la subida de las tasas de interés. La [presión]{.oranger} por tener mas dinero en manos (requerimiento de efectivo), hace que la tasa se incremente.
+:::
+:::
+::::
+
+# Mecanismo de transmisión {background-image="images/sunrise2.jpg"}
+
+## Mecanismo de transmisión
+
+::::{.columns}
+::: {.column width="40%"}
+- Qué ocurre si tenemos una política monetaria expansiva?
+- El **Banco Central** va $\downarrow$ la tasa de interés [nominal]{.oranger}
+- Esto va a permitir tener mas dinero disponible en la economía
+- La tasa de interés real $\boxed{r=i-\pi^*}$ también $\downarrow$
+:::
+
+::: {.column width="60%"}
+::: fragment
+```{r interes1, fig.cap='Transmisión arriba', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/comgra1.svg")
+```
+:::
+:::
+::::
+
+
+## Mecanismo de transmisión
+
+::::{.columns}
+::: {.column width="40%"}
+- Qué ocurre si tenemos una política monetaria expansiva?
+- Hay mas dinero en efectivo en la [economía]{.alert}
+- Las personas tienen con que [gastar]{.bg style="--col: #FFFF00"} mas
+- La inflación $\pi^*$  $\uparrow$ con el tiempo
+- Todo esto se le conoce como [ISLM]{.bg style="--col: #00FFFF"}
+:::
+
+::: {.column width="60%"}
+::: fragment
+```{r interes2, fig.cap='Transmisión abajo', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/comgra2.svg")
+```
+:::
+:::
+::::
+
+## Mecanismo de transmisión
+
+::: fragment
+```{r meca23, fig.cap='Transmisión. Fuente: Modern Macroeconomics and Monetary Policy (2017)', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Grilla.svg")
+```
+:::
+
+# Intercambio {background-image="images/sunrise2.jpg"}
+
+## Intercambio
+
+::::{.columns}
+::: {.column width="60%"}
+::: fragment
+```{r Cambio, fig.cap='Fuente: Aprendeconomia.com', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/comercio.jpeg")
+```
+:::
+:::
+
+::: {.column width="40%"}
+- Se da [intercambio]{.under} voluntario cuando dos personas desean [transferir]{.bg style="--col: #FFFF00"} bienes o servicios y se da porque esas dos personas aumentaran su bienestar.
+- La [especialización]{.blut} permite que cada agente económico solo produzca y mejore en el servicio de este antes de autogenerar y no satisfacer su propia necesidad.
+:::
+::::
+
+## Intercambio
+
+::: fragment
+::: callout-note
+## Intercambio voluntario directo
+Aquel que ocurre cuando se requiere algo por la cual debo intercambiar un bien necesario. Una economía con este tipo no produce mucho pero si es algo mejor que la autosuficiencia
+:::
+:::
+
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 1
+Carlos tiene un azadón, requiere de pan (que produce un individuo B), Queso que produce un individuo C y Maiz que produce D. Puede partir su azadón e intercambiar pero no servirá mucho ese ya siendo divisible.
+:::
+:::
+
+## Intercambio
+
+::: fragment
+::: callout-note
+## Intercambio voluntario indirecto
+Existe un intercambio por un bien que no necesito para consumir sinó para utilizarlo para otro evento o bien que si necesito
+:::
+:::
+
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 2
+Carlos tiene una ave de corral, necesita zapatos pero el individuo B (quien es zapatero) no quiere aves, quiere en cambio aceite. Carlos busca un individuo C que este dispuesto a intercambiar aves por aceite para así intercambiar con B. 
+:::
+:::
+
+::: fragment
+::: {.callout-warning appearance="simple"}
+## Cuidado!
+En algunas ocasiones, un bien altamente [comercializable]{.under} no necesariamente es un bien de [consumo]{.alert}. Posee características como: *se vende fácilmente* y tiene o posee mucha *aceptación*. Tiene tambien cosas que es facíl de transportar y dura mucho tiempo.
+:::
+:::
+
+## Intercambio
+
+::::{.columns}
+::: {.column width="40%"}
+- La ventaja de tener dinero es que habrá especialización en nuestras [economías]{.alert}. 
+- Se [desaparece]{.under} la parte de indivisibilidad y la falta de coincidencia de [necesidades]{.bg style="--col: #FFFF00"}
+- Con el Dinero la economía crece, se expande y los cálculos via precios se hacen mucho mejor. No hay que preocuparse por otros eventos
+- Propicia el libre mercado.
+:::
+
+::: {.column width="60%"}
+```{r dinerenlokk, fig.cap='Fuente: Portafolio', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/billegas.jpeg")
+```
+:::
+::::
+
+## Intercambio {background-image="images/fondotriv.png"}
+
+- La teoría de la [demanda de dinero]{.blut} es una parte de la teoría del capital, porque [el dinero]{.under} para el individuo es una forma de conservar riqueza y para la empresa es un activo productivo (Rivas, 2005).
+- La propiedad de [liquidez del dinero]{.oranger} lo convierte en un medio de intercambio y en un depósito de valor, ya que es portátil y de fácil aceptación, por lo que se intercambia fácilmente por bienes y servicios.
+
+# Ecuación Monetaria {background-image="images/sunrise2.jpg"}
+
+## Ecuación Monetaria
+
+- Debemos para entender la política mirar como se desprende la ecuación del dinero
+
+::: fragment
+$$M=PY$$
+
+Donde M es la cantidad de dinero y P e Y son precio y producción de bienes.
+:::
+
+- Si añadimos una variable como lo es la [velocidad del dinero]{.blut} la **ecuación** cambia a:
+
+::: fragment
+$$MV=PY$$
+:::
+
+## Ecuación Monetaria
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 2
+Si la producción de la economía es de 15.000 unidades, los precios de esas unidades es de $300 y el número de billetes o cantidad de dinero es de 4000. Cuál es la velocidad del dinero de esa economía y que significa?   
+:::
+:::
+
+- Hay que despejar V de la ecuación
+- Tenemos $V=\dfrac{PY}{M}=\dfrac{15000 \times 300}{4000}=\color{blue}{1125}$
+- Eso es el número de veces que pasa el dinero por las manos del público para satisfacer las necesidades de esa economía.
+
+## Ecuación Monetaria
+
+- De la ecuación podemos mencionar la [razón de precios]{.bg style="--col: #FFFF00"}:
+
+:::fragment
+$$\dfrac{\Delta M}{M}+ \dfrac{\Delta V}{V}= \dfrac{\Delta P}{P} + \dfrac{\Delta Y}{Y}$$
+:::
+
+- Mire que la [Velocidad]{.blut} es constante y si le damos nombres a esa ecuación vamos a tener la predicción de la inflación. Observe
+
+::: fragment
+$$\dfrac{\Delta M}{M} - \dfrac{\Delta Y}{Y}= \dfrac{\Delta P}{P}$$
+:::
+
+- Si la tasa de crecimiento de la economía es de 3% y la tasa de crecimiento del dinero es del 4%, entonces la inflación va ser de $4\%-3\%= \pi= 1\%$
+
+# Oferta de dinero {background-image="images/sunrise2.jpg"}
+
+## Oferta de dinero 
+
+- Antes de nuestro conocido [papel moneda]{.oranger}, a lo largo de la historia se han utilizado otros artículos como [instrumentos monetarios]{.alert}. Desde los cigarrillos hasta el oro, cualquier artículo utilizado como dinero que también tenga un valor intrínseco en algún otro uso se considera dinero mercancía. 
+
+- Hoy en día, las economías utilizan [dinero fiduciario]{.blut} (también conocido como simbólico), lo que significa que nuestros billetes de pesos, dólar, euros, por ejemplo, no tienen valor intrínseco. Sin embargo, los gobiernos han declarado el [dinero fiduciario]{.blut} como moneda de curso legal. En la práctica, esto significa que el dinero de una nación debe aceptarse para saldar deudas.
+
+## Oferta de dinero
+
+- Hay que pensar, que el dinero va más allá de los billetes de pesos.
+
+- Las funciones de almacenar valor, mantener riqueza y cotizar precios se aplican a una gama más amplia de activos distintos de los billetes de pesos.
+
+
+::: fragment
+### Ahora nos centraremos en las diferentes medidas del dinero.
+:::
+
+- Más allá de otras que no son demasiado importantes para nuestros propósitos actuales, veremos los tres principales:
+
+::: fragment
+    - M1 (dinero de las transacciones)
+    - M2 (dinero amplio).
+    - M3 (Cuasidineros)
+:::
+
+## Oferta de dinero
+
+- M1 = Efectivo + Depósitos en cuenta corriente
+- M2 = M1 + Cuasidineros. No incluye los CDTs en poder del Banco de la República ni los CDT emitidos por Findeter en el marco de la resolución 1318 de 2020.
+- M3 = Efectivo + Total Depósitos en poder del público. Incluye los depósitos restringidos y no incluye los CDTs y bonos en poder del Banco de la República
+ni los CDT emitidos por Findeter en el marco de la resolución 1318 de 2020.
+
+- Mas información: [Banrep agregados](https://www.banrep.gov.co/es/estadisticas/agregados-monetarios)
+
+## Bibliografía
+
+`r fa('book')` Rivas P., (2005) *Teoría Monetaria y Bancaria*. Ciudadela Universitaria. MIMEO
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+##  {background-image="images/jung1.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
+
