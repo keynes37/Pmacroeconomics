@@ -18,4 +18,7 @@ Class 07 | [Desempleo vs inflación](https://raw.githack.com/keynes37/Pmacroecon
 
 Class 08 | [Politica Monetaria](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class08.html)
 
+Class 09 | [Politica Monetaria II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class09.html)
+
+
 
