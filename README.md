@@ -20,5 +20,6 @@ Class 08 | [Politica Monetaria](https://raw.githack.com/keynes37/Pmacroeconomics
 
 Class 09 | [Politica Monetaria II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class09.html)
 
+Class 10 | [Demanda y oferta de dinero](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class10.html)
 
 
