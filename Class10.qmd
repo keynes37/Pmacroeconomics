@@ -1,0 +1,329 @@
+---
+title: "Principios de Macroeconomía 🫢"
+subtitle: "Politica Monetaria III"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/sunonset.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl, ggplot2, plotly, ggthemes, ggforce, viridis, knitr, hrbrthemes, ggeasy, ggrepel)
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F,
+  dpi=300
+)
+
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+red <- "#b92e34"
+
+theme_market <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.title.x = element_text(hjust = 1, size = 17),
+  axis.title.y = element_text(hjust = 1, angle = 0, size = 17),
+  axis.ticks = element_blank()
+)
+
+theme_set(theme_ipsum_rc())
+```
+
+## Lo que traimos
+
+- Formalizamos ideas de lo que es el [dinero]{.alert}
+- Vimos como la [política monetaria]{.oranger} tiene efectos en la economía
+- Inclusive como tiene que ver con la posición de [Inflación]{.alert}
+
+::: fragment
+
+> La liquidez de las personas tiene en cuenta otras cuestiones que debemos mirar
+
+:::
+
+::: fragment
+Recomendación: [Educación financiera con: karem Suarez](https://www.youtube.com/watch?v=0Jel7kP2854)
+:::
+
+## Lo que traimos
+
+::: fragment
+
+```{r m1m2m3, out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/trianglem1.png")
+```
+
+:::
+
+# Expansión Monetaria
+
+## Expansión Monetaria
+
+- Miremos rápidamente un asunto de depósitos en banco (Creación de Dinero)
+
+- [¿Cómo crean dinero los bancos?]{.fg style="--col: #e64173"}
+
+- Los bancos llevan sus libros de la siguiente manera:
+
+:::fragment
+
+[$$\text{Activo bancario} - \text{Pasivo bancario} ≡ \color{red}{\text{Patrimonio neto del banco}}$$]{.centre}
+
+:::
+
+## Expansión Monetaria
+
+::: fragment
+
+```{r bank, fig.cap='Cuentas T de. Banco X', out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/bankrup.png")
+```
+
+:::
+
+## Expansión Monetaria
+
+- *Recuerde que*: En muchas economías, los bancos están legalmente obligados a mantener reservas en el Banco Central del país.
+
+- El porcentaje de depósitos que un banco debe mantener como [reservas]{.blut} se conoce como [coeficiente de reservas obligatorias]{.alert}.
+
+::: fragment
+::: callout-note
+## Ingreso bancario
+Los bancos obtienen ingresos [prestando]{.alert} dinero a un tipo de [interés superior]{.under} al que pagan a los depositantes por el uso de su dinero.
+:::
+:::
+
+- Por lo tanto, suelen conceder [préstamos]{.alert} hasta el punto en que ya no pueden hacerlo debido a las restricciones del [coeficiente de reservas obligatorias]{.oranger}.
+
+- Entonces, el [exceso de reservas]{.under} de un banco es la diferencia entre sus reservas reales y las reservas legalmente exigidas.
+
+## Expansión Monetaria
+
+- Cuantos más [depósitos]{.blut} reciba un banco, [mayores]{.bg style="--col: #FFFF00"} serán sus [reservas reales]{.bg style="--col: #00FFFF"} en relación con sus reservas obligatorias.
+
+- De este modo, un aumento de las [reservas bancarias]{.oranger} puede dar lugar a un aumento más que proporcional de la [oferta monetaria]{.blut}.
+
+- Los economistas denominan [multiplicador monetario]{.bg style="--col: #FFFF00"} a la relación entre la variación final de los depósitos y la variación de las reservas que ha provocado dicha variación.
+
+::: fragment
+
+> El multiplicador monetario es el múltiplo por el que pueden aumentar los depósitos por cada dólar de aumento de las reservas.
+
+:::
+
+## Expansión Monetaria
+
+- Básicamente nos dice por cuántas veces se "multiplicará" un [préstamo]{.blut} cuando se [gaste en la economía]{.under} y luego se vuelva a depositar en otros bancos.
+
+::: fragment
+
+$$\begin{aligned}
+\text{Multiplicador Monetario} = \dfrac{1}{\text{Coeficiente de reserva requerido (%)}}
+\end{aligned}$$
+
+:::
+
+## Expansión Monetaria
+
+
+- Deposito inicial: `$2000`
+- Prestamos Banco 1: `$1800`= $(1-cr) \times 2000$
+- Prestamos Banco 2: `$1620`= $(1-cr)^{2} \times 2000$
+- Prestamos Banco 3: `$1458`= $(1-cr)^{3} \times 2000$
+- otros prestamos...
+
+::: fragment
+### Oferta total de dinero: 
+$$\left[1+(1-cr)+(1-cr)^{2}+(1-cr)^{3}+ \cdots \times 2000\right]$$
+:::
+
+## Expansión Monetaria
+
+- Para la equivalencia (usando una regla de Taylor):
+
+::: fragment
+
+$$\text{Expansión}\equiv \dfrac{1}{\text{Coeficiente de reserva}} \times 2000$$
+Donde cr es el ratio de reservas a depósitos. En nuestro ejemplo: cr=0.1 y M es= `$20000`.
+
+:::
+
+::: fragment
+::: callout-warning
+## Ojo!!
+Un sistema de reserva parcial crea dinero, pero [OJO]{.alert}, NO crea [riqueza]{.oranger}: Los [préstamos bancarios]{.bg style="--col: #FFFF00"} proveen nuevo dinero a los deudores pero al mismo tiempo estos contraen una deuda por el mismo valor.
+:::
+:::
+
+
+# Preferencias
+
+## Preferencias Demanda de dinero
+
+- Tener dinero (líquido) no paga [intereses]{.blut}, mientras que otros activos financieros sí lo hacen.
+
+- Una pregunta crucial:
+
+::: fragment 
+
+[*¿Por qué no depositar algo de dinero en un certificado de depósito, comprar acciones, bonos, etc.?*]{.bg style="--col: #D3D3D3"}
+
+:::
+
+## Preferencias Demanda de dinero
+
+- Ya que, al [guardar dinero]{.bg style="--col: #00FFFF"}, las personas [renuncian]{.alert} al pago de intereses, debe haber beneficios asociados.
+
+- De hecho, estos [beneficios potenciales]{.blut} pueden resumirse en tres motivos:
+
+::: fragment
+
+[Motivo de transacción]{.slater};
+
+**Motivo de precaución**;
+
+[Motivo especulativo]{.blut}.
+
+:::
+
+## Preferencias Demanda de dinero
+
+- Empezando por el motivo de las [transacciones]{.under}, tener dinero permite comprar cosas.
+
+- "*No hay forma de ir a la tienda y pagar la compra con un certificado de deuda pública colombiana, por ejemplo*".
+
+- En línea con este primer motivo, [mantener saldos]{.blut} en efectivo es también una medida de [precaución]{.alert}.
+
+- La gente guarda [dinero]{.blut} para emergencias, gastos inesperados y compras impulsivas.
+
+- Aunque la mayor parte de nuestros gastos habituales son previstos, siempre existe cierta incertidumbre asociada al [gasto]{.alert}.
+
+## Preferencias Demanda de dinero
+
+- Una última razón para mantener dinero es el llamado [motivo especulativo]{.bg style="--col: #e64173"}.
+
+- Y este motivo se encuentra en el centro de la disyuntiva entre [el efectivo]{.blut} y otros [activos financieros]{.blut} que pagan [intereses]{.alert}.
+
+- Este motivo se debe a la naturaleza variable de [los tipos de interés]{.bg style="--col: #FFFF00"} (rendimientos) de los bonos, las acciones y otras asignaciones potenciales de nuestras tenencias de dinero.
+
+- Así, si uno espera que el precio de un bono -o de cualquier activo financiero- baje, estará [perdiendo]{.alert} dinero por tenerlo.
+
+## Preferencias Demanda de dinero
+
+- Miremos el caso de la [especulación]{.alert}:
+
+::: fragment
+::: {.callout-note appearance="simple"}
+## Ejemplo 1
+Carlos compra un bono por valor de 10 millones del gobierno que paga al final de su periodo de madurez un 10% de su valor en 5 años.
+:::
+:::
+
+- El cupón de rentabilidad será de 5 millones (a interés simple)
+
+- Vamos a mirar que hay detrás si la tasa de interés se modifica
+
+::: fragment
+
+$$\begin{aligned}
+\text{Precio de un bono} = \dfrac{\text{Valor Nominal} + \text{Pago del cupón}}{(1 + \text{tasa de interés})^\text{periodo de madurez}}
+\end{aligned}$$
+
+:::
+
+## Preferencias Demanda de dinero
+
+- Pensemos por un momento que la tasa de interés sube al 15%.
+
+::: fragment
+$$\begin{aligned}
+\text{Precio de un bono} = \dfrac{10.000.000 + 5.000.000}{(1 + 0.15)^5}=7.457.651
+\end{aligned}$$
+:::
+
+::: fragment
+::: {.callout-warning}
+## Cuidado!
+Con un interés [arriba]{.alert} del pactado habremos perdido dinero o el bono adquirido habrá perdido valor de compra. *Una segunda persona o inversionista con un mismo papel o bono ganaría mas que nosotros por ese evento*.
+:::
+:::
+
+## Preferencias Demanda de dinero
+
+- Ahora miremos otro caso, la tasa de interés baja al 5%.
+
+::: fragment
+$$\begin{aligned}
+\text{Precio de un bono} = \dfrac{10.000.000 + 5.000.000}{(1 + 0.05)^5}=11.752.893
+\end{aligned}$$
+:::
+
+::: fragment
+::: {.callout-tip}
+## Magnifico!!
+Con un interés [abajo]{.blut} del pactado habremos ganado dinero o el bono adquirido habrá ganado valor de compra. *Una segunda persona o inversionista con un mismo papel o bono ganaría menos que nosotros por ese evento*.
+:::
+:::
+
+## Preferencias Demanda de dinero
+
+- En realidad, los tipos de interés [fluctúan](https://fred.stlouisfed.org/series/COLIRLTLT01STM) todo el tiempo.
+
+- Los inversionistas en bonos [buscan continuamente]{.bg style="--col: #FFFF00"} *indicios/pistas/información* sobre cómo serán los [tipos de interés]{.oranger} en el futuro para decidir si deben mantener sus inversiones o, por el contrario, mantener dinero líquido.
+
+- Cuando los individuos esperan que los precios de los bonos [suban]{.blut}, mantienen [menos efectivo]{.bg style="--col: #FFFF00"} y [compran bonos]{.under}.
+
+- Cuando esperan que los precios de los bonos [bajen]{.alert}, tienen [más efectivo]{.oranger} y [venden bonos]{.alert}.
+
+- Esta dinámica resume el [motivo especulativo]{.alert} para [demandar dinero]{.bg style="--col: #00FFFF"}.
+
+## Bibliografía
+
+`r fa('book')` Rivas P., (2005) *Teoría Monetaria y Bancaria*. Ciudadela Universitaria. MIMEO
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+##  {background-image="images/sunonset.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
+
+
+
