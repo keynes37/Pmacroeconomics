@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="662" height="401" style="
+        width:662px;
+        height:401px;
+        background: transparent;
+        fill: none;
+">
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="role-diagram-draw-area"><g class="shapes-region" style="stroke: black; fill: none;"><g class="composite-shape axis2d" style="stroke-width: 1; stroke: rgb(0, 0, 0);"><path class="real" d=" M50,322.4 L505.5,322.4 M95.55,56 L95.55,352"/><path d=" M498.5,317.4 L505.5,322.4 L498.5,327.4"/><path d=" M90.55,63 L95.55,56 L100.55,63"/></g><g class="arrow-line"><path class="connection real" stroke-dasharray="" d="  M96,268 L515.5,121" style="stroke: rgb(74, 144, 226); stroke-width: 1; fill: none; fill-opacity: 1; stroke-opacity: 1;"/></g><g/></g><g/><g/><g/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="399" style="width:660px;height:399px;font-family:Asana-Math, Asana;background:transparent;"><g transform="matrix(-1.8369701987210297e-16,-1,1,-1.8369701987210297e-16,-122.203125,255.20312500000003)"><g><g><text x="0.203125" y="180.203125" style="white-space:pre;stroke:none;fill:rgb(0,0,0);fill-opacity:1;font-size:15px;font-family:Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;dominant-baseline:text-before-edge;text-decoration:none solid rgb(0, 0, 0);">Consumo Agregado</text></g></g></g><g><g><g><text x="382" y="336" style="white-space:pre;stroke:none;fill:rgb(0,0,0);fill-opacity:1;font-size:15px;font-family:Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;dominant-baseline:text-before-edge;text-decoration:none solid rgb(0, 0, 0);">Ingreso Agregado</text></g></g></g></svg>
+</svg>

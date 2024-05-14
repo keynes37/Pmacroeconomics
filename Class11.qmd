@@ -1,0 +1,303 @@
+---
+title: "Principios de Macroeconomía 🫢"
+subtitle: "Gasto Agregado"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/onbeach.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl, ggplot2, plotly, ggthemes, ggforce, viridis, knitr, hrbrthemes, ggeasy, ggrepel)
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F,
+  dpi=300
+)
+
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+red <- "#b92e34"
+
+theme_market <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.title.x = element_text(hjust = 1, size = 17),
+  axis.title.y = element_text(hjust = 1, angle = 0, size = 17),
+  axis.ticks = element_blank()
+)
+
+theme_set(theme_ipsum_rc())
+```
+
+## Lo que traimos
+
+::: fragment
+Como medidas de la [macroeconomía]{.alert}
+:::
+
+- Producto (PIB)
+- Inflación (Deflactor e IPC)
+- (Des)empleo
+- Crecimiento 
+- Política monetaria
+
+::: fragment
+Ahora, tenemos suficientes antecedentes para juntar estas piezas y empezar a modelar [la macroeconomía]{.bg style="--col: #FFFF00"}
+:::
+
+- Empezaremos poco a poco.
+- En primer lugar, nos centraremos en el consumo y la inversión agregados. Es decir, el [gasto de los hogares]{.blut} y las [empresas]{.oranger}.
+
+# Consumo Agregado
+
+## Consumo Agregado
+
+::: fragment
+Ecuación General
+:::
+
+::: fragment
+$$DA=\color{blue}{C+I}+GP+(X-M)$$
+
+:::
+
+::: fragment
+Donde tendremos: Consumo mas Inversión, mas el Gasto Público y por último las Exportaciones Netas
+:::
+
+::: fragment
+> La Demanda Agregada tiene como referencia el PIB de una economía
+:::
+
+::: fragment
+La proporción del PIB en Colombia que se destina a consumo es en el orden de $\approx$ un 70%. Estamos hablando de alrededor de mas de 500 miles de millones de pesos. [Datos](https://datos.bancomundial.org/indicator/NE.CON.PRVT.PP.KD?locations=CO)
+:::
+
+## Consumo Agregado
+
+::::{.columns}
+::: {.column width="60%"}
+- Uno de los economistas influyente fué
+John Maynard Keynes
+- Formalizó la idea de que la [renta personal]{.blut} es el factor más relevante que determina el [consumo propio]{.alert}, por lo que también es importante a nivel agregado.
+:::
+
+::: {.column width="40%"}
+::: fragment
+```{r keynes, out.width='100%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/libkeynes.png")
+```
+:::
+:::
+::::
+
+## Consumo Agregado
+
+::::{.columns}
+::: {.column width="40%"}
+::: fragment
+```{r keynesgraph, out.width='150%', fig.asp=.75, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/diaging.svg")
+```
+:::
+:::
+
+::: {.column width="60%"}
+- El consumo tiende [a aumentar]{.bg style="--col: #FFFF00"} con [el ingreso]{.blut};
+
+- Su relación es positiva, pero el consumo no aumenta en la misma proporción que el ingreso. "*Esto es válido tanto a nivel microeconómico como macroeconómico*".
+:::
+::::
+
+## Consumo Agregado
+
+- Como estamos suponiendo que el [consumo agregado]{.alert} sólo depende de la [renta agregada]{.blut} (*ingreso*), podemos llamar a la [función de consumo]{.slater} C(Y).
+
+::: fragment
+Y ponerla en forma de ecuación
+:::
+
+::: fragment
+$$C= a + bY$$
+:::
+
+::: fragment
+[*Qué significa lo anterior*? ]{.bg style="--col: #d3d3d3"}
+:::
+
+::: fragment
+::: callout-tip
+## Propensión a consumir
+Cuando las personas reciben [ingresos adicionales]{.blut}, una parte de estos se destina al ahorro en lugar de al consumo.
+:::
+:::
+
+## Consumo Agregado
+
+- Cada vez que aumenta la [renta/ingreso]{.slater} (ΔY), aumenta también [el consumo]{.alert} (ΔC). Así pues, la [variación del consumo]{.bg style="--col: #FFFF00"} cuando cambia la renta puede venir dada por
+
+::: fragment
+$$\dfrac{\Delta C}{\Delta Y}= PMC$$
+:::
+
+- En otras palabras, es la fracción de un cambio en la renta agregada que se gasta en consumo.
+
+- En términos económicos, esta fracción se denomina propensión marginal al consumo (PMC).
+
+::: fragment
+::: {.callout-note appearance="simple"}
+Por ejemplo, si el [ingreso]{.oranger} aumenta en $200, (ΔY = 200), una [PMC de 0,5]{.under} significa que el consumo aumenta en 0,5 * 200 = 100.
+:::
+:::
+
+# Ahorro Agregado
+
+## Ahorro Agregado
+
+- La parte de la renta/ingreso que no se destina al [consumo]{.alert} se ahorra.
+
+::: fragment
+Desde una perspectiva agregada, la parte de la renta agregada (Y) que no se consume (C) se convierte en ahorro agregado (S).
+:::
+
+::: fragment
+$$ S \equiv Y-C $$
+:::
+
+
+::: fragment
+Obsérve que el signo «equivalente a» (≡) significa una [identidad]{.bg style="--col: #FFFF00"} (algo que siempre es cierto).
+:::
+
+- Así, la [propensión marginal al ahorro]{.oranger} (PMA) es igual a
+
+::: fragment
+$$\text{PMA} ≡ 1 - \text{PMC}$$
+:::
+
+## Ahorro Agregado
+
+::: fragment
+::: callout-note
+## Definición PMA
+La PMA es la fracción de un aumento del ingreso que se ahorra (o la fracción de una disminución del ingreso que sale del ahorro).
+:::
+:::
+
+- Miremos la complementariedad del ejemplo anterior:
+
+::: fragment
+::: {.callout-note appearance="simple"}
+Nuevamenye, si el [ingreso]{.oranger} aumenta en `$200`, (ΔY = 200), una [PMC de 0,5]{.under}. La PMA va ser igual a $\text{PMA} ≡ 1 - 0,5 \equiv 0,5$
+:::
+:::
+
+# Inversión
+
+## Inversión
+
+::: fragment
+> El [consumo de bienes y servicios]{.bg style="--col: #FFFF00"} constituye una parte importante del [gasto agregado]{.oranger}.
+:::
+
+::: fragment
+Sin embargo, las inversiones realizadas por las empresas también forman parte de la producción de la economía.
+:::
+
+::: fragment
+La inversión agregada incluye:
+:::
+
+- Compras de maquinaria, equipos;
+
+- Estructuras;
+
+- Software, investigación y desarrollo;
+
+- Inversión residencial.
+
+## Inversión
+
+::: fragment
+::: callout-warning
+## Existencias
+Las existencias de una empresa son los bienes que tiene a la espera de ser vendidos.
+:::
+:::
+
+::: fragment
+Hay varias razones por las que las empresas quieren tener existencias:
+:::
+
+- Es más barato producir en grandes volúmenes;
+
+- Cambios inesperados en el comportamiento de los consumidores;
+
+- La coyuntura económica actual.
+
+
+::: fragment
+Dicho esto, aunque las decisiones de la empresa de comprar [nueva maquinaria]{.under} o de [mantener existencias]{.under} son deliberadas, a veces las existencias se acumulan (o disminuyen) sin que las empresas tengan un plan ya acorde con ello.
+:::
+
+
+::: fragment
+Por esta razón, puede haber una diferencia entre la [inversión prevista]{.alert} y la [inversión real]{.blut}.
+:::
+
+## Inversión
+
+- Para simplificar, supondremos por ahora que la [inversión agregada]{.oranger} es igual a la [inversión prevista]{.alert}.
+
+- Por lo tanto, no tendremos en cuenta [las diferencias]{.bg style="--col: #FFFF00"} entre la [inversión real]{.blut} y la [prevista]{.alert}.
+
+- Más adelante, relajaremos este supuesto.
+
+::: fragment
+En la práctica, esto significa que la [inversión prevista]{.alert} por las empresas es fija y no depende de los ingresos.
+:::
+
+## Bibliografía
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+##  {background-image="images/onbeach.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
