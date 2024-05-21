@@ -24,4 +24,6 @@ Class 10 | [Demanda y oferta de dinero](https://raw.githack.com/keynes37/Pmacroe
 
 Class 11 | [Modelo General de DA](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class11.html)
 
+Class 12 [Modelo General de DA II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class12.html)
+
 
