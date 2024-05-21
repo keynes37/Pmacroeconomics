@@ -1,0 +1,326 @@
+---
+title: "Principios de Macroeconomía 🙂"
+subtitle: "Gasto Agregado II"
+author:
+  - name: Carlos Andrés Yanes
+    orcid: 0000-0003-0683-3727
+    email: cayanes@uninorte.edu.co
+    affiliations: Universidad del Norte
+format: 
+  revealjs:
+    multiplex: true
+    footer: "[Universidad del Norte](https://www.uninorte.edu.co/)"
+    theme: ["options.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: images/oldbo.jpg
+      data-background-size: cover  
+editor: visual
+---
+
+```{r setup}
+#| include: false
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
+       fontawesome, readxl, ggplot2, plotly, ggthemes, ggforce, viridis, knitr, hrbrthemes, ggeasy, ggrepel)
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F,
+  dpi=300
+)
+
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" # metropolis font color 
+purple <- "#9370DB"
+green <- "#007935"
+light_green <- "#7DBA97"
+orange <- "#FD5F00"
+turquoise <- "#44C1C4"
+red <- "#b92e34"
+
+theme_market <- theme_bw() + theme(
+  axis.line = element_line(color = met_slate),
+  panel.grid = element_blank(),
+  rect = element_blank(),
+  strip.text = element_blank(),
+  text = element_text(family = "Fira Sans", color = met_slate, size = 17),
+  axis.title.x = element_text(hjust = 1, size = 17),
+  axis.title.y = element_text(hjust = 1, angle = 0, size = 17),
+  axis.ticks = element_blank()
+)
+
+theme_set(theme_ipsum_rc())
+```
+
+## Lo que traimos
+
+::: fragment
+Como medidas de la [macroeconomía]{.alert}
+:::
+
+- Producto (PIB)
+- Inflación (Deflactor e IPC)
+- (Des)empleo
+- Crecimiento 
+- Política monetaria
+
+::: fragment
+Ahora que tenemos suficientes antecedentes para juntar estas piezas y empezar a modelar [la macroeconomía]{.bg style="--col: #FFFF00"}
+:::
+
+- La clase pasada ya habíamos empezado **C+I**.
+- Llego la hora del [Multiplicador]{.blut}.
+
+# Multiplicador
+
+## Multiplicador
+
+::: fragment
+Hasta ahora, la [producción total]{.alert} de nuestra economía es igual a sus [gastos agregados]{.oranger} en equilibrio.
+:::
+
+::: fragment
+Y = C + I
+:::
+
+::: fragment
+A partir de aquí, podemos preguntarnos:
+:::
+
+- ¿Qué ocurre con [la producción]{.bg style="--col: #FFFF00"} si la inversión planificada cambia de, digamos, I1 = 40 $ a I2 = 80 $?
+
+- Ahora, los [gastos agregados]{.under} previstos superan la [producción total]{.slater} (C + I > Y), y las [empresas]{.blut} verán reducidas sus existencias/inventarios.
+
+- Por ejemplo, menos vehículos sin vender, computadores, equipos, ...
+
+## Multiplicador
+
+- Para responder a esta [disminución de las existencias]{.under}, las empresas tendrán que *aumentar* la producción y restablecer las existencias previstas.
+
+- Este [aumento de la producción]{.bg style="--col: #FFFF00"} contribuye a aumentar el empleo, y más [personas]{.blut} obtienen ingresos que antes.
+
+- Una gran parte de estos [ingresos]{.oranger} se destinará al consumo.
+Por lo tanto, el aumento de la [inversión agregada]{.alert} también ayuda a aumentar el [consumo agregado]{.alert}.
+
+::: fragment
+::: callout-note
+## Opinión
+A medida que se desarrollen estos acontecimientos, la economía no volverá a su equilibrio anterior, ya que los niveles de consumo, inversión y producción han cambiado.
+:::
+:::
+
+## Multiplicador
+
+::::{.columns}
+::: {.column width="50%"}
+- Recordemos que, a medida que aumenta la renta, aumenta también el consumo, pero no en la misma proporción.
+
+- Con este nuevo impulso de la [inversión]{.oranger} y el consiguiente aumento del [consumo agregado]{.alert}, el [ahorro agregado]{.blut} (S) también tiende a aumentar.
+
+- Hace unas diapositivas vimos que S = I es una condición necesaria para el **equilibrio** de una economía.
+:::
+
+::: {.column width="50%"}
+::: fragment
+```{r aspa, fig.cap='Tomado de Mankiw 2013', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Aspa1.png")
+```
+:::
+:::
+::::
+
+## Multiplicador
+
+::::{.columns}
+::: {.column width="50%"}
+::: fragment
+```{r aspa2, fig.cap='Tomado de Mankiw 2013', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Aspa2.png")
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+```{r aspa3, fig.cap='Tomado de Mankiw 2013', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/Aspa3.png")
+```
+:::
+:::
+::::
+
+## Multiplicador
+
+- Dado que el [ahorro añadido]{.oranger} es una fracción de la renta añadida (la PMA), el aumento de [la renta]{.blut} necesario para restablecer el equilibrio debe ser un múltiplo del aumento de la inversión prevista.
+
+- La propensión marginal al ahorro es, por definición:
+
+::: fragment
+$$\text{PMA}= \dfrac{\Delta S}{\Delta Y}$$
+:::
+
+
+- Para restablecer el equilibrio, S = I, por lo que ΔS = ΔI. Entonces
+
+::: fragment
+$$\text{PMA}= \dfrac{\Delta I}{\Delta Y}$$
+:::
+
+## Multiplicador
+
+- De nuevo tenemos
+
+::: fragment
+$$\text{PMA}= \dfrac{\Delta I}{\Delta Y}$$
+:::
+
+- Así las cosas vamos a encontrar que:
+
+::: fragment
+$$\Delta Y= \Delta I \times \dfrac{1}{\text{PMA}}$$
+:::
+
+::: fragment
+::: callout-warning
+## Apreciación
+La variación de la Inversión hace y transforma la economía en un objeto dinamizador que termina afectando al desempleo -*algo positivo!!*- e inclusive al nivel de precios
+:::
+:::
+
+## Multiplicador
+
+```{mermaid}
+flowchart LR
+  A((Banco de la República)) --> |Mercado Abierto| B[Tasas de interés Bonos]
+  B --> C(Tasa de interés Mercado)
+  B --> D(Disponibilidad de Crédito)
+  C --> E[Prestamos]
+  D --> E[Prestamos]--> |Multiplicador| F[Y]
+  F --> |Ley Okum|G[Desempleo]
+  F --> |Curva de Phillips| H[Inflación]
+  H -->|Regla de Política| A
+```
+
+::: fragment
+El juego de política es fundamental, no solo [monetaria]{.alert} si no tambien la fiscal o lo que hace el [gobierno nacional]{.slater}. 
+:::
+
+::: fragment
+::: callout-tip
+## Ojo
+Independientemente de la opinión de cada cual sobre el papel del gobierno, éste desempeña varias funciones.
+:::
+:::
+
+## Multiplicador
+
+::: fragment
+Dentro de las funciones del Gobierno se encuentra:
+:::
+
+- Fijar [salarios]{.oranger} mínimos;
+
+- Regular la calidad de los productos (Invima);
+
+- Proporcionar y mantener escuelas públicas, parques, programas sanitarios, etc.
+
+## Multiplicador
+
+::: fragment
+```{r tp1, fig.cap='Tomado de X @petrogustavo', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/salmin.png")
+```
+:::
+
+## Multiplicador
+
+::: fragment
+```{r tp2, fig.cap='Tomado de X @petrogustavo', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/invima1.png")
+```
+:::
+
+## Multiplicador
+
+::: fragment
+```{r tp3, fig.cap='Tomado de X @petrogustavo', out.width='120%', fig.asp=.85, fig.align='center', echo=FALSE}
+knitr::include_graphics("images/colegion.png")
+```
+:::
+
+# Un poco del Estado
+
+## Política Fiscal
+
+::: fragment
+::: callout-note
+## Definición
+La [política fiscal]{.alert} se refiere al uso que el gobierno hace de sus ingresos (provenientes principalmente de impuestos) y sus gastos (en bienes y servicios públicos) para [influir en la economía]{.oranger}. Esta política es una herramienta clave para la [estabilización económica]{.under} y la promoción del crecimiento.
+:::
+:::
+
+- Aumento del [Gasto Público]{.blut}: Incrementar el gasto en infraestructura, educación y salud, crea empleos y aumenta la demanda de bienes y servicios.
+- Reducción de [Impuestos]{.blut}: Bajar los impuestos a individuos y empresas aumenta el ingreso disponible y la capacidad de inversión, estimulando el consumo y la producción.
+
+## Política Fiscal
+
+- [Subsidios y Exenciones Fiscales]{.alert}: Proporcionar beneficios fiscales a sectores estratégicos incentiva la inversión privada en áreas como tecnología, energía renovable y manufactura.
+- [Créditos Fiscales]{.alert}: Ofrecer créditos fiscales por investigación y desarrollo (I+D) promueve la innovación y mejora la productividad a largo plazo.
+
+::: fragment
+### Estabilidad Macroeconómica:
+
+
+:::
+
+- Control del [Déficit Fiscal]{.oranger}: Mantener un equilibrio entre ingresos y gastos evita la inflación y proporciona un entorno económico estable.
+- [Política Contracíclica]{.oranger}: Ajustar el gasto y los impuestos para mitigar las fluctuaciones económicas. Por ejemplo, aumentar el gasto en recesiones y reducirlo en periodos de expansión.
+
+## Política Fiscal
+
+:::fragment
+Con [Multiplicador del Impuesto]{.slater}
+:::
+
+::: fragment
+[*Si la propensión a consumir es de 0.8. Cuanto es el efecto de impuestos?*]{.bg style="--col: #d3d3d3"}
+:::
+
+- Primero hallamos $=\dfrac{-PMC}{1-PMC}$
+- Luego pasamos a: $=\dfrac{-0.8}{1-0.8}=-4$
+
+::: fragment
+::: callout-tip
+## Interpretación
+Por una unidad [monetaria]{.under} que aumenten los impuestos, el Ingreso Nacional PIB se reduce en 4 unidades monetarias.
+
+:::
+
+:::
+
+
+## Bibliografía
+
+`r fa('book')` Fergusson, L., & Suarez, G. (2010). *Política fiscal*. Universidad de los Andes.
+
+`r fa('book')` Shapiro D., MacDonald D. & Greenlaw S. A., (2024)*Principles of Macroeconomics 3e: Official OpenStax*. OpenStax
+
+`r fa('book')` Santetti M., (2023) Lecture notes Course *Introduction to Macroeconomics*. MIMEO
+
+##  {background-image="images/barquitos.jpg"}
+
+### Gracias por su atención!! {.r-fit-text}
+
+#### Feliz fin de semestre
+
+#### cayanes\@uninorte.edu.co
+
+#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
