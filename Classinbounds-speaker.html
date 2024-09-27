@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Classinbounds_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Classinbounds_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Classinbounds_files/libs/quarto-html/popper.min.js"></script>
+<script src="Classinbounds_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Classinbounds_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Classinbounds_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Classinbounds_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Classinbounds_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="Carlos Andrés Yanes">
+  <title>Teoría Económica 🙂</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Classinbounds_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Classinbounds_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Classinbounds_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Classinbounds_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Classinbounds_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Classinbounds_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Classinbounds_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="Classinbounds_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="Classinbounds_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="Classinbounds_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+  <script src="Classinbounds_files/libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="Classinbounds_files/libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="Classinbounds_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="Classinbounds_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <link href="Classinbounds_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="Classinbounds_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="images/tit1.jpg" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Teoría Económica 🙂</h1>
+  <p class="subtitle">Indicadores Macroeconómicos</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Carlos Andrés Yanes <a href="https://orcid.org/0000-0003-0683-3727" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:cayanes@uninorte.edu.co">cayanes@uninorte.edu.co</a>
+</div>
+        <p class="quarto-title-affiliation">
+            Universidad del Norte
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="referentes-indicadores" class="slide level2">
+<h2>Referentes (indicadores)</h2>
+<ul>
+<li class="fragment">Es <span class="bg" style="--col: #FFFF00">muy importante</span> que siempre este mirando los indicadores económicos.</li>
+<li class="fragment">Una fuente muy importante es la de distintos diarios del país y entonces ir viendo si no es <em>día</em> a <em>día</em> si al menos a la semana.</li>
+<li class="fragment">Una pagina de este <strong>estilo</strong> es por ejemplo: <a href="https://www.larepublica.co/indicadores-economicos/macro">Indicadores diarios</a></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>En el caso para inflación hay que tener en cuenta:</p>
+<ul>
+<li class="fragment">Variación mensual</li>
+<li class="fragment">Variación doce meses</li>
+<li class="fragment">Variación año corrido</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="primeros-cálculos" class="slide level2">
+<h2>Primeros cálculos</h2>
+<ul>
+<li class="fragment">Hay múltiples formulas que encontrará en el <a href="https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica">DANE</a></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Variación Mensual (VM)</strong></p>
+</div>
+<div class="callout-content">
+<p><font size="+2"><span class="math display">\[\text{VM}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mes anterior}}-1\right]\times 100\]</span></font></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="primeros-cálculos-1" class="slide level2">
+<h2>Primeros cálculos</h2>
+<ul>
+<li class="fragment">Para la parte anual (gran componente de la parte de inflación)</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Variación Anual (VA)</strong></p>
+</div>
+<div class="callout-content">
+<p><font size="+2"><span class="math display">\[\text{VA}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mismo mes año anterior}}-1\right]\times 100\]</span></font></p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Variación Año Corrido (VAC)</strong></p>
+</div>
+<div class="callout-content">
+<p><font size="+2"><span class="math display">\[\text{VAC}=\left[\frac{\text{IPC mes referencia}}{\text{IPC mes diciembre año anterior}}-1\right]\times 100\]</span></font></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section" class="slide level2" data-background-image="images/bean.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="microeconomía-vs-macroeconomía">Microeconomía vs Macroeconomía</h3>
+</section>
+<section id="comparación-entre-ramas" class="slide level2">
+<h2>Comparación entre ramas</h2>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Microeconomía</strong></p>
+</div>
+<div class="callout-content">
+<p>Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><span class="bg" style="--col: #dcdcdc">Ejemplo: ¿Qué sucede si disminuye los impuestos para autos importados?</span></p>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Macroeconomía</strong></p>
+</div>
+<div class="callout-content">
+<p>Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><span class="bg" style="--col: #dcdcdc">Ejemplo: ¿Qué sucede si el gobierno aumenta la inversión en infraestructura física?</span></p>
+</div>
+<div class="fragment">
+<p>Microeconomía → <span class="fg" style="--col: #FF0000">macroeconomía</span> → microeconomía</p>
+</div>
+</section>
+<section id="comparación-entre-ramas-1" class="slide level2">
+<h2>Comparación entre ramas</h2>
+<h3 id="qué-estudia-la-macroeconomía">Qué estudia la Macroeconomía?</h3>
+<ul>
+<li class="fragment"><p>¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la <span class="fg" style="--col: #FF8000">pobreza</span>?</p></li>
+<li class="fragment"><p>¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los <span class="fg" style="--col: #FF8000">precios</span>?</p></li>
+<li class="fragment"><p>¿Por qué todos los países experimentan <span class="fg" style="--col: #FF8000">recesiones</span> y <span class="fg" style="--col: #314f4f">depresiones</span> –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?</p></li>
+</ul>
+</section>
+<section id="comparación-entre-ramas-2" class="slide level2">
+<h2>Comparación entre ramas</h2>
+<ul>
+<li class="fragment"><p>Del libro guía es hora de consultar el capitulo: <a href="https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective">libro Openstax Cap 6</a></p></li>
+<li class="fragment"><p>Tambien es bueno consultar la importancia de: <a href="https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib">Recesión, fluctuación y desempleo</a></p></li>
+<li class="fragment"><p>Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el <em>objeto</em> de esta parte del modulo del curso.</p></li>
+<li class="fragment"><p>En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar <span class="bg" style="--col: #FFFF00">Macroeconomía</span>.</p></li>
+<li class="fragment"><p>La <strong>macroeconomía</strong> se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).</p></li>
+<li class="fragment"><p>Por tanto, no nos centramos en el <span class="fg" style="--col: #0000FF">ingreso</span> de un solo hogar, sino en el <span class="fg" style="--col: #0000FF">ingreso nacional</span>; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.</p></li>
+</ul>
+</section>
+<section id="section-1" class="slide level2" data-background-image="images/arb.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="cuentas-nacionales">Cuentas Nacionales</h3>
+</section>
+<section id="cuentas-nacionales-1" class="slide level2">
+<h2>Cuentas Nacionales</h2>
+<ul>
+<li class="fragment"><p>Los economistas utilizan las <span class="fg" style="--col: #FF0000">estadísticas agregadas</span> para describir los fenómenos macroeconómicos.</p></li>
+<li class="fragment"><p>Aquí, agregado significa simplemente <span class="bg" style="--col: #FFFF00">suma</span>.</p></li>
+<li class="fragment"><p>Entre ellos, el Producto Interno Bruto (PIB) es la principal medida de los <span class="fg" style="--col: #0000FF">resultados económicos globales</span> y del tamaño de un país.</p></li>
+<li class="fragment"><p>Se define como la <span class="bg" style="--col: #FFFF00">suma</span> (en valor monetario) de todos los bienes y servicios finales producidos en una economía en un periodo determinado. Como lo describe la economista Diane Coyle:</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Desde uñas a cepillos de dientes, tractores, zapatos, cortes de pelo, asesoría de empresas, limpieza de calles, enseñanza del yoga, planchas, vendas, libros y los millones de servicios y productos de la economía.</p>
+</blockquote>
+</div>
+</section>
+<section id="evolución-pib" class="slide level2">
+<h2>Evolución PIB</h2>
+<p><a href="https://fred.stlouisfed.org/series/COLNAEXKP01STSAQ">PIB</a></p>
+</section>
+<section id="evolución-pib-1" class="slide level2">
+<h2>Evolución PIB</h2>
+<ul>
+<li class="fragment"><p>Una distinción crucial en Economía es entre valores <span class="bg" style="--col: #FFFF00">reales</span> y <span class="bg" style="--col: #FFFF00">nominales</span>.</p></li>
+<li class="fragment"><p>En el caso del PIB, esto es especialmente importante cuando la <span class="bg" style="--col: #FFFF00">inflación</span> es un componente tan importante de la economía.</p></li>
+<li class="fragment"><p>La inflación es un aumento sostenido del <span class="fg" style="--col: #0000FF">nivel de precios</span> de una economía.</p></li>
+<li class="fragment"><p>El valor <strong>nominal</strong> de cualquier medida económica implica una estadística en términos de <span class="fg" style="--col: #FF0000">precios reales</span> que existen en ese momento.</p></li>
+<li class="fragment"><p>En cambio, los <span class="fg" style="--col: #FF0000">valores reales</span> se refieren a la misma estadística una vez ajustada a la inflación.</p></li>
+</ul>
+</section>
+<section id="pib" class="slide level2">
+<h2>PIB</h2>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} \ = \text{Consumo + Inversión + Gasto Público + Exportaciones netas}
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} = C + I + G + (X - M)
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="pib-1" class="slide level2">
+<h2>PIB</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Años</th>
+<th style="text-align: right;">Precio Corriente (por unidad)</th>
+<th style="text-align: right;">Cantidad Vendida</th>
+<th style="text-align: right;">PIB Nominal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">200.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">275.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">264.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Clave la distinción de lo nominal. Si queremos entonces tener el <strong>REAL</strong> necesitamos un año base.</p>
+</div>
+</section>
+<section id="pib-2" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment">Supongamos que nuestro año base es <span class="bg" style="--col: #FFFF00">2016</span></li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Años</th>
+<th style="text-align: right;">Precio Constante (por unidad)</th>
+<th style="text-align: right;">Cantidad Vendida</th>
+<th style="text-align: right;">PIB Real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">220</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">275</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">253</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="comparación" class="slide level2">
+<h2>Comparación</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">PIB Nominal</th>
+<th style="text-align: right;">PIB Real (Precios Constantes de 2016)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">200.0</td>
+<td style="text-align: right;">220</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">275.0</td>
+<td style="text-align: right;">275</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">264.5</td>
+<td style="text-align: right;">253</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Podemos entonces tener a consideración</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB Real} = \dfrac{\text{PIB Nominal}}{\text{Deflactor PIB}}
+\end{aligned}
+\]</span></p>
+</div>
+<ul>
+<li class="fragment">Una vista <a href="https://fred.stlouisfed.org/series/COLNAGIGP01IXOBSAQ">Gráfica</a></li>
+</ul>
+</section>
+<section id="pib-3" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment"><p>Antes de continuar… debemos tener presente la <span class="bg" style="--col: #FFFF00">importancia</span> de conocer porque es necesario tener un <span id="FF8000" class="fg" style="&quot;--col:">Indice de precios</span></p></li>
+<li class="fragment"><p>Un <span class="fg" style="--col: #FF8000">índice</span> es un número que permite realizar <span class="fg" style="--col: #FF0000">comparaciones</span> entre distintos momentos del tiempo o distintas entidades.</p></li>
+<li class="fragment"><p>Para nuestros efectos, un <span class="fg" style="--col: #FF8000">índice de precios</span> es un número de referencia que nos permite comparar estadísticas económicas en distintos momentos, sirviendo como cambio medio global de los <span class="fg" style="--col: #e64173">precios relativos</span> a lo largo del tiempo.</p></li>
+<li class="fragment"><p>Teniendo en cuenta que el <span class="under">tiempo</span>, la cantidad de bienes y servicios producidos por una economía aumenta, y también lo hacen sus <span class="fg" style="--col: #e64173">precios</span>.</p></li>
+<li class="fragment"><p>Para ello, el <span class="under">deflactor del PIB</span> es un índice de precios que incluye todos los bienes y servicios que se contabilizan en el <span id="FF8000" class="fg" style="&quot;--col:">PIB</span> mediante una metodología de <strong>media ponderada</strong>.</p></li>
+</ul>
+</section>
+<section id="pib-4" class="slide level2">
+<h2>PIB</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li class="fragment">El PIB Nominal no tiene en cuenta la variación de precios</li>
+<li class="fragment">El PIB Real si lo hace, aparte nos muestra en pleno cuanto realmente hemos <span class="under">crecido</span></li>
+<li class="fragment">Siempre en el <span class="under">año base</span> tanto el PIB nominal como el Real serán <strong>similares</strong></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/c3g1.png" style="width:100.0%"></p>
+<figcaption>Calculo de PIB Real y Nominal</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="pib-5" class="slide level2">
+<h2>PIB</h2>
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1gYXq&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</section>
+<section id="pib-6" class="slide level2">
+<h2>PIB</h2>
+<p>Considere los siguientes datos (en Billones de US$) para EEUU, entre Q1 2008 and Q4 2009 (año base = 2005) y halle el <span class="bg" style="--col: #9f9f9f">PIB real</span> correspondiente:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Trimestre</th>
+<th style="text-align: right;">PIB Nominal</th>
+<th style="text-align: right;">Deflactor PIB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Q1 2008</td>
+<td style="text-align: right;">14373.9</td>
+<td style="text-align: right;">1.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2008</td>
+<td style="text-align: right;">14497.8</td>
+<td style="text-align: right;">1.08</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2008</td>
+<td style="text-align: right;">14546.7</td>
+<td style="text-align: right;">1.09</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2008</td>
+<td style="text-align: right;">14347.3</td>
+<td style="text-align: right;">1.09</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2009</td>
+<td style="text-align: right;">14178.0</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2009</td>
+<td style="text-align: right;">14151.2</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2009</td>
+<td style="text-align: right;">14242.1</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2009</td>
+<td style="text-align: right;">14453.8</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="pib-7" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment">Miremos la relación existente entre el <span class="blut">deflactor</span> y la propia <span class="oranger">inflación</span> (IPC)</li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-5ae4b7992748f04c2729" style="width:1008px;height:672px;"></div>
+<script type="application/json" data-for="htmlwidget-5ae4b7992748f04c2729">{"x":{"visdat":{"60335bdca25f":["function () ","plotlyVisDat"]},"cur_data":"60335bdca25f","attrs":{"60335bdca25f":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[33.659999999999997,6.5199999999999996,5.9699999999999998,6.8200000000000003,7.2800000000000002,4.7599999999999998,5.7999999999999998,5.21,7.6799999999999997,4.0499999999999998,3.8100000000000001,6.3899999999999997,3.6200000000000001,1.8999999999999999,2.2400000000000002,2.4500000000000002,5.1500000000000004,5.1399999999999997,4.6299999999999999,4,1.4099999999999999],"type":"scatter","mode":"lines","name":"Deflactor","line":{"dash":null},"inherit":true},"60335bdca25f.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[8.75,7.6500000000000004,6.9900000000000002,6.4900000000000002,5.5,4.8499999999999996,4.4800000000000004,5.6900000000000004,7.6699999999999999,2,3.1699999999999999,3.73,2.4399999999999999,1.9399999999999999,3.6600000000000001,6.7699999999999996,5.75,4.0899999999999999,3.1800000000000002,3.7999999999999998,1.6100000000000001],"type":"scatter","mode":"lines","name":"Inflacion","line":{"dash":null},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","showgrid":false},"yaxis":{"domain":[0,1],"automargin":true,"title":"Crecimiento porcentual (%)","showgrid":false},"title":"Inflación vs Deflactor PIB en Colombia","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[33.659999999999997,6.5199999999999996,5.9699999999999998,6.8200000000000003,7.2800000000000002,4.7599999999999998,5.7999999999999998,5.21,7.6799999999999997,4.0499999999999998,3.8100000000000001,6.3899999999999997,3.6200000000000001,1.8999999999999999,2.2400000000000002,2.4500000000000002,5.1500000000000004,5.1399999999999997,4.6299999999999999,4,1.4099999999999999],"type":"scatter","mode":"lines","name":"Deflactor","line":{"color":"rgba(31,119,180,1)","dash":[]},"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[8.75,7.6500000000000004,6.9900000000000002,6.4900000000000002,5.5,4.8499999999999996,4.4800000000000004,5.6900000000000004,7.6699999999999999,2,3.1699999999999999,3.73,2.4399999999999999,1.9399999999999999,3.6600000000000001,6.7699999999999996,5.75,4.0899999999999999,3.1800000000000002,3.7999999999999998,1.6100000000000001],"type":"scatter","mode":"lines","name":"Inflacion","line":{"color":"rgba(255,127,14,1)","dash":[]},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="ingreso-total">Ingreso total</h3>
+</section>
+<section id="ingreso-total-1" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>Necesitamos medir la <span class="bg" style="--col: #FFFF00">salud de una economía</span>. A la hora de juzgar si una economía va bien o mal, es natural fijarse en el <span class="oranger">ingreso total</span> que obtienen sus habitantes.</p></li>
+<li class="fragment"><p>El <span class="oranger">ingreso total</span> no siempre está estrechamente ligado al <span class="alert">bienestar económico</span>. Por ejemplo, la población de un país puede aumentar temporalmente su nivel de vida <span class="under">pidiendo prestado</span> a otros países. -<em>Pero no se puede seguir pidiendo prestado para siempre</em>-. Por eso, el nivel de vida de una nación depende en gran medida de su propia renta total.</p></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h3 class="r-fit-text" id="ingreso-gasto-producción">Ingreso = Gasto = Producción</h3>
+</div>
+</section>
+<section id="ingreso-total-2" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>Podríamos medir tanto el <span class="oranger">ingreso total</span> como el <span class="alert">gasto total</span> o la <span class="bg" style="--col: #FFFF00">producción total</span>. Obtendríamos la misma cifra en todos los casos.</p></li>
+<li class="fragment"><p>Para una economía en su conjunto, el <span class="oranger">ingreso</span> debe ser igual al gasto porque:</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Cada transacción tiene un comprador y un vendedor.</p>
+</blockquote>
+</div>
+<ul>
+<li class="fragment"><p>Cada peso ($) de gasto de algún comprador es un peso de ingreso para algún vendedor.</p></li>
+<li class="fragment"><p>Además, el gasto total es también el <span class="alert">valor monetario</span> de la producción que se produce y se vende.</p></li>
+<li class="fragment"><p>Esta <span class="under">igualdad</span> entre ingresos, gastos y producción tiene consecuencias prácticas. Ofrece a los estadísticos gubernamentales más opciones sobre cómo medir el <span class="oranger">ingreso total</span>.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-3" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p><span class="alert">P</span>: ¿Y el <em>ahorro</em>? La gente suele ahorrar parte de lo que gana. ¿Cómo es posible entonces que el <span class="oranger">ingreso</span> sea igual al <span class="alert">gasto</span> en el conjunto de la economía?</p></li>
+<li class="fragment"><p><span class="blut"><em>R/</em></span>: Lo que la gente ahorra suele prestarse a <span class="under">las empresas</span>, que luego <strong>gastan</strong> el dinero prestado. Por tanto, para el conjunto de la economía, los ingresos deben seguir siendo iguales a los gastos.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-4" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p><span class="alert">P</span>: ¿Y el comercio internacional? Compramos bienes fabricados en el extranjero y los <span class="blut">extranjeros</span> compran bienes fabricados por nosotros. En ese caso, ¿cómo pueden nuestros <span class="oranger">ingresos totales</span> ser iguales a nuestros gastos totales?</p></li>
+<li class="fragment"><p><span class="blut"><em>R/</em></span>: Así es. Por tanto, es mejor decir que el <span class="oranger">ingreso total</span> de los residentes nacionales es igual al gasto total en bienes y servicios de producción nacional.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-5" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>El Producto Interno Bruto (PIB) es una medida del <span class="oranger">ingreso total</span> de un país. Existen otras medidas del <span class="oranger">ingreso total</span>, pero el PIB es la más popular.</p></li>
+<li class="fragment"><p>El <span class="alert">PIB</span> es el valor total de mercado de todos los bienes y servicios finales producidos en un país en un periodo de tiempo determinado.</p></li>
+<li class="fragment"><p>No se trata de un concepto <em>teórico abstracto</em>. Podemos ponerle una cifra. Por ejemplo, el PIB de Colombia en 2023 fue de 978 250 miles de millones de pesos (978 Billones), según el Departamento Nacional de Estadística DANE. (Para más datos, consulta <a href="https://www.dane.gov.co/files/operaciones/PIB/cp-PIB-IVtrim2023.pdf">esto</a>).</p></li>
+</ul>
+</section>
+<section id="ingreso-en-finales" class="slide level2">
+<h2>Ingreso en finales</h2>
+<ul>
+<li class="fragment"><p>El PIB mide el valor de los <span class="bg" style="--col: #FFFF00">bienes finales</span>, no de los bienes intermedios.</p></li>
+<li class="fragment"><p>Los <span class="under">bienes intermedios</span> son aquellos bienes que desaparecen dentro de otros bienes que se producen para la venta. Los <span class="blut">bienes finales</span> son bienes que no son intermedios. Son bienes vendidos a sus usuarios finales. El PIB se define de forma que el valor de los bienes intermedios se contabilice una sola vez, no dos o tres veces.</p></li>
+<li class="fragment"><p>Los bienes intermedios son bienes que sus productores venden a los productores de otros bienes. Ejemplos:</p>
+<ul>
+<li class="fragment">Leche vendida por una central lechera a una empresa de helados,</li>
+<li class="fragment">Uvas vendidas por un viñedo a un vinicultor,</li>
+<li class="fragment">papel de impresora vendido a Norma.</li>
+</ul></li>
+</ul>
+</section>
+<section id="ingreso-en-finales-1" class="slide level2">
+<h2>Ingreso en finales</h2>
+<ul>
+<li class="fragment"><p>Los bienes finales son los que se venden a los usuarios finales de esos bienes. Ejemplos:</p>
+<ul>
+<li class="fragment">Leche que compras en un supermercado,</li>
+<li class="fragment">Uvas de mesa que compras en el mercado del agricultor,</li>
+<li class="fragment">Papel de impresora que compra para la impresora de su computador.</li>
+</ul></li>
+<li class="fragment"><p>Todos los bienes fabricados <span class="under">este año</span> pero que <strong>no</strong> se han vendido a final de año se consideran bienes finales (y se etiquetan como “existencias”).</p></li>
+<li class="fragment"><p><em>Nota</em>: Aunque los <span class="alert">servicios</span> de su Broker, que dedica su tiempo a negociar acciones para usted, se contabilizan en el PIB, el comercio de activos en sí no afecta al PIB. ¿Por qué? Este comercio no es más que la transferencia de la propiedad de un activo de una persona a otra.</p></li>
+</ul>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="valor-agregado">Valor Agregado</h3>
+</section>
+<section id="valor-agregado-1" class="slide level2">
+<h2>Valor Agregado</h2>
+<ul>
+<li class="fragment">Mire una especie de contabilidad en el PIB con enfoque de Valor Agregado:</li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 69%">
+<col style="width: 9%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Procesos</th>
+<th style="text-align: right;">Compra</th>
+<th style="text-align: right;">Valor agregado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Agricultor siembra trigo y vende a comercio en $</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comercio transforma trigo en harina y vende a $</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Panadero hace pan con harina y vende a $</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">180</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Note que:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{PIB}=100+200+180=\color{red}{480}\]</span></p>
+</div>
+<ul>
+<li class="fragment">La <span class="under">suma de valor agregado</span> es el <strong>PIB</strong> cuando por ejemplo el solo panadero como venta final ha vendido a $480 su producto.</li>
+</ul>
+</section>
+<section id="section-4" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="pib-per-cápita">PIB per Cápita</h3>
+</section>
+<section id="pib-per-cápita-1" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Cuando individualizamos el <strong>PIB</strong> dividiendoel PIB sobre el <span class="bg" style="--col: #FFFF00">tamaño de la población</span> vamos encontrar lo que se denomina <span class="oranger">PIB per cápita</span>:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} \ per \ cápita = \dfrac{\text{PIB Nominal o Real}}{\text{Población}}
+\end{aligned}
+\]</span></p>
+</div>
+<ul>
+<li class="fragment">Así que si en Colombia el PIB es de 978 Billones de pesos, el <em>PIB per capita</em> viene a ser:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{PIB per cápita}_{Col}=\frac{978 \ \text{Billones}}{52 \ \text{Millones}}=18 \;807\;692\]</span></p>
+</div>
+</section>
+<section id="pib-per-cápita-2" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment"><p>Sirve para comparar entre países y nos da idea de como un País es mas rico que otro. Tomemos por ejemplo: Japón y Colombia.</p></li>
+<li class="fragment"><p><span class="bg" style="--col: #FFFF00">Purchasing Power Parity (PPP)</span> una forma para homologar que lo que se consume en cierto sitio también se hace en otro.</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>PPP</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[\begin{aligned}
+\text{Tasa de cambio PPP}=\dfrac{\text{Precio del bien en moneda local}}{\text{Precio del bien en moneda extranjera}}
+\end{aligned}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="pib-per-cápita-3" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Suponga que un (1) peso colombiano en septiembre de 2024 equivale a 0.038 YENES
+<ul>
+<li class="fragment">Así que, la <strong>tasa de cambio</strong> YEN/COP es de 29.37, cuando (1) YEN se iguala a COP.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tasa de cambio</strong></p>
+</div>
+<div class="callout-content">
+<p>Aquella que expresa el valor de una moneda en términos de otra</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="pib-per-cápita-4" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Resolviendo el PIB en términos de YENES:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\begin{aligned}
+\text{PIB COLOMBIA en Yen\$} = \dfrac{\text{PIB COL en COP}}{\text{tasa de cambio Yen/Pesos}} = \dfrac{970 \; \text{Billones de pesos}}{29.37 \; \text{pesos}}
+\end{aligned}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p>Esto nos da <span class="math inline">\(\text{Yen(\$)}= \; 33.02 \; \text{Billones de Yenes}\)</span></p></li>
+<li class="fragment"><p>Con dolares nos da: <span class="math inline">\(\text{Dolar(\$)}= \; 232.39 \; \text{Mil millones de dolares}\)</span></p></li>
+<li class="fragment"><p>Lo que es en téminos de <span class="alert">PIB per cápita</span> un total de 4.469 US Dolares.</p></li>
+</ul>
+</section>
+<section id="section-5" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="empleo">Empleo</h3>
+</section>
+<section id="determinantes-del-desempleo" class="slide level2">
+<h2>Determinantes del desempleo</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tabsal2024.png" style="width:60.0%"></p>
+<figcaption>Tabla de salario</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="determinantes-del-desempleo-1" class="slide level2">
+<h2>Determinantes del desempleo</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Distpobempleo.png" style="width:80.0%"></p>
+<figcaption>Tabla de ocupaciones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="determinantes-del-desempleo-2" class="slide level2">
+<h2>Determinantes del desempleo</h2>
+<div class="fragment">
+<blockquote>
+<p>Existen un grupo de <strong>variables que inciden</strong> en la existencia y persistencia del desempleo.</p>
+</blockquote>
+</div>
+<ul>
+<li class="fragment">Salarios en otros mercados laborales</li>
+<li class="fragment">Ingresos no laborales</li>
+<li class="fragment">Preferencias sobre trabajo y ocio</li>
+<li class="fragment">Condiciones de trabajo</li>
+<li class="fragment">Prestaciones complementarias</li>
+<li class="fragment">Número de trabajadores cualificados</li>
+</ul>
+</section>
+<section>
+<section id="miremos-mas-preguntas" class="title-slide slide level1 center">
+<h1>Miremos mas preguntas</h1>
+
+</section>
+<section id="pregunta-1" class="slide level2">
+<h2>Pregunta 1</h2>
+<p>Si le dan la siguiente información</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Datos ciudad</th>
+<th style="text-align: right;">Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Población total</td>
+<td style="text-align: right;">6000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Población adulta</td>
+<td style="text-align: right;">4000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desocupados</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fuerza Laboral</td>
+<td style="text-align: right;">2000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Cuál es la tasa de desempleo?</p>
+<blockquote>
+<p>A. El 10% <br> B. El 20% <br> C. El 40% <br> D. El 50%</p>
+</blockquote>
+</section>
+<section id="pregunta-1-1" class="slide level2" data-visibility="uncounted">
+<h2>Pregunta 1</h2>
+<p>Si le dan la siguiente información</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Datos ciudad</th>
+<th style="text-align: right;">Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Población total</td>
+<td style="text-align: right;">6000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Población adulta</td>
+<td style="text-align: right;">4000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desocupados</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fuerza Laboral</td>
+<td style="text-align: right;">2000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Cuál es la tasa de desempleo?</p>
+<blockquote>
+<p><span class="alert">A. El 10%</span> <br> B. El 20% <br> C. El 40% <br> D. El 50%</p>
+</blockquote>
+</section>
+<section id="pregunta-2" class="slide level2">
+<h2>Pregunta 2</h2>
+<p>Carlos perdió su trabajo en la fabrica de vidrios porque la economía cayó en recesión. Podemos clasificarlo como:</p>
+<blockquote>
+<p>A. Desempleado temporal <br> B. Desempleado friccional <br> C. Desempleado estructural <br> D. Desempleado cíclico</p>
+</blockquote>
+</section>
+<section id="pregunta-2-1" class="slide level2" data-visibility="uncounted">
+<h2>Pregunta 2</h2>
+<p>Carlos perdió su trabajo en la fabrica de vidrios porque la economía cayó en recesión. Podemos clasificarlo como:</p>
+<blockquote>
+<p>A. Desempleado temporal <br> B. Desempleado friccional <br> C. Desempleado estructural <br> <span class="alert">D. Desempleado cíclico</span></p>
+</blockquote>
+</section>
+<section id="pregunta-3" class="slide level2">
+<h2>Pregunta 3</h2>
+<p>Hay un requerimiento alto en la Guajira de Ingenieros Mecánicos. Maria es ingeniera mecánica anda desempleada pero vive en Barranquilla. Entra a ser clasificada como:</p>
+<blockquote>
+<p>A. Desempleado temporal <br> B. Desempleado friccional <br> C. Desempleado estructural <br> D. Desempleado cíclico</p>
+</blockquote>
+</section>
+<section id="pregunta-3-1" class="slide level2" data-visibility="uncounted">
+<h2>Pregunta 3</h2>
+<p>Hay un requerimiento alto en la Guajira de Ingenieros Mecánicos. Maria es ingeniera mecánica anda desempleada pero vive en Barranquilla. Entra a ser clasificada como:</p>
+<blockquote>
+<p>A. Desempleado temporal <br> B. Desempleado friccional <br> <span class="alert">C. Desempleado estructural</span> <br> D. Desempleado cíclico</p>
+</blockquote>
+</section>
+<section id="pregunta-4" class="slide level2">
+<h2>Pregunta 4</h2>
+<p>No es cierto que el desempleo pueda llegar a cero (o caer tan bajo), porque existe:</p>
+<blockquote>
+<p>A. Impuestos corporativos <br> B. Desempleo friccional <br> C. Desempleo cíclico <br> D. Políticas gubernamentales</p>
+</blockquote>
+</section>
+<section id="pregunta-4-1" class="slide level2" data-visibility="uncounted">
+<h2>Pregunta 4</h2>
+<p>No es cierto que el desempleo pueda llegar a cero (o caer tan bajo), porque existe:</p>
+<blockquote>
+<p>A. Impuestos corporativos <br> <span class="alert">B. Desempleo friccional</span> <br> C. Desempleo cíclico <br> D. Políticas gubernamentales</p>
+</blockquote>
+</section>
+<section id="section-6" class="slide level2" data-background-image="images/bean.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="disposiciones-en-el-trabajo">Disposiciones en el trabajo</h3>
+</section>
+<section id="disposición-a-trabajar" class="slide level2">
+<h2>Disposición a trabajar</h2>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Concepto</strong></p>
+</div>
+<div class="callout-content">
+<p>Como personas de acuerdo a las condiciones laborales y comodidades tendremos cierta disposición y disponibilidad a trabajar</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Debemos tener presente que por muchas ayudas (subsidio de desempleo, programas de capacitación, ferias, etc.) Las personas pueden no sentirse atraidas por las vacantes del mercado laboral.</p>
+</div>
+<ul>
+<li class="fragment"><p>El concepto de <span class="bg" style="--col: #00FFFF">salario de reserva</span> <span class="math inline">\((W_r)\)</span>, sale a relucir y es de tener presente que es lo que nos impulsa en gran parte a ir a trabajar.</p></li>
+<li class="fragment"><p>La condición de trabajo va:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{Disposición}= W^* \geq W_r\]</span></p>
+</div>
+</section>
+<section id="disposición-a-trabajar-1" class="slide level2">
+<h2>Disposición a trabajar</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-9-1.svg" class="quarto-figure quarto-figure-center" width="336"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tenemos una persona que es muy <span class="bg" style="--col: #FFFF00">lineal</span> con el salario.</p>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-10-1.svg" class="quarto-figure quarto-figure-center" width="336"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Una persona que ya tiene un salario de reserva pero con poco esta dispuesta a trabajar mas tiempo.</p>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-11-1.svg" class="quarto-figure quarto-figure-center" width="336"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Una persona que ya tiene un salario de reserva alto y desde ahí, ya esta dispuesta a trabajar mas tiempo.</p>
+</div></div>
+</section>
+<section id="section-7" class="slide level2" data-background-image="images/bean.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="el-problema-de-los-ingresos-no-salariales">El problema de los ingresos no salariales</h3>
+</section>
+<section id="disposición-en-base-a-elección" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-12-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="under">aumento</span> de los ingresos no laborales?</p>
+</div></div>
+</section>
+<section id="disposición-en-base-a-elección-1" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-13-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="under">aumento</span> de los ingresos no laborales?</p>
+</div></div>
+</section>
+<section id="disposición-en-base-a-elección-2" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-14-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="under">aumento</span> de los ingresos no laborales? <br> <span class="alert">R./</span> Tiene mas <strong>deseo</strong> de no hacer nada y desde luego su ocio aumenta mucho mas. <br> Recuerde ademas que el <span class="oranger">trabajo</span> es un <em>bien</em> mal.</p>
+</div></div>
+</section>
+<section id="disposición-en-base-a-elección-3" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-15-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="oranger">aumento</span> de los ingresos de renta laboral?</p>
+</div></div>
+</section>
+<section id="disposición-en-base-a-elección-4" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-16-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="oranger">aumento</span> de los ingresos de renta laboral?</p>
+</div></div>
+</section>
+<section id="disposición-en-base-a-elección-5" class="slide level2">
+<h2>Disposición en base a elección</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-17-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="blut">P:</span> Como responde una persona (trabajador) frente a un <span class="oranger">aumento</span> de los ingresos de renta laboral?</p>
+<p><span class="alert">R./</span> para este caso deseará <span class="oranger">trabajar</span> mas que descansar.</p>
+</div></div>
+</section>
+<section id="section-8" class="slide level2" data-background-image="images/Plantis.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="comparación-entre-trabajadores">Comparación entre trabajadores</h3>
+</section>
+<section id="comparación-entre-trabajadores-1" class="slide level2">
+<h2>Comparación entre trabajadores</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="amantes-del-dinero">Amantes del dinero</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-18-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="amantes-del-ocio">Amantes del ocio</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-19-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="comparación-entre-trabajadores-2" class="slide level2">
+<h2>Comparación entre trabajadores</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="amantes-del-dinero-1">Amantes del dinero</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-20-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="amantes-del-ocio-1">Amantes del ocio</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-21-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="comparación-entre-trabajadores-3" class="slide level2">
+<h2>Comparación entre trabajadores</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="amantes-del-dinero-2">Amantes del dinero</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-22-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="amantes-del-ocio-2">Amantes del ocio</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Classinbounds_files/figure-revealjs/unnamed-chunk-23-1.svg" class="quarto-figure quarto-figure-center" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-9" class="slide level2" data-background-image="images/Plantis.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="implicaciones-de-politica">Implicaciones de politica</h3>
+</section>
+<section id="la-politica-de-empleabilidad" class="slide level2">
+<h2>La politica de empleabilidad</h2>
+<ul>
+<li class="fragment"><p>En un mundo que depronto sea <span class="bg" style="--col: #FFFF00">igual</span> seguira siendo <strong>desigual</strong>, esto es porque simplemente tenemos todos preferencias <span class="alert">distintas</span></p>
+<ul>
+<li class="fragment">No se trata de que no se pueda reducir</li>
+<li class="fragment">Hay niveles sociales de convencimiento</li>
+<li class="fragment">Los ingresos mayores podrán conducir al mundo a mejorar preferencias</li>
+</ul></li>
+<li class="fragment"><p>Lo que ha dicho el gobierno</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>“El Estado actuará como empleador de última instancia ofreciendo empleo a quienes puedan y quieran trabajar, pero no encuentran empleo en el sector privado, beneficiando principalmente a las y los desempleados, jóvenes, mujeres, trabajadores informales, las economías populares y los territorios”</p>
+</blockquote>
+</div>
+</section>
+<section id="section-10" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="politica-y-empleo">Politica y empleo</h3>
+</section>
+<section id="intercambio" class="slide level2">
+<h2>Intercambio</h2>
+<ul>
+<li class="fragment">Para la población en general e incluso para los mismos <em>economistas</em>, esto es muy deseable:</li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Un nivel muy bajo de inflación y una tasa de desempleo baja</p>
+</blockquote>
+</div>
+<ul>
+<li class="fragment"><p>Sin embargo, ocurre lo contrario:</p></li>
+<li class="fragment"><p>Cuando la inflación <span class="math inline">\(\downarrow\)</span>, entonces el desempleo <span class="math inline">\(\color{red}{\uparrow}\)</span>, es alto o tiende a crecer y viceversa.</p>
+<ul>
+<li class="fragment">Por qué cree que pasa esto?</li>
+</ul></li>
+<li class="fragment"><p>El nivel deseable de que ambas <strong>tasas</strong> sean <span class="alert">bajas</span> siempre es un <span class="bg" style="--col: #FFFF00">problema</span> complejo.</p></li>
+</ul>
+</section>
+<section id="intercambio-1" class="slide level2">
+<h2>Intercambio</h2>
+<div class="fragment">
+<!-- -->
+<h3 id="entonces-como-balanceamos-eso">Entonces, como balanceamos eso?</h3>
+</div>
+<ul>
+<li class="fragment"><p>La <span class="oranger">política</span> es quien puede <strong>intentar</strong> resolver en parte ese problema</p></li>
+<li class="fragment"><p>Pensemos en algo, para re-elegir políticos o partidos políticos. El indicador de empleabilidad es <span class="under">clave</span>. Si en un pasado queda una sensación de <span class="alert">desempleo</span>, entonces ese partido y sus afines no va ser reelegido.</p></li>
+<li class="fragment"><p>En muchas ocasiones -<em>no es camisa de fuerza</em>-, el primer periodo de un nuevo gobierno sufre de un <span class="alert">desempleo</span> moderadamente <span class="math inline">\(\triangle \uparrow\)</span> (alto)</p></li>
+<li class="fragment"><p>Colombia es un país donde el empleo tiene mucho que ver con el <span class="bg" style="--col: #FFFF00">estado</span>.</p></li>
+<li class="fragment"><p>Mientras que la <span class="under">inflación</span> sea <span class="alert">estable</span>, importa mas el <strong>empleo</strong></p></li>
+</ul>
+</section>
+<section id="intercambio-2" class="slide level2">
+<h2>Intercambio</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-9fae64b821343a419022" style="width:768px;height:624px;"></div>
+<script type="application/json" data-for="htmlwidget-9fae64b821343a419022">{"x":{"data":[{"orientation":"v","width":[0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0],"x":[18,19,20,21],"y":[9.9900000000000002,9.9499999999999993,13.91,11.1],"text":["paste(año, presidente): 2018 Duque<br />desempleo:  9.99<br />presidente: Duque","paste(año, presidente): 2019 Duque<br />desempleo:  9.95<br />presidente: Duque","paste(año, presidente): 2020 Duque<br />desempleo: 13.91<br />presidente: Duque","paste(año, presidente): 2021 Duque<br />desempleo: 11.10<br />presidente: Duque"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Duque","legendgroup":"Duque","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.89999999999999991,"base":0,"x":[1],"y":[13.609999999999999],"text":"paste(año, presidente): 2001 Pastrana<br />desempleo: 13.61<br />presidente: Pastrana","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(196,154,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Pastrana","legendgroup":"Pastrana","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.89999999999999858,0.89999999999999858],"base":[0,0],"x":[22,23],"y":[10.27,10.01],"text":["paste(año, presidente): 2022 Petro<br />desempleo: 10.27<br />presidente: Petro","paste(año, presidente): 2023 Petro<br />desempleo: 10.01<br />presidente: Petro"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(83,180,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Petro","legendgroup":"Petro","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0],"x":[10,11,12,13],"y":[11.23,10.07,9.9399999999999995,8.6500000000000004],"text":["paste(año, presidente): 2010 Santos I<br />desempleo: 11.23<br />presidente: Santos I","paste(año, presidente): 2011 Santos I<br />desempleo: 10.07<br />presidente: Santos I","paste(año, presidente): 2012 Santos I<br />desempleo:  9.94<br />presidente: Santos I","paste(año, presidente): 2013 Santos I<br />desempleo:  8.65<br />presidente: Santos I"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(0,192,148,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Santos I","legendgroup":"Santos I","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858],"base":[0,0,0,0],"x":[14,15,16,17],"y":[9.0399999999999991,8.8200000000000003,9.0999999999999996,8.9100000000000001],"text":["paste(año, presidente): 2014 Santos II<br />desempleo:  9.04<br />presidente: Santos II","paste(año, presidente): 2015 Santos II<br />desempleo:  8.82<br />presidente: Santos II","paste(año, presidente): 2016 Santos II<br />desempleo:  9.10<br />presidente: Santos II","paste(año, presidente): 2017 Santos II<br />desempleo:  8.91<br />presidente: Santos II"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(0,182,235,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Santos II","legendgroup":"Santos II","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.90000000000000013,0.90000000000000036,0.90000000000000036,0.90000000000000036],"base":[0,0,0,0],"x":[2,3,4,5],"y":[15.42,12.56,11.949999999999999,10.27],"text":["paste(año, presidente): 2002 Uribe I<br />desempleo: 15.42<br />presidente: Uribe I","paste(año, presidente): 2003 Uribe I<br />desempleo: 12.56<br />presidente: Uribe I","paste(año, presidente): 2004 Uribe I<br />desempleo: 11.95<br />presidente: Uribe I","paste(año, presidente): 2005 Uribe I<br />desempleo: 10.27<br />presidente: Uribe I"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(165,138,255,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Uribe I","legendgroup":"Uribe I","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.90000000000000036,0.90000000000000036,0.89999999999999947,0.89999999999999858],"base":[0,0,0,0],"x":[6,7,8,9],"y":[11.84,9.9199999999999999,10.77,11.31],"text":["paste(año, presidente): 2006 Uribe II<br />desempleo: 11.84<br />presidente: Uribe II","paste(año, presidente): 2007 Uribe II<br />desempleo:  9.92<br />presidente: Uribe II","paste(año, presidente): 2008 Uribe II<br />desempleo: 10.77<br />presidente: Uribe II","paste(año, presidente): 2009 Uribe II<br />desempleo: 11.31<br />presidente: Uribe II"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(251,97,215,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Uribe II","legendgroup":"Uribe II","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":42.526167896030913,"r":7.3059360730593621,"b":38.946259220231831,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Desempleo por Año y Presidente","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,23.600000000000001],"tickmode":"array","ticktext":["2001 Pastrana","2002 Uribe I","2003 Uribe I","2004 Uribe I","2005 Uribe I","2006 Uribe II","2007 Uribe II","2008 Uribe II","2009 Uribe II","2010 Santos I","2011 Santos I","2012 Santos I","2013 Santos I","2014 Santos II","2015 Santos II","2016 Santos II","2017 Santos II","2018 Duque","2019 Duque","2020 Duque","2021 Duque","2022 Petro","2023 Petro"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],"categoryorder":"array","categoryarray":["2001 Pastrana","2002 Uribe I","2003 Uribe I","2004 Uribe I","2005 Uribe I","2006 Uribe II","2007 Uribe II","2008 Uribe II","2009 Uribe II","2010 Santos I","2011 Santos I","2012 Santos I","2013 Santos I","2014 Santos II","2015 Santos II","2016 Santos II","2017 Santos II","2018 Duque","2019 Duque","2020 Duque","2021 Duque","2022 Petro","2023 Petro"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Año - Presidente","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.77100000000000002,16.190999999999999],"tickmode":"array","ticktext":["0","5","10","15"],"tickvals":[0,4.9999999999999991,10,15],"categoryorder":"array","categoryarray":["0","5","10","15"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Tasa de Desempleo","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"presidente","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"60334ed97cf3":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"60334ed97cf3","visdat":{"60334ed97cf3":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="salarios-reales-vs-salarios-nominales" class="title-slide slide level1 center" data-background-image="images/treescape.jpg">
+<h1>Salarios Reales vs Salarios Nominales</h1>
+
+</section>
+<section id="salarios-reales" class="slide level2">
+<h2>Salarios Reales</h2>
+<ul>
+<li class="fragment"><p>En una <span class="blut">Economía</span>, muchas veces creemos que como el salario <span class="under">nominal</span> crece <span class="math inline">\(\color{red}{\uparrow}\)</span> pensamos que nuestra <span class="slater">riqueza</span> aumenta.</p></li>
+<li class="fragment"><p>El salario <span class="under">nominal</span> tiene un poder de compra o alcanza para cierta cesta de bienes. <em>Es de pensar que si con 1 millon de salario le alcanzaba para comprar 30 bienes</em>. Si al pasar los años su salario aumenta en un 19%, es decir, ahora tiene 1 millon 190 mil y solo le alcanza para comprar 26 bienes. Usted en términos <span class="bg" style="--col: #FFFF00">reales</span> ha perdido salario.</p></li>
+<li class="fragment"><p>El Salario real entonces no es mas que:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{Salario Real}=\dfrac{\text{Salario Nominal}}{\text{IPC}}\]</span></p>
+</div>
+<ul>
+<li class="fragment">Note que si la <span class="blut">inflación</span> es alta usted se siente mas pobre que antes</li>
+</ul>
+</section>
+<section id="salarios-reales-1" class="slide level2">
+<h2>Salarios Reales</h2>
+<ul>
+<li class="fragment">Un ejemplo de calculo es el siguiente:</li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Años</th>
+<th style="text-align: right;">Salario Nominal</th>
+<th style="text-align: right;">IPC</th>
+<th style="text-align: right;">Real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">7000</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">7142.857</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">7200</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">7200.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: right;">7500</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">7352.941</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: right;">7590</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">7027.778</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: right;">7700</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">6754.386</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="salarios-reales-2" class="slide level2">
+<h2>Salarios Reales</h2>
+<ul>
+<li class="fragment"><p>Las <span class="oranger">empresas</span> fijan sus <span class="alert">precios de mercado</span> en función de los costos de producción, más un <span class="slater">margen de beneficio</span> compatible con la obtención de beneficios.</p></li>
+<li class="fragment"><p>Al mismo tiempo, las empresas intentan pagar <span class="under">salarios nominales</span> coherentes con sus objetivos de beneficios, pero suficientes para mantener motivados a los trabajadores.</p></li>
+<li class="fragment"><p>Además, los <span class="bg" style="--col: #FFFF00">trabajadores</span> negocian cada año su salario objetivo.</p></li>
+<li class="fragment"><p>Cuanto más <span class="alert">poder de mercado</span> tiene una empresa, más puede cobrar por sus bienes y/o servicios.</p>
+<ul>
+<li class="fragment">El resultado es un salario real <span class="under">decreciente</span>.</li>
+<li class="fragment">Y cuanto más organizados estén los trabajadores (a través de los sindicatos y otras instituciones y políticas del mercado laboral), más podrán negociar mejores salarios nominales (y, en consecuencia, mejores salarios reales).</li>
+</ul></li>
+</ul>
+</section>
+<section id="bibliografía" class="slide level2">
+<h2>Bibliografía</h2>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Udayan R. (2022) <em>Introduction to Macroeconomics</em>. Bookdown</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Shapiro D., MacDonald D. &amp; Greenlaw S. A., (2024)<em>Principles of Macroeconomics 3e: Official OpenStax</em>. OpenStax</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Santetti M., (2023) Lecture notes Course <em>Introduction to Macroeconomics</em>. MIMEO</p>
+</section>
+<section id="section-11" class="slide level2" data-background-image="images/tit1.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="gracias-por-su-atención">Gracias por su atención!!</h3>
+<h4 id="cayanesuninorte.edu.co">cayanes@uninorte.edu.co</h4>
+<h4 id="carlosyanes.netlify.app"><a href="https://carlosyanes.netlify.app/">carlosyanes.netlify.app</a></h4>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://www.uninorte.edu.co/">Universidad del Norte</a></p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Classinbounds_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Classinbounds_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Classinbounds_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Classinbounds_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'multiplex': {"secret":"17274104281834438539","id":"f87cc5eb13d4060b","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
