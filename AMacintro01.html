@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="AMacintro01_files/libs/clipboard/clipboard.min.js"></script>
+<script src="AMacintro01_files/libs/quarto-html/tabby.min.js"></script>
+<script src="AMacintro01_files/libs/quarto-html/popper.min.js"></script>
+<script src="AMacintro01_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="AMacintro01_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="AMacintro01_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="AMacintro01_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <meta name="author" content="Carlos Andrés Yanes">
+  <title>Introducción a la economía 🙂</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="AMacintro01_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="AMacintro01_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="AMacintro01_files/libs/revealjs/dist/theme/quarto-ea588ada28ee620cfec93952c1bbf3c3.css">
+  <link href="AMacintro01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="AMacintro01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="AMacintro01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="AMacintro01_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="AMacintro01_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="AMacintro01_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="AMacintro01_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+  <script src="AMacintro01_files/libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="AMacintro01_files/libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="AMacintro01_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="AMacintro01_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <link href="AMacintro01_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="AMacintro01_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="images/tit1.jpg" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Introducción a la economía 🙂</h1>
+  <p class="subtitle">Macroeconomía</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Carlos Andrés Yanes <a href="https://orcid.org/0000-0003-0683-3727" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:cayanes@uninorte.edu.co">cayanes@uninorte.edu.co</a>
+</div>
+        <p class="quarto-title-affiliation">
+            Universidad del Norte
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="microeconomía-vs-macroeconomía" class="slide level2">
+<h2>Microeconomía vs Macroeconomía</h2>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Microeconomía</strong></p>
+</div>
+<div class="callout-content">
+<p>Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><span class="bg" style="--col: #dcdcdc">Ejemplo: ¿Qué sucede si disminuye los impuestos para autos importados?</span></p>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Macroeconomía</strong></p>
+</div>
+<div class="callout-content">
+<p>Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><span class="bg" style="--col: #dcdcdc">Ejemplo: ¿Qué sucede si el gobierno aumenta la inversión en infraestructura física?</span></p>
+</div>
+<div class="fragment">
+<p>Microeconomía → <span class="fg" style="--col: #FF0000">macroeconomía</span> → microeconomía</p>
+</div>
+</section>
+<section id="comparación-entre-ramas" class="slide level2">
+<h2>Comparación entre ramas</h2>
+<h3 id="qué-estudia-la-macroeconomía">Qué estudia la Macroeconomía?</h3>
+<ul>
+<li class="fragment"><p>¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la <span class="fg" style="--col: #FF8000">pobreza</span>?</p></li>
+<li class="fragment"><p>¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los <span class="fg" style="--col: #FF8000">precios</span>?</p></li>
+<li class="fragment"><p>¿Por qué todos los países experimentan <span class="fg" style="--col: #FF8000">recesiones</span> y <span class="fg" style="--col: #314f4f">depresiones</span> –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?</p></li>
+</ul>
+</section>
+<section id="comparación-entre-ramas-1" class="slide level2">
+<h2>Comparación entre ramas</h2>
+<ul>
+<li class="fragment"><p>Del libro guía es hora de consultar el capitulo: <a href="https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective">libro Openstax Cap 6</a></p></li>
+<li class="fragment"><p>Tambien es bueno consultar la importancia de: <a href="https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib">Recesión, fluctuación y desempleo</a></p></li>
+<li class="fragment"><p>Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el <em>objeto</em> de esta parte del curso.</p></li>
+<li class="fragment"><p>En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar <span class="bg" style="--col: #FFFF00">Macroeconomía</span>.</p></li>
+<li class="fragment"><p>La <strong>macroeconomía</strong> se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).</p></li>
+<li class="fragment"><p>Por tanto, no nos centramos en el <span class="fg" style="--col: #0000FF">ingreso</span> de un solo hogar, sino en el <span class="fg" style="--col: #0000FF">ingreso nacional</span>; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2" data-background-image="images/arb.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="cuentas-nacionales">Cuentas Nacionales</h3>
+</section>
+<section id="cuentas-nacionales-1" class="slide level2">
+<h2>Cuentas Nacionales</h2>
+<ul>
+<li class="fragment"><p>Los economistas utilizan las <span class="fg" style="--col: #FF0000">estadísticas agregadas</span> para describir los fenómenos macroeconómicos.</p></li>
+<li class="fragment"><p>Aquí, agregado significa simplemente <span class="bg" style="--col: #FFFF00">suma</span>.</p></li>
+<li class="fragment"><p>Entre ellos, el Producto Interno Bruto (PIB) es la principal medida de los <span class="fg" style="--col: #0000FF">resultados económicos globales</span> y del tamaño de un país.</p></li>
+<li class="fragment"><p>Se define como la <span class="bg" style="--col: #FFFF00">suma</span> (en valor monetario) de todos los bienes y servicios finales producidos en una economía en un periodo determinado. Como lo describe la economista Diane Coyle:</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Desde uñas a cepillos de dientes, tractores, zapatos, cortes de pelo, asesoría de empresas, limpieza de calles, enseñanza del yoga, planchas, vendas, libros y los millones de servicios y productos de la economía.</p>
+</blockquote>
+</div>
+</section>
+<section id="evolución-pib" class="slide level2">
+<h2>Evolución PIB</h2>
+<p><a href="https://fred.stlouisfed.org/series/COLNAEXKP01STSAQ">PIB</a></p>
+</section>
+<section id="evolución-pib-1" class="slide level2">
+<h2>Evolución PIB</h2>
+<ul>
+<li class="fragment"><p>Una distinción crucial en Economía es entre valores <span class="bg" style="--col: #FFFF00">reales</span> y <span class="bg" style="--col: #FFFF00">nominales</span>.</p></li>
+<li class="fragment"><p>En el caso del PIB, esto es especialmente importante cuando la <span class="bg" style="--col: #FFFF00">inflación</span> es un componente tan importante de la economía.</p></li>
+<li class="fragment"><p>La inflación es un aumento sostenido del <span class="fg" style="--col: #0000FF">nivel de precios</span> de una economía.</p></li>
+<li class="fragment"><p>El valor <strong>nominal</strong> de cualquier medida económica implica una estadística en términos de <span class="fg" style="--col: #FF0000">precios reales</span> que existen en ese momento.</p></li>
+<li class="fragment"><p>En cambio, los <span class="fg" style="--col: #FF0000">valores reales</span> se refieren a la misma estadística una vez ajustada a la inflación.</p></li>
+</ul>
+</section>
+<section id="pib" class="slide level2">
+<h2>PIB</h2>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} \ = \text{Consumo + Inversión + Gasto Público + Exportaciones netas}
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} = C + I + G + (X - M)
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="pib-1" class="slide level2">
+<h2>PIB</h2>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Años</th>
+<th style="text-align: right;">Precio Corriente (por unidad)</th>
+<th style="text-align: right;">Cantidad Vendida</th>
+<th style="text-align: right;">PIB Nominal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">200.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">275.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">264.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Clave la distinción de lo nominal. Si queremos entonces tener el <strong>REAL</strong> necesitamos un año base.</p>
+</div>
+</section>
+<section id="pib-2" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment">Supongamos que nuestro año base es <span class="bg" style="--col: #FFFF00">2016</span></li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Años</th>
+<th style="text-align: right;">Precio Constante (por unidad)</th>
+<th style="text-align: right;">Cantidad Vendida</th>
+<th style="text-align: right;">PIB Real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">220</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">275</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">253</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="comparación" class="slide level2">
+<h2>Comparación</h2>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">PIB Nominal</th>
+<th style="text-align: right;">PIB Real (Precios Constantes de 2016)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">200.0</td>
+<td style="text-align: right;">220</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">275.0</td>
+<td style="text-align: right;">275</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">264.5</td>
+<td style="text-align: right;">253</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Podemos entonces tener a consideración</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB Real} = \dfrac{\text{PIB Nominal}}{\text{Deflactor PIB}}
+\end{aligned}
+\]</span></p>
+</div>
+<ul>
+<li class="fragment">Una vista <a href="https://fred.stlouisfed.org/series/COLNAGIGP01IXOBSAQ">Gráfica</a></li>
+</ul>
+</section>
+<section id="pib-3" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment"><p>Antes de continuar… debemos tener presente la <span class="bg" style="--col: #FFFF00">importancia</span> de conocer porque es necesario tener un <span id="FF8000" class="fg" style="&quot;--col:">Indice de precios</span></p></li>
+<li class="fragment"><p>Un <span class="fg" style="--col: #FF8000">índice</span> es un número que permite realizar <span class="fg" style="--col: #FF0000">comparaciones</span> entre distintos momentos del tiempo o distintas entidades.</p></li>
+<li class="fragment"><p>Para nuestros efectos, un <span class="fg" style="--col: #FF8000">índice de precios</span> es un número de referencia que nos permite comparar estadísticas económicas en distintos momentos, sirviendo como cambio medio global de los <span class="fg" style="--col: #e64173">precios relativos</span> a lo largo del tiempo.</p></li>
+<li class="fragment"><p>Teniendo en cuenta que el <span class="under">tiempo</span>, la cantidad de bienes y servicios producidos por una economía aumenta, y también lo hacen sus <span class="fg" style="--col: #e64173">precios</span>.</p></li>
+<li class="fragment"><p>Para ello, el <span class="under">deflactor del PIB</span> es un índice de precios que incluye todos los bienes y servicios que se contabilizan en el <span id="FF8000" class="fg" style="&quot;--col:">PIB</span> mediante una metodología de <strong>media ponderada</strong>.</p></li>
+</ul>
+</section>
+<section id="pib-4" class="slide level2">
+<h2>PIB</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li class="fragment">El PIB Nominal no tiene en cuenta la variación de precios</li>
+<li class="fragment">El PIB Real si lo hace, aparte nos muestra en pleno cuanto realmente hemos <span class="under">crecido</span></li>
+<li class="fragment">Siempre en el <span class="under">año base</span> tanto el PIB nominal como el Real serán <strong>similares</strong></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/c3g1.png" style="width:100.0%"></p>
+<figcaption>Calculo de PIB Real y Nominal</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="pib-5" class="slide level2">
+<h2>PIB</h2>
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1gYXq&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</section>
+<section id="pib-6" class="slide level2">
+<h2>PIB</h2>
+<p>Considere los siguientes datos (en Billones de US$) para EEUU, entre Q1 2008 and Q4 2009 (año base = 2005) y halle el <span class="bg" style="--col: #9f9f9f">PIB real</span> correspondiente:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Trimestre</th>
+<th style="text-align: right;">PIB Nominal</th>
+<th style="text-align: right;">Deflactor PIB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Q1 2008</td>
+<td style="text-align: right;">14373.9</td>
+<td style="text-align: right;">1.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2008</td>
+<td style="text-align: right;">14497.8</td>
+<td style="text-align: right;">1.08</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2008</td>
+<td style="text-align: right;">14546.7</td>
+<td style="text-align: right;">1.09</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2008</td>
+<td style="text-align: right;">14347.3</td>
+<td style="text-align: right;">1.09</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q1 2009</td>
+<td style="text-align: right;">14178.0</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q2 2009</td>
+<td style="text-align: right;">14151.2</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q3 2009</td>
+<td style="text-align: right;">14242.1</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q4 2009</td>
+<td style="text-align: right;">14453.8</td>
+<td style="text-align: right;">1.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="pib-7" class="slide level2">
+<h2>PIB</h2>
+<ul>
+<li class="fragment">Miremos la relación existente entre el <span class="blut">deflactor</span> y la propia <span class="oranger">inflación</span> (IPC)</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-653b8158ff501432d201" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-653b8158ff501432d201">{"x":{"visdat":{"5b0d7816f9e0":["function () ","plotlyVisDat"]},"cur_data":"5b0d7816f9e0","attrs":{"5b0d7816f9e0":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[33.659999999999997,6.5199999999999996,5.9699999999999998,6.8200000000000003,7.2800000000000002,4.7599999999999998,5.7999999999999998,5.21,7.6799999999999997,4.0499999999999998,3.8100000000000001,6.3899999999999997,3.6200000000000001,1.8999999999999999,2.2400000000000002,2.4500000000000002,5.1500000000000004,5.1399999999999997,4.6299999999999999,4,1.4099999999999999],"type":"scatter","mode":"lines","name":"Deflactor","line":{"dash":null},"inherit":true},"5b0d7816f9e0.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[8.75,7.6500000000000004,6.9900000000000002,6.4900000000000002,5.5,4.8499999999999996,4.4800000000000004,5.6900000000000004,7.6699999999999999,2,3.1699999999999999,3.73,2.4399999999999999,1.9399999999999999,3.6600000000000001,6.7699999999999996,5.75,4.0899999999999999,3.1800000000000002,3.7999999999999998,1.6100000000000001],"type":"scatter","mode":"lines","name":"Inflacion","line":{"dash":null},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","showgrid":false},"yaxis":{"domain":[0,1],"automargin":true,"title":"Crecimiento porcentual (%)","showgrid":false},"title":"Inflación vs Deflactor PIB en Colombia","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[33.659999999999997,6.5199999999999996,5.9699999999999998,6.8200000000000003,7.2800000000000002,4.7599999999999998,5.7999999999999998,5.21,7.6799999999999997,4.0499999999999998,3.8100000000000001,6.3899999999999997,3.6200000000000001,1.8999999999999999,2.2400000000000002,2.4500000000000002,5.1500000000000004,5.1399999999999997,4.6299999999999999,4,1.4099999999999999],"type":"scatter","mode":"lines","name":"Deflactor","line":{"color":"rgba(31,119,180,1)","dash":[]},"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],"y":[8.75,7.6500000000000004,6.9900000000000002,6.4900000000000002,5.5,4.8499999999999996,4.4800000000000004,5.6900000000000004,7.6699999999999999,2,3.1699999999999999,3.73,2.4399999999999999,1.9399999999999999,3.6600000000000001,6.7699999999999996,5.75,4.0899999999999999,3.1800000000000002,3.7999999999999998,1.6100000000000001],"type":"scatter","mode":"lines","name":"Inflacion","line":{"color":"rgba(255,127,14,1)","dash":[]},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="ingreso-total">Ingreso total</h3>
+</section>
+<section id="ingreso-total-1" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>Necesitamos medir la <span class="bg" style="--col: #FFFF00">salud de una economía</span>. A la hora de juzgar si una economía va bien o mal, es natural fijarse en el <span class="oranger">ingreso total</span> que obtienen sus habitantes.</p></li>
+<li class="fragment"><p>El <span class="oranger">ingreso total</span> no siempre está estrechamente ligado al <span class="alert">bienestar económico</span>. Por ejemplo, la población de un país puede aumentar temporalmente su nivel de vida <span class="under">pidiendo prestado</span> a otros países. -<em>Pero no se puede seguir pidiendo prestado para siempre</em>-. Por eso, el nivel de vida de una nación depende en gran medida de su propia renta total.</p></li>
+</ul>
+<div class="fragment">
+<h3 class="r-fit-text" id="ingreso-gasto-producción">Ingreso = Gasto = Producción</h3>
+</div>
+</section>
+<section id="ingreso-total-2" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>Podríamos medir tanto el <span class="oranger">ingreso total</span> como el <span class="alert">gasto total</span> o la <span class="bg" style="--col: #FFFF00">producción total</span>. Obtendríamos la misma cifra en todos los casos.</p></li>
+<li class="fragment"><p>Para una economía en su conjunto, el <span class="oranger">ingreso</span> debe ser igual al gasto porque:</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Cada transacción tiene un comprador y un vendedor.</p>
+</blockquote>
+</div>
+<ul>
+<li class="fragment"><p>Cada peso ($) de gasto de algún comprador es un peso de ingreso para algún vendedor.</p></li>
+<li class="fragment"><p>Además, el gasto total es también el <span class="alert">valor monetario</span> de la producción que se produce y se vende.</p></li>
+<li class="fragment"><p>Esta <span class="under">igualdad</span> entre ingresos, gastos y producción tiene consecuencias prácticas. Ofrece a los estadísticos gubernamentales más opciones sobre cómo medir el <span class="oranger">ingreso total</span>.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-3" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p><span class="alert">P</span>: ¿Y el <em>ahorro</em>? La gente suele ahorrar parte de lo que gana. ¿Cómo es posible entonces que el <span class="oranger">ingreso</span> sea igual al <span class="alert">gasto</span> en el conjunto de la economía?</p></li>
+<li class="fragment"><p><span class="blut"><em>R/</em></span>: Lo que la gente ahorra suele prestarse a <span class="under">las empresas</span>, que luego <strong>gastan</strong> el dinero prestado. Por tanto, para el conjunto de la economía, los ingresos deben seguir siendo iguales a los gastos.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-4" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p><span class="alert">P</span>: ¿Y el comercio internacional? Compramos bienes fabricados en el extranjero y los <span class="blut">extranjeros</span> compran bienes fabricados por nosotros. En ese caso, ¿cómo pueden nuestros <span class="oranger">ingresos totales</span> ser iguales a nuestros gastos totales?</p></li>
+<li class="fragment"><p><span class="blut"><em>R/</em></span>: Así es. Por tanto, es mejor decir que el <span class="oranger">ingreso total</span> de los residentes nacionales es igual al gasto total en bienes y servicios de producción nacional.</p></li>
+</ul>
+</section>
+<section id="ingreso-total-5" class="slide level2">
+<h2>Ingreso total</h2>
+<ul>
+<li class="fragment"><p>El Producto Interno Bruto (PIB) es una medida del <span class="oranger">ingreso total</span> de un país. Existen otras medidas del <span class="oranger">ingreso total</span>, pero el PIB es la más popular.</p></li>
+<li class="fragment"><p>El <span class="alert">PIB</span> es el valor total de mercado de todos los bienes y servicios finales producidos en un país en un periodo de tiempo determinado.</p></li>
+<li class="fragment"><p>No se trata de un concepto <em>teórico abstracto</em>. Podemos ponerle una cifra. Por ejemplo, el PIB de Colombia en 2023 fue de 978 250 miles de millones de pesos (978 Billones), según el Departamento Nacional de Estadística DANE. (Para más datos, consulta <a href="https://www.dane.gov.co/files/operaciones/PIB/cp-PIB-IVtrim2023.pdf">esto</a>).</p></li>
+</ul>
+</section>
+<section id="ingreso-en-finales" class="slide level2">
+<h2>Ingreso en finales</h2>
+<ul>
+<li class="fragment"><p>El PIB mide el valor de los <span class="bg" style="--col: #FFFF00">bienes finales</span>, no de los bienes intermedios.</p></li>
+<li class="fragment"><p>Los <span class="under">bienes intermedios</span> son aquellos bienes que desaparecen dentro de otros bienes que se producen para la venta. Los <span class="blut">bienes finales</span> son bienes que no son intermedios. Son bienes vendidos a sus usuarios finales. El PIB se define de forma que el valor de los bienes intermedios se contabilice una sola vez, no dos o tres veces.</p></li>
+<li class="fragment"><p>Los bienes intermedios son bienes que sus productores venden a los productores de otros bienes. Ejemplos:</p>
+<ul>
+<li class="fragment">Leche vendida por una central lechera a una empresa de helados,</li>
+<li class="fragment">Uvas vendidas por un viñedo a un vinicultor,</li>
+<li class="fragment">papel de impresora vendido a Norma.</li>
+</ul></li>
+</ul>
+</section>
+<section id="ingreso-en-finales-1" class="slide level2">
+<h2>Ingreso en finales</h2>
+<ul>
+<li class="fragment"><p>Los bienes finales son los que se venden a los usuarios finales de esos bienes. Ejemplos:</p>
+<ul>
+<li class="fragment">Leche que compras en un supermercado,</li>
+<li class="fragment">Uvas de mesa que compras en el mercado del agricultor,</li>
+<li class="fragment">Papel de impresora que compra para la impresora de su computador.</li>
+</ul></li>
+<li class="fragment"><p>Todos los bienes fabricados <span class="under">este año</span> pero que <strong>no</strong> se han vendido a final de año se consideran bienes finales (y se etiquetan como “existencias”).</p></li>
+<li class="fragment"><p><em>Nota</em>: Aunque los <span class="alert">servicios</span> de su Broker, que dedica su tiempo a negociar acciones para usted, se contabilizan en el PIB, el comercio de activos en sí no afecta al PIB. ¿Por qué? Este comercio no es más que la transferencia de la propiedad de un activo de una persona a otra.</p></li>
+</ul>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="valor-agregado">Valor Agregado</h3>
+</section>
+<section id="valor-agregado-1" class="slide level2">
+<h2>Valor Agregado</h2>
+<ul>
+<li class="fragment">Mire una especie de contabilidad en el PIB con enfoque de Valor Agregado:</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 69%">
+<col style="width: 9%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Procesos</th>
+<th style="text-align: right;">Compra</th>
+<th style="text-align: right;">Valor agregado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Agricultor siembra trigo y vende a comercio en $</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comercio transforma trigo en harina y vende a $</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Panadero hace pan con harina y vende a $</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">180</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Note que:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{PIB}=100+200+180=\color{red}{480}\]</span></p>
+</div>
+<ul>
+<li class="fragment">La <span class="under">suma de valor agregado</span> es el <strong>PIB</strong> cuando por ejemplo el solo panadero como venta final ha vendido a $480 su producto.</li>
+</ul>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/Polwave2.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="pib-per-cápita">PIB per Cápita</h3>
+</section>
+<section id="pib-per-cápita-1" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Cuando individualizamos el <strong>PIB</strong> dividiendoel PIB sobre el <span class="bg" style="--col: #FFFF00">tamaño de la población</span> vamos encontrar lo que se denomina <span class="oranger">PIB per cápita</span>:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{PIB} \ per \ cápita = \dfrac{\text{PIB Nominal o Real}}{\text{Población}}
+\end{aligned}
+\]</span></p>
+</div>
+<ul>
+<li class="fragment">Así que si en Colombia el PIB es de 978 Billones de pesos, el <em>PIB per capita</em> viene a ser:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{PIB per cápita}_{Col}=\frac{978 \ \text{Billones}}{52 \ \text{Millones}}=18 \;807\;692\]</span></p>
+</div>
+</section>
+<section id="pib-per-cápita-2" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment"><p>Sirve para comparar entre países y nos da idea de como un País es mas rico que otro. Tomemos por ejemplo: Japón y Colombia.</p></li>
+<li class="fragment"><p><span class="bg" style="--col: #FFFF00">Purchasing Power Parity (PPP)</span> una forma para homologar que lo que se consume en cierto sitio también se hace en otro.</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>PPP</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[\begin{aligned}
+\text{Tasa de cambio PPP}=\dfrac{\text{Precio del bien en moneda local}}{\text{Precio del bien en moneda extranjera}}
+\end{aligned}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="pib-per-cápita-3" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Suponga que un (1) peso colombiano en febrero de 2024 equivale a 0.038 YENES
+<ul>
+<li class="fragment">Así que, la <strong>tasa de cambio</strong> YEN/COP es de 26.04, cuando (1) YEN se iguala a COP.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tasa de cambio</strong></p>
+</div>
+<div class="callout-content">
+<p>Aquella que expresa el valor de una moneda en términos de otra</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="pib-per-cápita-4" class="slide level2">
+<h2>PIB per Cápita</h2>
+<ul>
+<li class="fragment">Resolviendo el PIB en términos de YENES:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\begin{aligned}
+\text{PIB COLOMBIA en Yen\$} = \dfrac{\text{PIB COL en COP}}{\text{tasa de cambio Yen/Pesos}} = \dfrac{970 \; \text{Billones de pesos}}{26.04 \; \text{pesos}}
+\end{aligned}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p>Esto nos da <span class="math inline">\(\text{Yen(\$)}= \; 37.2 \; \text{Billones de Yenes}\)</span></p></li>
+<li class="fragment"><p>Con dolares nos da: <span class="math inline">\(\text{Dolar(\$)}= \; 244 \; \text{Mil millones de dolares}\)</span></p></li>
+<li class="fragment"><p>Lo que es en téminos de <span class="alert">PIB per cápita</span> un total de 4.743 US Dolares.</p></li>
+</ul>
+</section>
+<section id="bibliografía" class="slide level2">
+<h2>Bibliografía</h2>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Udayan R. (2022) <em>Introduction to Macroeconomics</em>. Bookdown</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Shapiro D., MacDonald D. &amp; Greenlaw S. A., (2024)<em>Principles of Macroeconomics 3e: Official OpenStax</em>. OpenStax</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> Santetti M., (2023) Lecture notes Course <em>Introduction to Macroeconomics</em>. MIMEO</p>
+</section>
+<section id="section-4" class="slide level2" data-background-image="images/tit1.jpg">
+<h2></h2>
+<h3 class="r-fit-text" id="gracias-por-su-atención">Gracias por su atención!!</h3>
+<h4 id="cayanesuninorte.edu.co">cayanes@uninorte.edu.co</h4>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p><a href="https://www.uninorte.edu.co/">Universidad del Norte</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="AMacintro01_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="AMacintro01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="AMacintro01_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="AMacintro01_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'multiplex': {"secret":null,"id":"1e96b2a2d968813c","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

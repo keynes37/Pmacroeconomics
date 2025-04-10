@@ -1,6 +1,6 @@
 ---
-title: "Principios de Macroeconomía 🙂"
-subtitle: "PIB y PIB per Cápita"
+title: "Introducción a la economía 🙂"
+subtitle: "Macroeconomía"
 author:
   - name: Carlos Andrés Yanes
     orcid: 0000-0003-0683-3727
@@ -25,6 +25,178 @@ library(pacman)
 p_load(tidyverse, scales, gapminder, ggiraph, patchwork, kableExtra, TSstudio,
        fontawesome)
 ```
+
+## Microeconomía vs Macroeconomía 
+
+:::: fragment
+::: callout-note
+## Microeconomía
+
+Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados
+:::
+::::
+
+::: fragment
+[Ejemplo: ¿Qué sucede si disminuye los impuestos para autos importados?]{.bg style="--col: #dcdcdc"}
+:::
+
+:::: fragment
+::: callout-tip
+## Macroeconomía
+
+Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros
+:::
+::::
+
+::: fragment
+[Ejemplo: ¿Qué sucede si el gobierno aumenta la inversión en infraestructura física?]{.bg style="--col: #dcdcdc"}
+:::
+
+::: fragment
+Microeconomía → [macroeconomía]{.fg style="--col: #FF0000"} → microeconomía
+:::
+
+## Comparación entre ramas
+
+### Qué estudia la Macroeconomía?
+
+-   ¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la [pobreza]{.fg style="--col: #FF8000"}?
+
+-   ¿Por qué algunos países tienen tasas de inflación elevadas mientras que otros mantienen estables los [precios]{.fg style="--col: #FF8000"}?
+
+-   ¿Por qué todos los países experimentan [recesiones]{.fg style="--col: #FF8000"} y [depresiones]{.fg style="--col: #314f4f"} –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?
+
+## Comparación entre ramas
+
+-   Del libro guía es hora de consultar el capitulo: [libro Openstax Cap 6](https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective)
+
+-   Tambien es bueno consultar la importancia de: [Recesión, fluctuación y desempleo](https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib)
+
+-   Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el *objeto* de esta parte del curso.
+
+-   En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar [Macroeconomía]{.bg style="--col: #FFFF00"}.
+
+-   La **macroeconomía** se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).
+
+-   Por tanto, no nos centramos en el [ingreso]{.fg style="--col: #0000FF"} de un solo hogar, sino en el [ingreso nacional]{.fg style="--col: #0000FF"}; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.
+
+##  {background-image="images/arb.jpg"}
+
+### Cuentas Nacionales {.r-fit-text}
+
+## Cuentas Nacionales
+
+-   Los economistas utilizan las [estadísticas agregadas]{.fg style="--col: #FF0000"} para describir los fenómenos macroeconómicos.
+
+-   Aquí, agregado significa simplemente [suma]{.bg style="--col: #FFFF00"}.
+
+-   Entre ellos, el Producto Interno Bruto (PIB) es la principal medida de los [resultados económicos globales]{.fg style="--col: #0000FF"} y del tamaño de un país.
+
+-   Se define como la [suma]{.bg style="--col: #FFFF00"} (en valor monetario) de todos los bienes y servicios finales producidos en una economía en un periodo determinado. Como lo describe la economista Diane Coyle:
+
+::: fragment
+> Desde uñas a cepillos de dientes, tractores, zapatos, cortes de pelo, asesoría de empresas, limpieza de calles, enseñanza del yoga, planchas, vendas, libros y los millones de servicios y productos de la economía.
+:::
+
+## Evolución PIB {.r-fit-text}
+
+[PIB](https://fred.stlouisfed.org/series/COLNAEXKP01STSAQ)
+
+## Evolución PIB
+
+-   Una distinción crucial en Economía es entre valores [reales]{.bg style="--col: #FFFF00"} y [nominales]{.bg style="--col: #FFFF00"}.
+
+-   En el caso del PIB, esto es especialmente importante cuando la [inflación]{.bg style="--col: #FFFF00"} es un componente tan importante de la economía.
+
+-   La inflación es un aumento sostenido del [nivel de precios]{.fg style="--col: #0000FF"} de una economía.
+
+-   El valor **nominal** de cualquier medida económica implica una estadística en términos de [precios reales]{.fg style="--col: #FF0000"} que existen en ese momento.
+
+-   En cambio, los [valores reales]{.fg style="--col: #FF0000"} se refieren a la misma estadística una vez ajustada a la inflación.
+
+## PIB
+
+::: fragment
+$$
+\begin{aligned}
+\text{PIB} \ = \text{Consumo + Inversión + Gasto Público + Exportaciones netas}
+\end{aligned}
+$$
+:::
+
+<br>
+
+::: fragment
+$$
+\begin{aligned}
+\text{PIB} = C + I + G + (X - M)
+\end{aligned}
+$$
+:::
+
+## PIB
+
+::: fragment
+```{r, echo=FALSE}
+toy <- tibble(
+  "Años" = c(2015, 2016, 2017),
+  "Precio Corriente (por unidad)" = c(1.00, 1.10, 1.15),
+  "Cantidad Vendida" = c(200, 250, 230),
+  "PIB Nominal" = c(200, 275, 264.5)
+)  
+  
+toy %>% 
+  kable()
+```
+:::
+
+::: fragment
+Clave la distinción de lo nominal. Si queremos entonces tener el **REAL** necesitamos un año base.
+:::
+
+## PIB
+
+-   Supongamos que nuestro año base es [2016]{.bg style="--col: #FFFF00"}
+
+::: fragment
+```{r, echo=F}
+toy2 <- tibble(
+  "Años" = c(2015, 2016, 2017),
+  "Precio Constante (por unidad)" = c(1.10, 1.10, 1.10),
+  "Cantidad Vendida" = c(200, 250, 230),
+  "PIB Real" = c(220, 275, 253)
+)  
+  
+toy2 %>% 
+  kable()
+```
+:::
+
+## Comparación
+
+::: fragment
+```{r, echo=F}
+toy3 <- tibble(
+  "PIB Nominal" = c(200, 275, 264.5),
+  "PIB Real (Precios Constantes de 2016)" = c(220, 275, 253)
+)  
+  
+toy3 %>% 
+  kable()
+```
+:::
+
+-   Podemos entonces tener a consideración
+
+::: fragment
+$$
+\begin{aligned}
+\text{PIB Real} = \dfrac{\text{PIB Nominal}}{\text{Deflactor PIB}}
+\end{aligned}
+$$
+:::
+
+-   Una vista [Gráfica](https://fred.stlouisfed.org/series/COLNAGIGP01IXOBSAQ)
 
 ## PIB
 
@@ -292,5 +464,3 @@ $$\begin{aligned}
 ### Gracias por su atención!! {.r-fit-text}
 
 #### cayanes\@uninorte.edu.co
-
-#### [carlosyanes.netlify.app](https://carlosyanes.netlify.app/)
