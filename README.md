@@ -34,4 +34,4 @@ Clase Last [Final](https://raw.githack.com/keynes37/Pmacroeconomics/main/Classin
 
 ### Render out Introduction
 
-Macroeconomia[Archivo]() 
+Macroeconomia 2[Archivo](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class02act.html) 
