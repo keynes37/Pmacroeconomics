@@ -156,6 +156,129 @@ ic_slope <- function(x, k, constant = 1, alpha = 0.5, offset = 10) {
 
 ```
 
+## Qué vamos hacer en esta clase
+
+- Aspectos Macroeconómicos
+- Inflación
+- Producto Interno Bruto
+- Paridad en indices para bienestar (PPP)
+- Algo de Politica de Empleo
+
+
+## Aspectos Macroecómicos
+
+::: .incremental
+
+- El [entorno macroeconómico]{.fg style="--col: #e64173"} es el conjunto de **condiciones** y **variables** que describen el estado general de la economía de un país o región en un momento determinado. Incluye aspectos como el *crecimiento del PIB*, *la inflación*, *la tasa de interés*, *el tipo de cambio*, *el empleo*, *la balanza comercial*, la [política fiscal]{.bg style="--col: #00FFFF"} y la [política monetaria]{.bg style="--col: #FFFF00"}.
+
+- En términos simples, es el “clima” económico donde los proyectos se **formulan**, financian, ejecutan y evalúan. Así como el clima atmosférico influye en una cosecha, el clima macroeconómico influye en la [viabilidad]{.fg style="--col: #0000FF"} y [rentabilidad]{.fg style="--col: #0000FF"} de un proyecto.
+:::
+
+## Aspectos Macroecómicos
+
+- Todo proyecto —sea público o privado— implica una asignación de recursos hoy esperando beneficios futuros.
+
+- Esos [beneficios]{.fg style="--col: #e64173"}
+ y [costos]{.fg style="--col: #e64173"}
+ no ocurren en un vacío, sino en un contexto económico que:
+	-	Determina el **costo del dinero** (tasas de interés o costo de capital).
+	-	Afecta los **precios de insumos** y **mano de obra** (inflación, productividad).
+	-	Condiciona la demanda esperada (ciclo económico, poder adquisitivo).
+	-	Incide sobre los riesgos y la rentabilidad esperada (devaluación, recesión, políticas públicas).
+	
+##  {background-image="images/bean.jpg"}
+
+### Tasas de Interés y Costo del Financiamiento {.r-fit-text}
+
+## Tasas de interés
+::: fragment
+Una subida en las tasas de interés tiene el **efecto directo de aumentar el costo de financiamiento** para los proyectos de inversión. Esto sucede porque:
+- Los préstamos se hacen más caros debido a la mayor tasa que deben pagar los [inversionistas]{.fg style="--col: #e64173"}.
+- Los proyectos que dependen de financiamiento externo (bancos, inversionistas, emisiones de bonos) ven cómo sus costos de **capital** se incrementan.
+:::
+
+:::: fragment
+::: callout-warning
+### Tasa de interés: 
+**Porcentaje** que se cobra (o paga) por el uso del dinero prestado o invertido en un período de tiempo.
+
+$$Pago= \text{dinero} \times (1+i)$$
+:::
+::::
+
+## Efecto en los Proyectos de Inversión
+
+- Una subida en las tasas de interés tiene el **efecto directo de aumentar el costo de financiamiento** para los proyectos de inversión. 
+
+- En este ejemplo, un proyecto de inversión de $10,000,000 requiere financiamiento a largo plazo.
+
+::: fragment
+#### Supuestos Iniciales:
+- **Tasa de interés inicial**: 8% anual.
+- **Préstamo solicitado**: $8,000,000.
+- **Duración**: 10 años.
+:::
+
+## Efecto en los Proyectos de Inversión
+
+#### Costo de Financiamiento Original
+
+::: fragment
+$$\text{Pago Anual} = \frac{\text{Préstamo} \times \text{Tasa}}{1 - (1 + \text{Tasa})^{-10}} = \frac{8,000,000 \times 0.08}{1 - (1 + 0.08)^{-10}} = 1,070,829.45$$
+:::
+
+::: fragment
+**Flujo de caja anual de pago**: $1,070,829.45
+:::
+
+## Efecto en los Proyectos de Inversión
+
+#### **Escenario con Subida en la Tasa de Interés:**
+
+::: fragment
+Supongamos que la tasa de interés sube al **10%**.
+
+$$\text{Nuevo Pago Anual} = \frac{8,000,000 \times 0.10}{1 - (1 + 0.10)^{-10}} = 1,152,788.22$$
+
+:::
+
+::: fragment
+**Flujo de caja anual de pago**: $1,152,788.22
+:::
+
+## Efecto en los Proyectos de Inversión
+
+::: fragment
+**Diferencia en el Costo:**
+- **Aumento en el pago anual**: $1,152,788.22 - $1,070,829.45 = **$81,958.77**
+:::
+
+::: fragment
+**Impacto en la Rentabilidad del Proyecto:**
+- La subida de 2 puntos porcentuales aumenta el costo de financiamiento en aproximadamente **$81,958.77** anuales, lo que reduce la [rentabilidad]{.fg style="--col: #e64173"} de cualquier proyecto, y por lo tanto su **VAN** o **TIR**.
+:::
+
+## Efecto en los Proyectos de Inversión
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzNjMjQycGgxYTQ1cHl0aWFtZ2lnbDdzMnEwbGZnemlkaG81NHBtOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6DZ8k92zhbw5XGg5EL/giphy.gif)
+:::
+
+::: {.column width="60%"}
+Según el PMBOK (Project Management Body of Knowledge), los proyectos están influenciados por los llamados Factores Ambientales de la Empresa (Enterprise Environmental Factors, EEFs), que incluyen:
+
+	- Condiciones económicas nacionales o internacionales.
+	- Políticas gubernamentales y regulatorias.
+	- Tendencias del mercado financiero y laboral.
+	- Tipos de cambio y acceso a financiamiento.
+
+El [gerente de proyectos]{.bg style="--col: #FFFF00"} debe identificar y analizar estos factores al inicio del proyecto, porque pueden modificar la línea base de *tiempo*, *costo* y *alcance*.
+:::
+
+::::
+
 ## Referentes (indicadores)
 
 -   Es [muy importante]{.bg style="--col: #FFFF00"} que siempre este mirando los indicadores económicos.
@@ -204,17 +327,105 @@ En el caso para inflación hay que tener en cuenta:
 :::
 ::::
 
+## Efecto inflación
+
+::: fragment
+Supongamos que estamos evaluando un **proyecto de construcción de una planta** que requiere una inversión inicial y generará flujos de caja durante los próximos 5 años. En este caso, la [inflación]{.fg style="--col: #FF8000} afecta tanto los costos de los insumos como las ventas proyectadas (dependiendo de la elasticidad del precio).
+:::
+
+::: fragment
+Datos del Proyecto:
+
+- Inversión inicial: $5,000,000
+- Vida útil del proyecto: 5 años
+- Inflación anual: 5% (inflación constante)
+- Tasa de descuento nominal: 10% (que incluye inflación y riesgo del proyecto)
+:::
+
+## Efecto inflación
+
+::: fragment
+| Año  | Flujo de Caja Nominal |
+|------|-----------------------|
+| Año 1 | $1,200,000            |
+| Año 2 | $1,300,000            |
+| Año 3 | $1,400,000            |
+| Año 4 | $1,500,000            |
+| Año 5 | $1,600,000            |
+:::
+
+:::: fragment
+Para obtener los [flujos reales]{.fg style="--col: #0000FF"}, necesitamos ajustar los *flujos nominales* para [eliminar]{.fg style="--col: #e64173"} el efecto de la inflación. Usamos la fórmula:
+
+::: callout-note
+## Ajuste de flujos
+$$\text{Flujo Real} = \frac{\text{Flujo Nominal}}{(1 + \text{Inflación})^t}$$
+:::
+::::
+
+## Efecto inflación
+
+::: fragment
+$$\text{Flujo Real (Año 1)} = \frac{1,200,000}{(1 + 0.05)^1} = \frac{1,200,000}{1.05} = 1,142,857.14$$
+:::
+
+::: fragment
+$$\text{Flujo Real (Año 2)} = \frac{1,300,000}{(1 + 0.05)^2} = \frac{1,300,000}{1.1025} = 1,179,253.07$$
+:::
+
+:::fragment
+### Y así continua...
+:::
+
+
+## Efecto inflación
+
+::: fragment
+| Año  | Flujo de Caja Nominal | Flujo de Caja Real |
+|------|-----------------------|--------------------|
+| Año 1 | 1,200,000            | $1,142,857.14      |
+| Año 2 | 1,300,000            | $1,179,253.07      |
+| Año 3 | 1,400,000            | $1,208,116.95      |
+| Año 4 | 1,500,000            | $1,235,332.27      |
+| Año 5 | 1,600,000            | $1,254,907.59      |
+:::
+
+::: fragment
+Vamos al cálculo del VAN
+
+$$\text{VAN Nominal} = \frac{1,200,000}{(1 + 0.10)^1} + \frac{1,300,000}{(1 + 0.10)^2} + \frac{1,400,000}{(1 + 0.10)^3} + \frac{1,500,000}{(1 + 0.10)^4} + \frac{1,600,000}{(1 + 0.10)^5}$$
+
+$$\text{VAN Nominal} = 1,090,909 + 1,074,380 + 1,050,103 + 1,026,486 + 1,003,606 = 5,245,484$$
+:::
+
+## Efecto inflación
+
+::: fragment
+$$\text{VAN Real} = \frac{1,142,857}{(1 + 0.10)^1} + \frac{1,179,253}{(1 + 0.10)^2} + \frac{1,208,116}{(1 + 0.10)^3} + \frac{1,235,332}{(1 + 0.10)^4} + \frac{1,254,907}{(1 + 0.10)^5}$$
+:::
+
+::: fragment
+Tambien su parte
+$$\text{VAN Real} = 1,038,962 + 975,049 + 902,115 + 821,581 + 737,016 = 4,474,723$$
+:::
+
+::: fragment
+- La [inflación]{.bg style="--col: #FFFF00"} reduce el VAN real del proyecto, ya que *los flujos de caja* ajustados por inflación tienen un menor valor en términos de **poder adquisitivo constante**.
+
+- Aunque los [flujos nominales]{.bg style="--col: #00FFFF"} muestran un VAN más alto, los flujos reales proporcionan una visión **más precisa** de la [rentabilidad real]{.fg style="--col: #e64173"} del proyecto, considerando el poder adquisitivo a lo largo del tiempo.
+:::
+
 ##  {background-image="images/bean.jpg"}
 
-### Microeconomía vs Macroeconomía {.r-fit-text}
+### Otros indicadores Macroeconómicos {.r-fit-text}
 
-## Comparación entre ramas
+## Recuerde algo
 
 :::: fragment
 ::: callout-note
-## Microeconomía
+## Con lo microeconómico
 
-Estudia la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados
+Se mira la forma en que los individuos (hogares) y empresas toman decisiones, así como la forma en la que interactúan con los mercados locales
 :::
 ::::
 
@@ -224,9 +435,9 @@ Estudia la forma en que los individuos (hogares) y empresas toman decisiones, as
 
 :::: fragment
 ::: callout-tip
-## Macroeconomía
+## Con lo macroeconómico
 
-Estudia los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros
+Se mira los fenómenos que afectan a la economía como un todo: desempleo, crecimiento económico, entre otros
 :::
 ::::
 
@@ -240,7 +451,7 @@ Microeconomía → [macroeconomía]{.fg style="--col: #FF0000"} → microeconom�
 
 ## Comparación entre ramas
 
-### Qué estudia la Macroeconomía?
+### Qué preguntas hace la Macroeconomía?
 
 -   ¿Por qué los ingresos han experimentado un rápido crecimiento en los últimos cien años en algunos países mientras que otros siguen sumidos en la [pobreza]{.fg style="--col: #FF8000"}?
 
@@ -248,25 +459,95 @@ Microeconomía → [macroeconomía]{.fg style="--col: #FF0000"} → microeconom�
 
 -   ¿Por qué todos los países experimentan [recesiones]{.fg style="--col: #FF8000"} y [depresiones]{.fg style="--col: #314f4f"} –es decir, periodos recurrentes de disminución de los ingresos y de aumento del desempleo – cómo pueden reducir los gobiernos su frecuencia y su gravedad?
 
-## Comparación entre ramas
+## Déficit público y deuda: por qué importan en los proyectos
 
--   Del libro guía es hora de consultar el capitulo: [libro Openstax Cap 6](https://openstax.org/books/principles-macroeconomics-3e/pages/6-introduction-to-the-macroeconomic-perspective)
+::::{.columns}
+::: {.column width="70%"}
+[Déficit público]{.bg style="--col: #00FFFF"}: ocurre cuando el gasto del Estado supera sus ingresos en un periodo.
 
--   Tambien es bueno consultar la importancia de: [Recesión, fluctuación y desempleo](https://www.core-econ.org/the-economy/v1/book/es/text/13.html#134-medici%C3%B3n-de-la-econom%C3%ADa-agregada-los-componentes-del-pib)
+$$\text{Déficit} = \text{Gasto Público} - \text{IngresosFiscales}$$
 
--   Tras una breve introducción a algunos conceptos económicos básicos, nos centramos en el *objeto* de esta parte del modulo del curso.
+- [Deuda pública]{.bg style="--col: #00FFFF"}: es la acumulación de déficits pasados financiados mediante crédito interno o externo.
+:::
 
--   En caso de que uno esté interesado en el funcionamiento económico de todo el sistema, requiere estudiar [Macroeconomía]{.bg style="--col: #FFFF00"}.
+::: {.column width="30%"}
+<iframe src="https://ourworldindata.org/grapher/gross-public-sector-debt-as-a-proportion-of-gdp?tab=map" loading="lazy" style="width: 100%; height: 400px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+:::
+::::
 
--   La **macroeconomía** se centra en los factores determinantes de la producción nacional total (es decir, sus bienes y servicios).
+## Déficit público y deuda: por qué importan en los proyectos
 
--   Por tanto, no nos centramos en el [ingreso]{.fg style="--col: #0000FF"} de un solo hogar, sino en el [ingreso nacional]{.fg style="--col: #0000FF"}; no en los precios individuales, sino en el nivel de precios de toda la economía, etc.
+::: fragment
+#### Ambos son indicadores macroeconómicos críticos porque:
+
+- Determinan la capacidad del **Estado** para financiar infraestructura, subsidios o incentivos.
+- Influyen en las [tasas de interés]{.fg style="--col: #0000FF"}, la [inflación]{.fg style="--col: #0000FF"} y el [riesgo país]{.fg style="--col: #0000FF"}, que afectan el costo del dinero.
+- Señalan la sostenibilidad fiscal del entorno donde los proyectos se desarrollan.
+:::
+
+::: fragment
+> Se calcula comúnmente como la diferencia (spread) entre la tasa de interés de los bonos soberanos de un país y los Bonos del Tesoro de EE.UU. (considerados "libres de riesgo")
+
+
+:::
+
+
+## Déficit público y deuda: por qué importan en los proyectos
+::::{.columns}
+::: {.column width="70%"}
+| **Categoría**       | **Monto (billones de COP)** | **% del Total**           |
+|----------------------|-----------------------------|---------------------------|
+| Inversión pública    | 99,9                        | 19,9%                     |
+| Funcionamiento       | 402,7                       | 80,1%                     |
+| Deuda pública *(incluye servicio de deuda)* | 403,3 | — |
+| **Total**            | **502,6**                   | **100%**                  |
+:::
+
+
+::: {.column width="30%"}
+- El país recauda vía **ingreso tributario** y no tributario la suma de 281.5 billones de pesos.
+_ La ejecución de 2024 llegó a ser de un 83.1%
+:::
+::::
+
+## Déficit público y deuda: por qué importan en los proyectos
+
+
+::: fragment
+| **Componente**                       | **% Aprox.** | **Valor Aprox. (COP/galón)** |
+|-------------------------------------|---------------|-------------------------------|
+| Ingreso al Productor                | 60–65%        | 10.772                        |
+| Transporte & Márgenes               | 5–8%          | 800–1.100                     |
+| Impuestos Nacionales (IVA + IC)     | 20–25%        | 3.500–4.000                   |
+| Sobretasa Municipal                 | 3–5%          | 500–800                       |
+| Impuesto al Carbono                 | 1–2%          | 200–300                       |
+| Ajuste FEPC                         | 0–5%          | Variable (subsidio leve)      |
+| **Total**                           | **100%**      | **16.293**                    |
+:::
+
+
+
+## Hablemos mas de la Deuda
+
+:::: fragment
+::: callout-note
+La **deuda pública** es el conjunto de obligaciones financieras contraídas por el Gobierno Nacional Central (GNC) —y en algunos casos, entidades territoriales o empresas estatales— para cubrir déficits fiscales, invertir en infraestructura o responder a emergencias. No es "deuda personal" del ciudadano, sino una herramienta del Estado para equilibrar sus finanzas.
+:::
+::::
+
+::: fragment
+#### Tipos principales:
+- **Deuda interna**: Emitida en pesos colombianos (ej. Títulos de Tesorería - TES), comprada por inversionistas locales (bancos, fondos de pensiones). Representa ~70-75% del total.
+
+- **Deuda externa**: En dólares o euros, emitida en mercados internacionales (bonos soberanos). aprox. 25-30% del total, más sensible a fluctuaciones cambiarias.
+:::
+
 
 ##  {background-image="images/arb.jpg"}
 
-### Cuentas Nacionales {.r-fit-text}
+### Agregados {.r-fit-text}
 
-## Cuentas Nacionales
+## Agregados Nacionales
 
 -   Los economistas utilizan las [estadísticas agregadas]{.fg style="--col: #FF0000"} para describir los fenómenos macroeconómicos.
 
@@ -585,7 +866,7 @@ $$
 -   Así que si en Colombia el PIB es de 978 Billones de pesos, el *PIB per capita* viene a ser:
 
 ::: fragment
-$$\text{PIB per cápita}_{Col}=\frac{978 \ \text{Billones}}{52 \ \text{Millones}}=18 \;807\;692$$
+$$\text{PIB per cápita}_{Col}=\frac{978 \ \text{Billones}}{53 \ \text{Millones}}=18 \;452\;830$$
 :::
 
 ## PIB per Cápita
@@ -606,8 +887,8 @@ $$\begin{aligned}
 
 ## PIB per Cápita
 
--   Suponga que un (1) peso colombiano en septiembre de 2024 equivale a 0.038 YENES
-    -   Así que, la **tasa de cambio** YEN/COP es de 29.37, cuando (1) YEN se iguala a COP.
+-   Suponga que un (1) peso colombiano en octubre de 2025 equivale a 0.039 YENES
+    -   Así que, la **tasa de cambio** YEN/COP es de 25.41, cuando (1) YEN se iguala a COP.
 
 :::: fragment
 ::: callout-note
@@ -623,15 +904,164 @@ Aquella que expresa el valor de una moneda en términos de otra
 
 ::: fragment
 $$\begin{aligned}
-\text{PIB COLOMBIA en Yen\$} = \dfrac{\text{PIB COL en COP}}{\text{tasa de cambio Yen/Pesos}} = \dfrac{970 \; \text{Billones de pesos}}{29.37 \; \text{pesos}}
+\text{PIB COLOMBIA en Yen\$} = \dfrac{\text{PIB COL en COP}}{\text{tasa de cambio Yen/Pesos}} = \dfrac{978 \; \text{Billones de pesos}}{25.41 \; \text{pesos}}
 \end{aligned}$$
 :::
 
--   Esto nos da $\text{Yen(\$)}= \; 33.02 \; \text{Billones de Yenes}$
+-   Esto nos da $\text{Yen(\$)}= \; 38.48 \; \text{Billones de Yenes}$
 
--   Con dolares nos da: $\text{Dolar(\$)}= \; 232.39 \; \text{Mil millones de dolares}$
+-   Con dolares nos da: $\text{Dolar(\$)}= \; 251.99 \; \text{Mil millones de dolares}$
 
--   Lo que es en téminos de [PIB per cápita]{.alert} un total de 4.469 US Dolares.
+-   Lo que es en téminos de [PIB per cápita]{.alert} un total de 4.716 US Dolares.
+
+- Note que uno puede armar una tabla por los países a comparar
+
+## PIB per Cápita
+
+```{r, message=FALSE,echo=FALSE, warning=FALSE, dev='svg'}
+# Paquetes
+library(WDI)
+library(tidyverse)
+library(ggthemes)
+
+# 1️⃣ Descargar datos del Banco Mundial
+paises <- c("CO", "US", "DE", "FR", "CH", "ES", "IT", "GB", "MX", "BR", "CL", "AR", "PE")
+pib_df <- WDI(country = paises, indicator = "NY.GDP.PCAP.CD", start = 2023, end = 2023)
+
+# 2️⃣ Limpiar datos
+pib_df <- pib_df %>%
+  select(country, NY.GDP.PCAP.CD) %>%
+  rename(PIB_percapita = NY.GDP.PCAP.CD) %>%
+  mutate(
+    grupo = case_when(
+      country %in% c("United States", "Germany", "France", "Switzerland", "Spain", "Italy", "United Kingdom") ~ "Desarrollado",
+      TRUE ~ "En vía de desarrollo"
+    ),
+    country = recode(country,
+      "Colombia" = "Colombia",
+      "United States" = "EE.UU.",
+      "Germany" = "Alemania",
+      "France" = "Francia",
+      "Switzerland" = "Suiza",
+      "Spain" = "España",
+      "Italy" = "Italia",
+      "United Kingdom" = "Reino Unido",
+      "Mexico" = "México",
+      "Brazil" = "Brasil",
+      "Chile" = "Chile",
+      "Argentina" = "Argentina",
+      "Peru" = "Perú"
+    )
+  )
+
+# 3️⃣ Gráfico de barras
+pib_df %>%
+  ggplot(aes(x = reorder(country, PIB_percapita), y = PIB_percapita, fill = grupo)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = paste0("$", format(round(PIB_percapita, 0), big.mark = ","))),
+            vjust = -0.5, size = 4) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_fill_manual(
+    "Nivel de desarrollo",
+    values = c("Desarrollado" = "#0077b6", "En vía de desarrollo" = "#90e0ef")
+  ) +
+  labs(
+    title = "PIB per cápita (USD, 2023)",
+    subtitle = "Comparación entre Colombia y otros países seleccionados",
+    x = "Países",
+    y = "PIB per cápita (USD)",
+    caption = "Fuente: Banco Mundial (WDI, 2023)"
+  ) +
+  ggthemes::theme_pander(base_size = 15) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 20, hjust = 1)
+  )
+```
+
+##  {background-image="images/Polwave2.jpg"}
+
+### Indice Big Mac {.r-fit-text}
+
+## 🍔 ¿Qué es el Índice Big Mac?
+
+::: fragment
+El **Índice Big Mac** es una medida creada por *The Economist* para [comparar]{.blut} el **poder adquisitivo** entre países.
+:::
+
+::: fragment
+Se basa en el precio de una [hamburguesa Big Mac]{.alert} en distintas monedas.
+:::
+
+:::: fragment
+::: {.callout-tip}
+## Idea principal:
+Si un Big Mac cuesta más caro en un país que en otro (ajustado por tipo de cambio),  
+entonces una moneda está **sobrevalorada** o **subvalorada** frente al dólar.
+:::
+::::
+
+## 🍔 ¿Qué es el Índice Big Mac?
+
+::: fragment
+- Precio del Big Mac en **Colombia**: **$16,900 COP**  
+- Precio del Big Mac en **EE.UU.**: **$5.69 USD**
+- Tipo de cambio de mercado: **$3,950 COP/USD**
+:::
+
+:::fragment
+$$\text{Tipo de cambio implícito (PPA)} = \frac{16,900}{5.69} = 2,970 \text{ COP/USD}$$
+:::
+
+::: fragment
+$$\text{Subvaloración del peso} = \frac{2,970 - 3,950}{3,950} \times 100 = -24.8\%$$
+:::
+
+::: fragment
+El peso colombiano estaría **subvalorado en 25%** frente al dólar según el [Índice Big Mac]{.alert}.
+:::
+
+## 🍔 ¿Qué es el Índice Big Mac?
+
+::: fragment
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# Datos simulados con nuevos países
+bigmac <- data.frame(
+  pais = c("EE.UU.", "Colombia", "Chile", "México", "Brasil", "China", "Rusia", "Suiza"),
+  precio_local = c(5.69, 16900, 5100, 89, 23, 25.9, 229, 6.9),
+  moneda = c("USD", "COP", "CLP", "MXN", "BRL", "CNY", "RUB", "CHF"),
+  tipo_cambio = c(1, 3950, 930, 16, 5.2, 7.1, 92, 0.86)
+)
+
+# Calcular tipo de cambio PPA y diferencia
+bigmac <- bigmac %>%
+  mutate(
+    ppa = precio_local / 5.69,
+    sobreval = (ppa - tipo_cambio) / tipo_cambio * 100
+  )
+
+# Gráfico
+ggplot(bigmac, aes(x = reorder(pais, sobreval), y = sobreval, fill = pais)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = paste0(round(sobreval, 1), "%")),
+            vjust = -0.5, size = 4) +
+  scale_fill_brewer(palette = "Blues") +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "Índice Big Mac: Comparación de monedas frente al USD",
+    subtitle = "Valores negativos indican subvaloración de la moneda",
+    x = "País",
+    y = "Diferencia (%)",
+    caption = "Fuente: The Economist (Big Mac Index 2024)"
+  ) +
+  theme(legend.position = "none")
+```
+:::
+
 
 ##  {background-image="images/Polwave2.jpg"}
 
@@ -640,8 +1070,17 @@ $$\begin{aligned}
 ## Determinantes del desempleo
 
 ::: fragment
-```{r unemployment02, fig.cap='Tabla de salario', out.width='60%', fig.asp=.75, fig.align='center', echo=FALSE}
-knitr::include_graphics("images/tabsal2024.png")
+```{r, echo=FALSE, results='asis'}
+cat("
+| **Concepto**              | **Valor (COP)** | **Jornada**                                |
+|----------------------------|-----------------|--------------------------------------------|
+| Salario mínimo mensual     | $1.423.500      | 48 horas semanales, 8 horas diarias        |
+| Salario mínimo diario      | $47.450         | Jornada ordinaria (diurna)                 |
+| Salario mínimo hora        | $6.189          | 6 A.M. – 9 P.M.                            |
+| Salario mínimo nocturna    | $8.025          | 9 P.M. – 6 A.M.                            |
+| Auxilio de transporte mensual | $200.000     | 48 horas semanales, 8 horas diarias        |
+| Auxilio de transporte diario  | $6.667        | Jornada ordinaria                         |
+")
 ```
 :::
 
@@ -649,7 +1088,7 @@ knitr::include_graphics("images/tabsal2024.png")
 
 ::: fragment
 ```{r unemployment03, fig.cap='Tabla de ocupaciones', out.width='80%', fig.asp=.75, fig.align='center', echo=FALSE}
-knitr::include_graphics("images/Distpobempleo.png")
+knitr::include_graphics("images/distpobemplo.png")
 ```
 :::
 
@@ -738,1126 +1177,6 @@ No es cierto que el desempleo pueda llegar a cero (o caer tan bajo), porque exis
 
 > A. Impuestos corporativos <br> [B. Desempleo friccional]{.alert} <br> C. Desempleo cíclico <br> D. Políticas gubernamentales
 
-##  {background-image="images/bean.jpg"}
-
-### Disposiciones en el trabajo {.r-fit-text}
-
-## Disposición a trabajar
-
-:::: fragment
-::: callout-note
-## Concepto
-
-Como personas de acuerdo a las condiciones laborales y comodidades tendremos cierta disposición y disponibilidad a trabajar
-:::
-::::
-
-::: fragment
-Debemos tener presente que por muchas ayudas (subsidio de desempleo, programas de capacitación, ferias, etc.) Las personas pueden no sentirse atraidas por las vacantes del mercado laboral.
-:::
-
--   El concepto de [salario de reserva]{.bg style="--col: #00FFFF"} $(W_r)$, sale a relucir y es de tener presente que es lo que nos impulsa en gran parte a ir a trabajar.
-
--   La condición de trabajo va:
-
-::: fragment
-$$\text{Disposición}= W^* \geq W_r$$
-:::
-
-## Disposición a trabajar
-
-:::::: columns
-::: {.column width="30%"}
-```{r, echo = FALSE, fig.height = 3.5, fig.width = 3.5, dev = "svg"}
-supply <- function(x) 0 + (4/5)*x
-
-ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
-  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  theme_market +
-  labs(x = "L", y = "w") +
-  stat_function(fun = supply, color = red_pink, size = 1) +
-  annotate("label", label = "S", x = 9, y = supply(9), color = red_pink, family = "Fira Sans", size = 5)
-```
-
-Tenemos una persona que es muy [lineal]{.bg style="--col: #FFFF00"} con el salario.
-:::
-
-::: {.column width="30%"}
-```{r, echo = FALSE, fig.height = 3.5, fig.width = 3.5, dev = "svg"}
-supply <- function(x) 1 + (1/5)*x
-
-ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
-  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  theme_market +
-  labs(x = "L", y = "w") +
-  stat_function(fun = supply, color = red_pink, size = 1) +
-  annotate("label", label = "S", x = 5, y = supply(5), color = red_pink, family = "Fira Sans", size = 5)
-```
-
-Una persona que ya tiene un salario de reserva pero con poco esta dispuesta a trabajar mas tiempo.
-:::
-
-::: {.column width="30%"}
-```{r, echo = FALSE, fig.height = 3.5, fig.width = 3.5, dev = "svg"}
-supply <- function(x) 3 + (5/6)*x
-
-ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
-  scale_x_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  scale_y_continuous(limits = c(0, 10.5), expand = c(0, 0), breaks = seq(0, 10, 1)) +
-  theme_market +
-  labs(x = "L", y = "w") +
-  stat_function(fun = supply, color = red_pink, size = 1) +
-  annotate("label", label = "S", x = 8, y = supply(8), color = red_pink, family = "Fira Sans", size = 5)
-```
-
-Una persona que ya tiene un salario de reserva alto y desde ahí, ya esta dispuesta a trabajar mas tiempo.
-:::
-::::::
-
-##  {background-image="images/bean.jpg"}
-
-### El problema de los ingresos no salariales {.r-fit-text}
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-# parametros
-wage_level = 2
-other_income = 0
-income_increase = 20
-offset_level = 0
-leisure_love = 0.5
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-new_optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income + income_increase,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-new_optimal_y <-
-  budget(
-    x = new_optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income + income_increase
-  )
-new_max_utility <-
-  utility(
-    x = new_optimal_x,
-    y = new_optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # presupuesto
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 2.5,
-  #   y = budget(2.5, wage = wage_level, non_labor_income = other_income),
-  #   label = "Budget",
-  #   color = green
-  # ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 7,
-  #   y = ic(7, k = max_utility),
-  #   label = paste0("U = ", max_utility),
-  #   color = red_pink
-  # ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.under} de los ingresos no laborales?
-:::
-:::::
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-ggplot() + 
-  # budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 2.5,
-  #   y = budget(2.5, wage = wage_level, non_labor_income = other_income),
-  #   label = "Budget",
-  #   color = green
-  # ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 7,
-  #   y = ic(7, k = max_utility),
-  #   label = paste0("U = ", max_utility),
-  #   color = red_pink
-  # ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.under} de los ingresos no laborales?
-:::
-:::::
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-ggplot() + 
-  # budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 2.5,
-  #   y = budget(2.5, wage = wage_level, non_labor_income = other_income),
-  #   label = "Budget",
-  #   color = green
-  # ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = new_max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate, alpha = 0.5) +
-  
-  annotate(geom = "segment", x = 0, y = new_optimal_y, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = new_optimal_x, y = 0, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "point", x = new_optimal_x, y = new_optimal_y, size = 2, color = met_slate) +
-  
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.under} de los ingresos no laborales? <br/> [R./]{.alert} Tiene mas **deseo** de no hacer nada y desde luego su ocio aumenta mucho mas. <br/> Recuerde ademas que el [trabajo]{.oranger} es un *bien* mal.
-:::
-:::::
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-# parameter
-wage_level = 2
-wage_increase = 4
-other_income = 0
-income_increase = 20
-offset_level = 0
-leisure_love = 0.5
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income + income_increase,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income + income_increase
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-new_optimal_x <-
-  optimize(
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income + income_increase,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-new_optimal_y <-
-  budget(
-    x = new_optimal_x,
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income + income_increase
-  )
-new_max_utility <-
-  utility(
-    x = new_optimal_x,
-    y = new_optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # Budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1
-  ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 7,
-  #   y = ic(7, k = max_utility),
-  #   label = paste0("U = ", max_utility),
-  #   color = red_pink
-  # ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.oranger} de los ingresos de renta laboral?
-:::
-:::::
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-ggplot() + 
-  # budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level + wage_increase, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 2.5,
-  #   y = budget(2.5, wage = wage_level, non_labor_income = other_income),
-  #   label = "Budget",
-  #   color = green
-  # ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 7,
-  #   y = ic(7, k = max_utility),
-  #   label = paste0("U = ", max_utility),
-  #   color = red_pink
-  # ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.oranger} de los ingresos de renta laboral?
-:::
-:::::
-
-## Disposición en base a elección
-
-::::: columns
-::: {.column width="60%"}
-```{r, dev = "svg", echo = F, fig.height = 5.5, fig.width = 5.5}
-ggplot() + 
-  # budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level + wage_increase, non_labor_income = other_income + income_increase),
-    color = green,
-    size = 1
-  ) +
-  # annotate(
-  #   geom = "label",
-  #   x = 2.5,
-  #   y = budget(2.5, wage = wage_level, non_labor_income = other_income),
-  #   label = "Budget",
-  #   color = green
-  # ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = new_max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate, alpha = 0.5) +
-  
-  annotate(geom = "segment", x = 0, y = new_optimal_y, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = new_optimal_x, y = 0, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "point", x = new_optimal_x, y = new_optimal_y, size = 2, color = met_slate) +
-  
-  labs(x = "Hours of leisure (L)", y = "Labor income (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="40%"}
-[P:]{.blut} Como responde una persona (trabajador) frente a un [aumento]{.oranger} de los ingresos de renta laboral?
-
-[R./]{.alert} para este caso deseará [trabajar]{.oranger} mas que descansar.
-:::
-:::::
-
-##  {background-image="images/Plantis.jpg"}
-
-### Comparación entre trabajadores {.r-fit-text}
-
-## Comparación entre trabajadores
-
-::::: columns
-::: {.column width="50%"}
-#### Amantes del dinero
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameters
-offset_level = 1
-leisure_love = 0.25
-
-ggplot() + 
-  # u = 10
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 10, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-    # u = 20
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 20, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # u = 30
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 30, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # u = 40
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 40, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # u = 50
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 50, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="50%"}
-#### Amantes del ocio
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameters
-offset_level = 1
-leisure_love = 0.75
-
-ggplot() + 
-  # u = 10
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 6, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-    # u = 20
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 12, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  # u = 30
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 18, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  # u = 40
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 24, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  # u = 50
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = 30, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-:::::
-
-## Comparación entre trabajadores
-
-::::: columns
-::: {.column width="50%"}
-#### Amantes del dinero
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameter
-wage_level = 2
-other_income = 10
-offset_level = 0
-leisure_love = 0.25
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # Budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1
-  ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="50%"}
-#### Amantes del ocio
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameter
-wage_level = 2
-other_income = 10
-offset_level = 0
-leisure_love = 0.75
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # Budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1
-  ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  # dotted lines to show x and y
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate) +
-  # dot at optimal point
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-:::::
-
-## Comparación entre trabajadores
-
-::::: columns
-::: {.column width="50%"}
-#### Amantes del dinero
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameter
-wage_level = 2
-wage_increase = -1
-other_income = 10
-offset_level = 0
-leisure_love = 0.25
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-new_optimal_x <-
-  optimize(
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-new_optimal_y <-
-  budget(
-    x = new_optimal_x,
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income
-  )
-new_max_utility <-
-  utility(
-    x = new_optimal_x,
-    y = new_optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # Budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level + wage_increase, non_labor_income = other_income),
-    color = green,
-    size = 1
-  ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = new_max_utility, offset = offset_level, alpha = leisure_love),
-    color = red_pink,
-    size = 1
-  ) +
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate, alpha = 0.5) +
-  
-  annotate(geom = "segment", x = 0, y = new_optimal_y, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = new_optimal_x, y = 0, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "point", x = new_optimal_x, y = new_optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-
-::: {.column width="50%"}
-#### Amantes del ocio
-
-```{r, dev = "svg", echo = F, fig.height = 5.25, fig.width = 5.5}
-# parameter
-wage_level = 2
-wage_increase = -1
-other_income = 10
-offset_level = 0
-leisure_love = 0.75
-
-
-optimal_x <-
-  optimize(
-    wage = wage_level,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-optimal_y <-
-  budget(
-    x = optimal_x,
-    wage = wage_level,
-    non_labor_income = other_income
-  )
-max_utility <-
-  utility(
-    x = optimal_x,
-    y = optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-new_optimal_x <-
-  optimize(
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-new_optimal_y <-
-  budget(
-    x = new_optimal_x,
-    wage = wage_level + wage_increase,
-    non_labor_income = other_income
-  )
-new_max_utility <-
-  utility(
-    x = new_optimal_x,
-    y = new_optimal_y,
-    offset = offset_level,
-    alpha = leisure_love
-  )
-
-ggplot() + 
-  # Budget line
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level, non_labor_income = other_income),
-    color = green,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 0:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = budget,
-    args = list(wage = wage_level + wage_increase, non_labor_income = other_income),
-    color = green,
-    size = 1
-  ) +
-  # best indifference curve
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = max_utility, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1,
-    alpha = 0.5
-  ) +
-  stat_function(
-    data = tibble(x = 1:24),
-    xlim = c(0, 24),
-    aes(x = x),
-    fun = ic,
-    args = list(k = new_max_utility, offset = offset_level, alpha = leisure_love),
-    color = purple,
-    size = 1
-  ) +
-  annotate(geom = "segment", x = 0, y = optimal_y, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "segment", x = optimal_x, y = 0, xend = optimal_x, yend = optimal_y,
-           linetype = "dashed", color = met_slate, alpha = 0.5) +
-  annotate(geom = "point", x = optimal_x, y = optimal_y, size = 2, color = met_slate, alpha = 0.5) +
-  
-  annotate(geom = "segment", x = 0, y = new_optimal_y, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "segment", x = new_optimal_x, y = 0, xend = new_optimal_x, yend = new_optimal_y,
-           linetype = "dashed", color = met_slate) +
-  annotate(geom = "point", x = new_optimal_x, y = new_optimal_y, size = 2, color = met_slate) +
-  labs(x = "Horas de ocio (L)", y = "Ingreso laboral (Y)") +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 4), limits = c(0, 25)) +
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 160, 20), labels = scales::dollar, limits = c(0, 165)) +
-  theme_simple +
-  theme(axis.title.x = element_text(margin = margin(t = 10)),
-        axis.title.y = element_text(margin = margin(r = 10)))
-```
-:::
-:::::
-
 ##  {background-image="images/Plantis.jpg"}
 
 ### Implicaciones de politica {.r-fit-text}
@@ -1875,7 +1194,6 @@ ggplot() +
 ::: fragment
 > "El Estado actuará como empleador de última instancia ofreciendo empleo a quienes puedan y quieran trabajar, pero no encuentran empleo en el sector privado, beneficiando principalmente a las y los desempleados, jóvenes, mujeres, trabajadores informales, las economías populares y los territorios"
 :::
-
 
 ##  {background-image="images/Polwave2.jpg"}
 
@@ -1913,26 +1231,73 @@ ggplot() +
 
 -   Mientras que la [inflación]{.under} sea [estable]{.alert}, importa mas el **empleo**
 
-## Intercambio
+## Intercambio Político
 
 ::: fragment
-```{r, dev='svg', fig.height=6.5, fig.width=8}
-#| echo: false
-#| message: false
-#| warning: false
+```{r, dev='svg', echo=FALSE}
+# ===============================================
+# 📊 Desempleo en Colombia por año y presidente
+# ===============================================
+
+library(ggplot2)
+library(dplyr)
+library(ggthemes)
+library(plotly)
+
+# Datos
 datos <- data.frame(
-  desempleo = c(13.6084, 15.4225, 12.5583, 11.9539, 10.2722, 11.84025816, 9.923435534, 10.77305815, 11.31215274, 11.2264, 10.0677, 9.9404, 8.6473, 9.0375, 8.8227, 9.0971, 8.9122, 9.9891, 9.9497, 13.9142, 11.09649307, 10.27267877, 10.0137174),
-  año = c(2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023),
-  presidente = c('Pastrana', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe II', 'Uribe II', 'Uribe II', 'Uribe II', 'Santos I', 'Santos I', 'Santos I', 'Santos I', 'Santos II', 'Santos II', 'Santos II', 'Santos II', 'Duque', 'Duque', 'Duque', 'Duque', 'Petro', 'Petro')
+  desempleo = c(13.6084, 15.4225, 12.5583, 11.9539, 10.2722, 11.84025816, 9.923435534, 10.77305815, 11.31215274, 11.2264,
+                10.0677, 9.9404, 8.6473, 9.0375, 8.8227, 9.0971, 8.9122, 9.9891, 9.9497, 13.9142, 11.09649307,
+                10.27267877, 10.0137174, 9.10),
+  año = c(2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
+          2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020,
+          2021, 2022, 2023, 2024),
+  presidente = c('Pastrana', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe I',
+                 'Uribe II', 'Uribe II', 'Uribe II', 'Uribe II',
+                 'Santos I', 'Santos I', 'Santos I', 'Santos I',
+                 'Santos II', 'Santos II', 'Santos II', 'Santos II',
+                 'Duque', 'Duque', 'Duque', 'Duque',
+                 'Petro', 'Petro', 'Petro')
 )
 
-# Redondear desempleo a dos decimales
+# Limpieza
 datos$desempleo <- round(datos$desempleo, 2)
 
-# Crear el gráfico ggplot con el tema de The Economist
-p <- ggplot(datos, aes(x = paste(año, presidente), y = desempleo, fill = presidente)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Año - Presidente", y = "Tasa de Desempleo", title = "Desempleo por Año y Presidente") + theme_classic()
+# Paleta personalizada por presidente
+colores_presidente <- c(
+  "Pastrana" = "#5dade2",
+  "Uribe I" = "#2e86c1",
+  "Uribe II" = "#1f618d",
+  "Santos I" = "#82e0aa",
+  "Santos II" = "#27ae60",
+  "Duque" = "#f5b041",
+  "Petro" = "#e74c3c"
+)
+
+# Gráfico mejorado
+p <- ggplot(datos, aes(x = factor(año), y = desempleo, fill = presidente)) +
+  geom_col(width = 0.8) +
+  geom_text(aes(label = paste0(desempleo, "%")),
+            vjust = -0.3, size = 3.8, color = "black") +
+  scale_fill_manual(values = colores_presidente) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+  labs(
+    title = "📉 Tasa de Desempleo en Colombia (2001–2024)",
+    subtitle = "Desglose anual según periodo presidencial",
+    x = "Año",
+    y = "Tasa de desempleo (%)",
+    fill = "Presidente",
+    caption = "Fuente: DANE – Cálculos propios"
+  ) +
+  theme_economist_white(base_size = 14) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  )
+
+# Gráfico interactivo
 ggplotly(p)
 ```
 :::
