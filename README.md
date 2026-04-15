@@ -14,7 +14,7 @@ Class 05 | [Desempleo I](https://raw.githack.com/keynes37/Pmacroeconomics/main/C
 
 Class 06 | [Desempleo II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class06.html)
 
-Class 07 | [Desempleo vs inflación](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class07.html)
+Class 07 a | [Desempleo vs inflación](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class07.html)
 
 Class 08 | [Politica Monetaria](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class08.html)
 
@@ -26,9 +26,9 @@ Class 11 | [Modelo General de DA](https://raw.githack.com/keynes37/Pmacroeconomi
 
 Class 12 [Modelo General de DA II](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class12.html)
 
+-----
 
-
-## Perfomance Espeval 2025
+## Perfomance Espeval 2026
 
 Clase Last [Final](https://raw.githack.com/keynes37/Pmacroeconomics/main/Classinbounds.html)
 
