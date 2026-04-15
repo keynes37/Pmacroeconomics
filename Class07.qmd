@@ -43,9 +43,9 @@ theme_set(theme_ipsum_rc())
 
 **Se requiere leer**
 
-- [Curva de Phillips](https://www.econlowdown.org/v3/public/inflation-expectations-the-phillips-curve-and-the-feds-dual-mandate)
+-   [Curva de Phillips](https://www.econlowdown.org/v3/public/inflation-expectations-the-phillips-curve-and-the-feds-dual-mandate)
 
-- [Core economics](https://www.core-econ.org/the-economy/v1/book/es/text/15.html).
+-   [Core economics](https://www.core-econ.org/the-economy/v1/book/es/text/15.html).
 
 <br>
 
@@ -57,86 +57,97 @@ theme_set(theme_ipsum_rc())
 
 ## Para hoy
 
-- Mezclamos **decisiones de política** (inflación y desempleo)
-- Aprendemos mas de [teoría]{.bg style="--col: #FFFF00"} con el asunto de la curva de Phillips 
-- Hacemos una comparación en el [tiempo]{.under} para la economía de EEUU
-- Entender los planes de `inflación objetivo` 
-- Prepararnos para la politica monetaria
+-   Mezclamos **decisiones de política** (inflación y desempleo)
+-   Aprendemos mas de [teoría]{.bg style="--col: #FFFF00"} con el asunto de la curva de Phillips
+-   Hacemos una comparación en el [tiempo]{.under} para la economía de EEUU
+-   Entender los planes de `inflación objetivo`
+-   Prepararnos para la politica monetaria
 
-# Empecemos {background-image="images/nature1.jpg"} 
+# Empecemos {background-image="images/nature1.jpg"}
 
-## Intercambio 
+## Intercambio
 
-- Para la población en general e incluso para los mismos *economistas*, esto es muy deseable:
+-   Para la población en general e incluso para los mismos *economistas*, esto es muy deseable:
 
 ::: fragment
 > Un nivel muy bajo de inflación y una tasa de desempleo baja
 :::
 
-- Sin embargo, ocurre lo contrario: 
+-   Sin embargo, ocurre lo contrario:
 
-- Cuando la inflación $\downarrow$, entonces el desempleo $\color{red}{\uparrow}$, es alto o tiende a crecer y viceversa.
-  - Por qué cree que pasa esto?
+-   Cuando la inflación $\downarrow$, entonces el desempleo $\color{red}{\uparrow}$, es alto o tiende a crecer y viceversa.
 
-- El nivel deseable de que ambas **tasas** sean [bajas]{.alert} siempre es un [problema]{.bg style="--col: #FFFF00"} complejo.
+    -   Por qué cree que pasa esto?
 
+-   El nivel deseable de que ambas **tasas** sean [bajas]{.alert} siempre es un [problema]{.bg style="--col: #FFFF00"} complejo.
 
-## Intercambio 
+## Intercambio
 
 ::: fragment
 ### Entonces, como balanceamos eso?
 :::
 
-- La [política]{.oranger} es quien puede **intentar** resolver en parte ese problema
+-   La [política]{.oranger} es quien puede **intentar** resolver en parte ese problema
 
-- Pensemos en algo, para re-elegir políticos o partidos políticos. El indicador de empleabilidad es [clave]{.under}. Si en un pasado queda una sensación de [desempleo]{.alert}, entonces ese partido y sus afines no va ser reelegido.
+-   Pensemos en algo, para re-elegir políticos o partidos políticos. El indicador de empleabilidad es [clave]{.under}. Si en un pasado queda una sensación de [desempleo]{.alert}, entonces ese partido y sus afines no va ser reelegido.
 
-- En muchas ocasiones -*no es camisa de fuerza*-, el primer periodo de un nuevo gobierno sufre de un [desempleo]{.alert} moderadamente $\triangle \uparrow$ (alto) 
+-   En muchas ocasiones -*no es camisa de fuerza*-, el primer periodo de un nuevo gobierno sufre de un [desempleo]{.alert} moderadamente $\triangle \uparrow$ (alto)
 
-- Colombia es un país donde el empleo tiene mucho que ver con el [estado]{.bg style="--col: #FFFF00"}.
+-   Colombia es un país donde el empleo tiene mucho que ver con el [estado]{.bg style="--col: #FFFF00"}.
 
-- Mientras que la [inflación]{.under} sea [estable]{.alert}, importa mas el **empleo**
+-   Mientras que la [inflación]{.under} sea [estable]{.alert}, importa mas el **empleo**
 
-## Intercambio 
+## Intercambio
 
-:::fragment
-```{r, dev='svg', fig.height=1.5, fig.width=4}
+::: fragment
+```{r, dev='svg', fig.height=1.5, fig.width=5}
 #| echo: false
 #| message: false
 #| warning: false
+
+
 datos <- data.frame(
-  desempleo = c(13.6084, 15.4225, 12.5583, 11.9539, 10.2722, 11.84025816, 9.923435534, 10.77305815, 11.31215274, 11.2264, 10.0677, 9.9404, 8.6473, 9.0375, 8.8227, 9.0971, 8.9122, 9.9891, 9.9497, 13.9142, 11.09649307, 10.27267877, 10.0137174),
-  año = c(2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023),
-  presidente = c('Pastrana', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe II', 'Uribe II', 'Uribe II', 'Uribe II', 'Santos I', 'Santos I', 'Santos I', 'Santos I', 'Santos II', 'Santos II', 'Santos II', 'Santos II', 'Duque', 'Duque', 'Duque', 'Duque', 'Petro', 'Petro')
+  desempleo = c(13.6084, 15.4225, 12.5583, 11.9539, 10.2722, 11.84025816, 9.923435534, 10.77305815, 11.31215274, 11.2264, 10.0677, 9.9404, 8.6473, 9.0375, 8.8227, 9.0971, 8.9122, 9.9891, 9.9497, 13.9142, 11.09649307, 10.27267877, 10.0137174, 10.021132, 8.9001345),
+  año = c(2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025),
+  presidente = c('Pastrana', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe I', 'Uribe II', 'Uribe II', 'Uribe II', 'Uribe II', 'Santos I', 'Santos I', 'Santos I', 'Santos I', 'Santos II', 'Santos II', 'Santos II', 'Santos II', 'Duque', 'Duque', 'Duque', 'Duque', 'Petro', 'Petro','Petro','Petro')
 )
 
-# Redondear desempleo a dos decimales
 datos$desempleo <- round(datos$desempleo, 2)
 
-# Crear el gráfico ggplot con el tema de The Economist
-p <- ggplot(datos, aes(x = paste(año, presidente), y = desempleo, fill = presidente)) +
+p <- ggplot(datos, aes(x = año, y = desempleo, fill = presidente)) +
   geom_bar(stat = "identity") +
-  labs(x = "Año - Presidente", y = "Tasa de Desempleo", title = "Desempleo por Año y Presidente") + theme_classic()
-ggplotly(p)
+  labs(x = "Año", y = "Tasa de Desempleo (%)", 
+       title = "Desempleo en Colombia por Año y Presidente") + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+    legend.position = "bottom",
+    plot.title = element_text(size = 14, face = "bold")
+  )
+
+ggplotly(p, tooltip = c("x", "y", "fill"))
+
+
 ```
 :::
 
-# Curva de Phillips {background-image="images/treescape.jpg"} 
+# Curva de Phillips {background-image="images/treescape.jpg"}
 
 ## Curva de Phillips
-::: fragment
-::::{.columns}
+
+:::::: fragment
+::::: columns
 ::: {.column width="60%"}
-- A. W.  Phillips (1958), encontró una relación existente entre la [inflación]{.blut} y el [desempleo]{.alert}
-- Vió que [altas]{.blut} tasas de desempleo están relacionadas con [baja]{.bg style="--col: #FFFF00"} inflación
-- Esa [relación]{.under} es conocida como [Curva de Phillips]{.slater}
+-   A. W. Phillips (1958), encontró una relación existente entre la [inflación]{.blut} y el [desempleo]{.alert}
+-   Vió que [altas]{.blut} tasas de desempleo están relacionadas con [baja]{.bg style="--col: #FFFF00"} inflación
+-   Esa [relación]{.under} es conocida como [Curva de Phillips]{.slater}
 :::
 
 ::: {.column width="40%"}
-<img style="border-radius: 30%;" src="images/phillipspho.jpeg" width="250px"/>
+<img src="images/phillipspho.jpeg" style="border-radius: 30%;" width="250px"/>
 :::
-::::
-:::
+:::::
+::::::
 
 ## Curva de Phillips
 
@@ -148,14 +159,14 @@ knitr::include_graphics("images/philcurv.png")
 
 ## Curva de Phillips
 
-- La cantidad de [inflación]{.alert} adicional que se obtiene por una aceleración de un punto en el [crecimiento del PIB]{.under}, o una caída de un punto en el desempleo, depende de:
+-   La cantidad de [inflación]{.alert} adicional que se obtiene por una aceleración de un punto en el [crecimiento del PIB]{.under}, o una caída de un punto en el desempleo, depende de:
 
-  - Los valores actuales de las variables;
+    -   Los valores actuales de las variables;
 
-  - Del periodo histórico del país;
+    -   Del periodo histórico del país;
 
-  - Y de lo largo que sea ese periodo.
-  
+    -   Y de lo largo que sea ese periodo.
+
 ## Curva de Phillips
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -174,7 +185,6 @@ data_filter3 <- data %>% filter(DATE >= 2000)
 data_filter2 <- data_filter2 %>% mutate(CPI_CHANGE = c(NA, diff(CPI)))
 ```
 
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, dev='svg', fig.height = 5.5}
 data %>% 
   ggplot(aes(y=CPI, x=UNRATE)) + 
@@ -187,7 +197,6 @@ data %>%
   easy_y_axis_title_size(13) +
   easy_x_axis_title_size(13)
 ```
-
 
 ## Curva de Phillips
 
@@ -208,7 +217,7 @@ data %>%
 
 ## Curva de Phillips
 
-- En algunos casos no siempre se da, p.e:
+-   En algunos casos no siempre se da, p.e:
 
 ::: fragment
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, dev='svg', fig.height=5.5}
@@ -225,42 +234,41 @@ data %>%
 ```
 :::
 
-- La [inflación]{.alert} es bastante inestable!!
+-   La [inflación]{.alert} es bastante inestable!!
 
 ## Curva de Phillips
 
-- El nivel general de precios no dejó de aumentar durante la década de 1970.
+-   El nivel general de precios no dejó de aumentar durante la década de 1970.
 
-- Cuando la [inflación]{.alert} aumenta de forma constante a lo largo del tiempo, los trabajadores empiezan a incorporar este [contexto inflacionista]{.under} en las [negociaciones salariales]{.bg style="--col: #00FFFF"}.
+-   Cuando la [inflación]{.alert} aumenta de forma constante a lo largo del tiempo, los trabajadores empiezan a incorporar este [contexto inflacionista]{.under} en las [negociaciones salariales]{.bg style="--col: #00FFFF"}.
 
-- ¡Las [expectativas]{.blut} importan!
+-   ¡Las [expectativas]{.blut} importan!
 
-- ¿Y cómo responden los [propietarios]{.oranger} de las empresas al aumento de las demandas salariales?
+-   ¿Y cómo responden los [propietarios]{.oranger} de las empresas al aumento de las demandas salariales?
 
-- Subiendo los [precios de venta]{.slater}.
-
+-   Subiendo los [precios de venta]{.slater}.
 
 # Salarios Reales vs Salarios Nominales {background-image="images/treescape.jpg"}
 
 ## Salarios Reales
 
-- En una [Economía]{.blut}, muchas veces creemos que como el salario [nominal]{.under} crece $\color{red}{\uparrow}$ pensamos que nuestra [riqueza]{.slater} aumenta.
+-   En una [Economía]{.blut}, muchas veces creemos que como el salario [nominal]{.under} crece $\color{red}{\uparrow}$ pensamos que nuestra [riqueza]{.slater} aumenta.
 
-- El salario [nominal]{.under} tiene un poder de compra o alcanza para cierta cesta de bienes. *Es de pensar que si con 1 millon de salario le alcanzaba para comprar 30 bienes*. Si al pasar los años su salario aumenta en un 19%, es decir, ahora tiene 1 millon 190 mil y solo le alcanza para comprar 26 bienes. Usted en términos [reales]{.bg style="--col: #FFFF00"} ha perdido salario.
+-   El salario [nominal]{.under} tiene un poder de compra o alcanza para cierta cesta de bienes. *Es de pensar que si con 1 millon de salario le alcanzaba para comprar 30 bienes*. Si al pasar los años su salario aumenta en un 19%, es decir, ahora tiene 1 millon 190 mil y solo le alcanza para comprar 26 bienes. Usted en términos [reales]{.bg style="--col: #FFFF00"} ha perdido salario.
 
-- El Salario real entonces no es mas que:
+-   El Salario real entonces no es mas que:
 
 ::: fragment
 $$\text{Salario Real}=\dfrac{\text{Salario Nominal}}{\text{IPC}}$$
 :::
 
-- Note que si la [inflación]{.blut} es alta usted se siente mas pobre que antes
+-   Note que si la [inflación]{.blut} es alta usted se siente mas pobre que antes
 
 ## Salarios Reales
 
-- Un ejemplo de calculo es el siguiente:
+-   Un ejemplo de calculo es el siguiente:
 
-:::fragment
+::: fragment
 ```{r, echo=F}
 real <- tibble(
   "Años" = c(2021, 2022, 2023, 2024, 2025),
@@ -277,20 +285,20 @@ real %>%
 
 ## Salarios Reales
 
-- Las [empresas]{.oranger} fijan sus [precios de mercado]{.alert} en función de los costos de producción, más un [margen de beneficio]{.slater} compatible con la obtención de beneficios.
+-   Las [empresas]{.oranger} fijan sus [precios de mercado]{.alert} en función de los costos de producción, más un [margen de beneficio]{.slater} compatible con la obtención de beneficios.
 
-- Al mismo tiempo, las empresas intentan pagar [salarios nominales]{.under} coherentes con sus objetivos de beneficios, pero suficientes para mantener motivados a los trabajadores.
+-   Al mismo tiempo, las empresas intentan pagar [salarios nominales]{.under} coherentes con sus objetivos de beneficios, pero suficientes para mantener motivados a los trabajadores.
 
-- Además, los [trabajadores]{.bg style="--col: #FFFF00"} negocian cada año su salario objetivo.
+-   Además, los [trabajadores]{.bg style="--col: #FFFF00"} negocian cada año su salario objetivo.
 
-- Cuanto más [poder de mercado]{.alert} tiene una empresa, más puede cobrar por sus bienes y/o servicios.
+-   Cuanto más [poder de mercado]{.alert} tiene una empresa, más puede cobrar por sus bienes y/o servicios.
 
-  - El resultado es un salario real [decreciente]{.under}.
-  - Y cuanto más organizados estén los trabajadores (a través de los sindicatos y otras      instituciones y políticas del mercado laboral), más podrán negociar mejores salarios     nominales (y, en consecuencia, mejores salarios reales).
-  
+    -   El resultado es un salario real [decreciente]{.under}.
+    -   Y cuanto más organizados estén los trabajadores (a través de los sindicatos y otras instituciones y políticas del mercado laboral), más podrán negociar mejores salarios nominales (y, en consecuencia, mejores salarios reales).
+
 # Nairu {background-image="images/treescape.jpg"}
 
-## Non-Accelerating Inflation Rate of Unemployment 
+## Non-Accelerating Inflation Rate of Unemployment
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, dev='svg', fig.height=5.5}
 data_filter2 %>% ggplot(aes(y=CPI_CHANGE, x=UNRATE)) + 
@@ -304,7 +312,7 @@ data_filter2 %>% ggplot(aes(y=CPI_CHANGE, x=UNRATE)) +
 
 ```
 
-## Non-Accelerating Inflation Rate of Unemployment 
+## Non-Accelerating Inflation Rate of Unemployment
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, dev='svg', fig.height=5.5}
 data_filter2 %>% ggplot(aes(y=CPI_CHANGE, x=UNRATE)) + 
@@ -319,13 +327,13 @@ data_filter2 %>% ggplot(aes(y=CPI_CHANGE, x=UNRATE)) +
 
 ```
 
-## Non-Accelerating Inflation Rate of Unemployment 
+## Non-Accelerating Inflation Rate of Unemployment
 
-- Este es un concepto que brindan los [datos empíricos]{.bg style="--col: #FFFF00"}, se desprende que se puede alcanzar un determinado [nivel de desempleo]{.alert} compatible con una tasa de [inflación invariable]{.under} a lo largo del tiempo.
+-   Este es un concepto que brindan los [datos empíricos]{.bg style="--col: #FFFF00"}, se desprende que se puede alcanzar un determinado [nivel de desempleo]{.alert} compatible con una tasa de [inflación invariable]{.under} a lo largo del tiempo.
 
-- Por ello, los economistas empezaron a aceptar la noción de una [tasa natural de desempleo]{.oranger}.
+-   Por ello, los economistas empezaron a aceptar la noción de una [tasa natural de desempleo]{.oranger}.
 
-- Esta tasa también se conoce como [tasa de desempleo sin aceleración de la inflación]{.slater} (NAIRU).
+-   Esta tasa también se conoce como [tasa de desempleo sin aceleración de la inflación]{.slater} (NAIRU).
 
 ## Non-Accelerating Inflation Rate of Unemployment
 
