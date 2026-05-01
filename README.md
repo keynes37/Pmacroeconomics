@@ -1,5 +1,5 @@
 # Pmacroeconomics
-Course of principles in macroeconomics for Uninorte Students
+Course of principles in macroeconomics for Uninorte Students v.1.0
 
 
 Class 01| [Introducción](https://raw.githack.com/keynes37/Pmacroeconomics/main/Class00.html)
