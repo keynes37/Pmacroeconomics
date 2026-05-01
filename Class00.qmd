@@ -14,7 +14,7 @@ format:
     incremental: true
     title-slide-attributes:
       data-background-image: images/tit1.jpg
-      data-background-size: cover  
+      data-background-size: cover
 editor: visual
 ---
 
@@ -22,23 +22,72 @@ editor: visual
 #| include: false
 library(tidyverse)
 library(scales)
+library(babynames)
+library(fontawesome) # from github:
 library(gapminder)
 library(ggiraph)
 library(patchwork)
 ```
 
+## Por qué importa la economía
+
+- Hace 30 años: Un café costaba ~$200 COP
+- Hoy: Un café cuesta ~$5,000-$8,000 COP
+- ¿Qué explica esto? 
+👉 La economía te da herramientas para entenderlo
+
+::: fragment
+Estudiar Economía te permite:
+🎯 Tomar [mejores decisiones]{.bg style="--col: #FFFF00"} personales y profesionales
+:::
+
+::: fragment
+📊 Entender noticias como inflación, desempleo, deuda
+
+💼 Acceder a carreras bien remuneradas
+:::
+
+## ¿Cómo afecta la economía tu vida?
+
+::: fragment
+**Inflación en Colombia (abril 2026): 5,56%**
+
+- Hace 30 años: Cesta básica = $500 😎
+
+- Hace 10 años: Cesta básica = $30,000 🙂
+
+- Hoy: Cesta básica = > $290,000 🥶
+:::
+
+::: fragment
+**Mercado laboral:**
+- En 2025: Desempleo más bajo desde 2001 (8,9%)
+
+- En 2026: Está bajando nuevamente ⚠️
+:::
+
+::: fragment
+>¿Preguntas que la Economía responde?
+:::
+
+
+
 ## Quién soy?
 
--   Profesor del Departamento de Economía
--   Preferencia por temas de innovación, data sciene, economía de la decisión y economía laboral
--   Correo: `cayanes@uninorte.edu.co`
+- Profesor del Departamento de Economía
+- Director del Observatorio (OCSA)
+- Preferencia por temas de innovación, data science, economía de la decisión y economía laboral
+- Correo: `cayanes@uninorte.edu.co`
+- `r fa('x-twitter')` [Keynes37](https://x.com/keynes37)
+- `r fa('github')` [Github](https://github.com/keynes37)
 
-![](images/CYimge.png){fig-align="right"}
+![](images/Cyoung2.png){fig-align="right" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover;"}
+
 
 ## Esquema del Curso
 
--   Clases presenciales [la asistencia es importante]{.bg style="--col: #FFFF00"}
--   Notas y calificaciones:
+- Clases presenciales [la asistencia es importante]{.bg style="--col: #FFFF00"}
+- Notas y calificaciones:
 
 ::: fragment
 Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
@@ -54,9 +103,9 @@ Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
 ## Esquema del Curso
 
--   Dedicado a analizar y presentar datos e información macroeconómica.
--   Las clases de la complementaria tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* y desde luego la parte de [Trabajos en clases]{.fg style="--col: #FF8000"}.
--   Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tomar decisiones con conocimiento de causa.
+- Dedicado a analizar y presentar datos e información macroeconómica.
+- Las clases de la complementaria tienen [Ejemplos]{.fg style="--col: #FF8000"}, *explicación o claridad* y desde luego la parte de [Trabajos en clases]{.fg style="--col: #FF8000"}.
+- Por ello, [este curso]{.fg style="--col: #FF8000"} combinará [principios teóricos]{.fg style="--col: #0000FF"} con análisis del mundo real. De este modo, podremos tomar decisiones con conocimiento de causa.
 
 ## Fuentes de información
 
@@ -70,28 +119,34 @@ Un cuadro que requiere de [atención]{.fg style="--col: #FF0000"} 🧐
 
 ## Conceptos básicos
 
--   Una buena guía de abordaje de este tema esta en : [libro Openstax Cap 1](https://openstax.org/books/principles-macroeconomics-3e/pages/1-introduction)
--   No se puede olvidar la [definición de economía]{.fg style="--col: #e64173"}
+- Una buena guía de abordaje de este tema esta en : [libro Openstax Cap 1](https://openstax.org/books/principles-macroeconomics-3e/pages/1-introduction)
+- No se puede olvidar la [definición de economía]{.fg style="--col: #e64173"}
 
-::: fragment
+:::: fragment
 ::: callout-warning
 La economía analiza las decisiones de la sociedad y cómo esas decisiones del presente y del pasado se reflejan en los resultados del futuro.
 :::
-:::
+::::
 
--   Independientemente de la definición que usted elija, lo más importante es que estudiar **Economía** proporciona un conjunto de herramientas para analizar *críticamente* los [problemas sociales]{.fg style="--col: #FF8000"} en sus aspectos económicos cuantitativos y cualitativos.
+- Independientemente de la definición que usted elija, lo más importante es que estudiar **Economía** proporciona un conjunto de herramientas para analizar *críticamente* los [problemas sociales]{.fg style="--col: #FF8000"} en sus aspectos económicos cuantitativos y cualitativos.
 
 ## Conceptos básicos
 
--   Tenga en cuenta el siguiente ejercicio:
+```{=html}
+<iframe src="https://openstax.org/details/books/principles-macroeconomics-3e" title="Libro de interacción: Principios de Macroeconomía" width="1100px" height="600px"></iframe>
+```
 
-::: fragment
+## Conceptos básicos
+
+- Tenga en cuenta el siguiente ejercicio:
+
+:::: fragment
 ::: callout-important
 ## Ejercicio
 
 Hace unos 30 años, una cesta de bienes tales como (huevos, leche, pollo y mantequilla) costaban unos \$500. Hoy, esa misma cesta puede costar unos 290 mil COP.
 :::
-:::
+::::
 
 ::: fragment
 [*¿Por qué es mas caro ahora todo?*]{.bg style="--col: #dcdcdc"}
@@ -101,47 +156,281 @@ Hace unos 30 años, una cesta de bienes tales como (huevos, leche, pollo y mante
 
 ```{r}
 #| label: fig-inflaction
-#| fig-cap: "Comparación ranking País"
+#| fig-cap: "Comparación de inflación en América Latina (2024-2026)"
 #| warning: false
 #| echo: false
-# Crear un conjunto de datos de ejemplo
+
+# Crear un conjunto de datos ACTUALIZADO
 inflacion <- data.frame(
-  Pais = c("Colombia", "Colombia", "Brasil", "Brasil", "Perú", "Perú",
-           "Chile", "Chile", "Argentina", "Argentina", "Ecuador", "Ecuador", "Bolivia", "Bolivia",
-           "Mexico", "Mexico"),
-  periodo <- rep(c(2022, 2023), each = 1,8),
-  Valor = c(10.18,10.85, 9.28,5.03, 7.87, 5.69, 11.65, 7.88, 72.43, 98.59,
-            3.47,2.47, 1.75, 3.98, 7.9, 6.7)  # Datos actualizados
+  Pais = c("Colombia", "Colombia", "Colombia",
+           "Brasil", "Brasil", "Brasil",
+           "Perú", "Perú", "Perú",
+           "Chile", "Chile", "Chile",
+           "Argentina", "Argentina", "Argentina",
+           "Ecuador", "Ecuador", "Ecuador",
+           "Bolivia", "Bolivia", "Bolivia",
+           "México", "México", "México"),
+  periodo = rep(c(2024, 2025, 2026), 8),
+  Valor = c(3.73, 5.10, 5.56,    # Colombia
+            4.83, 4.80, 5.20,     # Brasil (proyecciones)
+            2.86, 2.40, 3.10,     # Perú
+            2.74, 2.20, 3.50,     # Chile
+            276.4, 189.4, 145.0,  # Argentina (anual)
+            1.90, 2.47, 3.20,     # Ecuador
+            2.76, 3.98, 4.50,     # Bolivia
+            4.69, 4.10, 3.80)     # México
 )
+
 inflacion$Pais <- factor(inflacion$Pais)
+inflacion$periodo <- as.factor(inflacion$periodo)
 
-p1 <- ggplot(inflacion[inflacion$periodo == 2022,], 
+# Gráfico mejorado - Comparación por año
+p1 <- ggplot(inflacion[inflacion$periodo == 2024,], 
              aes(y = reorder(Pais, Valor), 
-                 x=Valor,
-                 tooltip = Valor,
+                 x = Valor,
+                 tooltip = paste0(Pais, ": ", round(Valor, 2), "%"),
                  data_id = Pais)) +
   geom_bar_interactive(stat="identity", 
-                       fill="steelblue") +
-  labs(y="", x="2022") + 
-  theme_minimal()
+                       fill="#2E86AB") +
+  labs(y="", x="2024 (%)") + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 10))
 
-p2 <- ggplot(inflacion[inflacion$periodo == 2023,], 
+p2 <- ggplot(inflacion[inflacion$periodo == 2025,], 
              aes(y = reorder(Pais, Valor), 
-                 x=Valor,
-                 tooltip = Valor,
+                 x = Valor,
+                 tooltip = paste0(Pais, ": ", round(Valor, 2), "%"),
                  data_id = Pais)) +
   geom_bar_interactive(stat="identity", 
-                       fill="steelblue") +
-  labs(y="", x="2023") + 
-  theme_minimal()
+                       fill="#A23B72") +
+  labs(y="", x="2025 (%)") + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 10))
 
-p3 <- (p1 | p2) +
-  plot_annotation(title = "Inflación en la región")
-girafe(code = print (p3)) 
+p3 <- ggplot(inflacion[inflacion$periodo == 2026,], 
+             aes(y = reorder(Pais, Valor), 
+                 x = Valor,
+                 tooltip = paste0(Pais, ": ", round(Valor, 2), "%"),
+                 data_id = Pais)) +
+  geom_bar_interactive(stat="identity", 
+                       fill="#F18F01") +
+  labs(y="", x="2026 (proyectado)") + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 10))
+
+# Combinar los tres gráficos
+p_final <- (p1 | p2 | p3) +
+  plot_annotation(
+    title = "Inflación en América Latina: Comparación Regional (2024-2026)",
+    subtitle = "Nota: 2026 incluye proyecciones. Argentina en escala diferente por volatilidad histórica.",
+    theme = theme(
+      plot.title = element_text(size = 14, face = "bold"),
+      plot.subtitle = element_text(size = 10, color = "gray40")
+    )
+  )
+
+girafe(code = print(p_final),
+       options = list(
+         opts_hover(css = "fill:#FF6B6B;"),
+         opts_sizing(width = 1)
+       ))
+ 
 ```
+
+## Inflación en la región
+
+```{r}
+#| label: fig-inflaction-tendencia
+#| fig-cap: "Evolución de la tendencia inflación en América Latina (2024-2026)"
+#| warning: false
+#| echo: false
+
+library(tidyverse)
+library(ggiraph)
+library(patchwork)
+
+# Crear un conjunto de datos ACTUALIZADO
+inflacion <- data.frame(
+  Pais = c("Colombia", "Colombia", "Colombia",
+           "Brasil", "Brasil", "Brasil",
+           "Perú", "Perú", "Perú",
+           "Chile", "Chile", "Chile",
+           "Argentina", "Argentina", "Argentina",
+           "Ecuador", "Ecuador", "Ecuador",
+           "Bolivia", "Bolivia", "Bolivia",
+           "México", "México", "México"),
+  periodo = rep(c(2024, 2025, 2026), 8),
+  Valor = c(3.73, 5.10, 5.56,    # Colombia
+            4.83, 4.80, 5.20,     # Brasil (proyecciones)
+            2.86, 2.40, 3.10,     # Perú
+            2.74, 2.20, 3.50,     # Chile
+            276.4, 189.4, 145.0,  # Argentina (anual)
+            1.90, 2.47, 3.20,     # Ecuador
+            2.76, 3.98, 4.50,     # Bolivia
+            4.69, 4.10, 3.80)     # México
+)
+
+# FILTRAR ARGENTINA
+inflacion_filtrado <- inflacion %>% 
+  filter(Pais != "Argentina")
+
+inflacion_filtrado$Pais <- factor(inflacion_filtrado$Pais)
+inflacion_filtrado$periodo <- as.numeric(as.character(inflacion_filtrado$periodo))
+
+# Gráfico de líneas con tendencia
+p <- ggplot(inflacion_filtrado, 
+       aes(x = periodo, 
+           y = Valor, 
+           color = Pais,
+           group = Pais,
+           tooltip = paste0(Pais, " (", periodo, "): ", round(Valor, 2), "%"),
+           data_id = Pais)) +
+  geom_line_interactive(size = 1.2) +
+  geom_point_interactive(size = 3.5) +
+  labs(
+    title = "Evolución de la inflación en América Latina (2024-2026)",
+    subtitle = "Nota: 2026 incluye proyecciones. Argentina excluida por volatilidad histórica.",
+    x = "Año",
+    y = "Inflación anual (%)",
+    color = "País"
+  ) +
+  scale_x_continuous(breaks = c(2024, 2025, 2026)) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 10, color = "gray40", margin = margin(b = 15)),
+    legend.position = "right",
+    panel.grid.major = element_line(color = "gray90"),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 10),
+    legend.text = element_text(size = 10)
+  )
+
+girafe(code = print(p),
+       options = list(
+         opts_hover(css = "stroke-width:3;"),
+         opts_sizing(width = 1)
+       ))
+
+```
+
+## Inflación en Colombia
+
+::: columns
+
+:::: column
+![](images/Ministroinflacion.jpeg){width="310px" style="border-radius: 15px;"}
+::::
+
+:::: column
+
+::: fragment
+💰 **"La inflación es temporal"** 
+(Dicho hace 3 años...)
+:::
+
+::: fragment
+📈 **"Vamos a controlarla rápido"**
+(Spoiler: No lo hicieron)
+:::
+
+::: fragment
+🤔 **"Es culpa del contexto internacional"**
+(Sí, pero también de nosotros...)
+:::
+
+::: fragment
+😅 **Realidad 2026:**
+
+- Inflación en 5.56%
+
+- [Tasa de política]{.fg style="--col: #e64173"} en 11.25%
+
+- Tu café cada vez más caro 💰!!
+:::
+
+::::
+
+:::
+
+## ¿Quién controla la inflación?
+
+::: fragment
+🏦 **La junta Banrep: ¿Quién es?**
+Grupo de personas que decide la tasa de política monetaria
+:::
+
+::: fragment
+📈 **¿Qué hacen?**
+Suben o bajan tasas de interés para controlar la inflación
+:::
+
+::: fragment
+😅 **El "enredo":**
+- Abril 2026: Subieron tasa a 11.25% (máximo histórico)
+
+- Objetivo: Controlar inflación de 5.56%
+
+- Resultado: Créditos más caros, ahorro mejor remunerado
+:::
+
+::: fragment
+🤔 **La polémica:**
+¿Fue tardío el ajuste? ¿Muy agresivo? Los economistas todavía debaten...
+:::
+
+##  {background-image="images/fondotriv.png"}
+
+### Desempleo {.r-fit-text}
+
+## Conceptos básicos del desempleo
+
+::: fragment
+💼 **¿Qué es el desempleo?**
+Personas en edad de trabajar que no tienen empleo pero lo buscan activamente
+:::
+
+::: fragment
+📊 **Tipos de desempleo:**
+
+- **Friccional:** Entre un trabajo y otro (natural)
+
+- **Estructural:** Falta de habilidades para empleos disponibles
+
+- **Cíclico:** Por recesión económica
+:::
+
+::: fragment
+⚠️ **¿Por qué importa?**
+Afecta ingresos, bienestar y estabilidad social
+:::
+
+## La Curva de Phillips: Inflación vs Desempleo
+
+::: fragment
+📈 **La relación inversa:**
+Cuando baja desempleo → Sube inflación (más dinero circulando)
+Cuando sube desempleo → Baja inflación (menos consumo)
+:::
+
+::: fragment
+🎯 **Lo que hizo el Banco de la República:**
+1. Inflación alta (5.56%) → Subió tasa a 11.25%
+2. Tasa alta → Créditos más caros → Menos consumo y empleo
+3. Resultado esperado: Desempleo sube, inflación baja
+:::
+
+::: fragment
+😰 **El dilema:**
+Controlan inflación... pero sacrificando empleos. Bienvenidos a Economía 🎓
+:::
 
 ##  {background-image="images/tit1.jpg"}
 
 ### Gracias por su atención!! {.r-fit-text}
 
 #### cayanes\@uninorte.edu.co
+
+#### Departamento de Economía
+
+#### Universidad del Norte
