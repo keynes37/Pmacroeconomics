@@ -29,16 +29,86 @@ library(ggiraph)
 library(patchwork)
 ```
 
-## Por qué importa la economía
-
-- Hace 30 años: Un café costaba ~$200 COP
-- Hoy: Un café cuesta ~$5,000-$8,000 COP
-- ¿Qué explica esto? 
-👉 La economía te da herramientas para entenderlo
+## ¿El dinero da la felicidad?
 
 ::: fragment
-Estudiar Economía te permite:
-🎯 Tomar [mejores decisiones]{.bg style="--col: #FFFF00"} personales y profesionales
+> "La felicidad es el bien supremo — pero no equivale a riqueza."
+> — Aristóteles
+:::
+
+::: fragment
+📐 **Bentham (utilitarismo):** El bienestar es medible y el dinero
+es un medio para maximizarlo
+:::
+
+::: fragment
+::: callout-note
+La economía nació para resolver esta tensión: ¿cómo asignamos
+recursos escasos para maximizar el bienestar colectivo?
+:::
+:::
+
+## La paradoja que cambió todo
+
+::: fragment
+📊 **Easterlin (1974):** Más ingreso ≠ más felicidad
+pasado cierto umbral, el bienestar se estanca aunque el PIB suba
+:::
+
+::: fragment
+🧪 **Kahneman & Deaton (2010):** ~USD $75.000/año en EE.UU. es el
+umbral donde el bienestar emocional deja de mejorar con más ingreso
+:::
+
+::: fragment
+🇨🇴 **Colombia:** Entre los países con mayor índice de felicidad
+en América Latina — con un PIB per cápita medio
+
+[*¿Entonces por qué estudiar macroeconomía?*]{.bg style="--col: #dcdcdc"}
+:::
+
+## Psicología del consumidor y dinero
+
+::: fragment
+🧠 **Adaptación hedónica:** Nos acostumbramos rápido a los
+aumentos de ingreso — la satisfacción es temporal
+:::
+
+::: fragment
+👥 **Comparación social:** No importa cuánto tienes, sino cuánto
+tienes *respecto a otros* — "mantenerse a la altura del vecino"
+:::
+
+::: fragment
+📈 **Inflación y percepción:** Tu bienestar depende del ingreso
+[real]{.fg style="--col: #e64173"}, no del nominal.
+La inflación del 5.56% te hace "más pobre" aunque ganes lo mismo
+:::
+
+::: fragment
+:::: columns
+::: column
+**Inflación sube** →
+:::
+::: column
+**Poder adquisitivo baja** →
+:::
+::: column
+**Bienestar percibido cae**
+:::
+::::
+:::
+
+
+
+## Por qué importa la economía
+
+- Hace 30 años: Un café costaba \~\$200 COP
+- Hoy: Un café cuesta \~\$5,000-\$8,000 COP
+- ¿Qué explica esto? 👉 La economía te da herramientas para entenderlo
+
+::: fragment
+Estudiar Economía te permite: 🎯 Tomar [mejores decisiones]{.bg style="--col: #FFFF00"} personales y profesionales
 :::
 
 ::: fragment
@@ -52,25 +122,22 @@ Estudiar Economía te permite:
 ::: fragment
 **Inflación en Colombia (abril 2026): 5,56%**
 
-- Hace 30 años: Cesta básica = $500 😎
+- Hace 30 años: Cesta básica = \$500 😎
 
-- Hace 10 años: Cesta básica = $30,000 🙂
+- Hace 10 años: Cesta básica = \$30,000 🙂
 
-- Hoy: Cesta básica = > $290,000 🥶
+- Hoy: Cesta básica = \> \$290,000 🥶
 :::
 
 ::: fragment
-**Mercado laboral:**
-- En 2025: Desempleo más bajo desde 2001 (8,9%)
+**Mercado laboral:** - En 2025: Desempleo más bajo desde 2001 (8,9%)
 
 - En 2026: Está bajando nuevamente ⚠️
 :::
 
 ::: fragment
->¿Preguntas que la Economía responde?
+> ¿Preguntas que la Economía responde?
 :::
-
-
 
 ## Quién soy?
 
@@ -82,7 +149,6 @@ Estudiar Economía te permite:
 - `r fa('github')` [Github](https://github.com/keynes37)
 
 ![](images/Cyoung2.png){fig-align="right" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover;"}
-
 
 ## Esquema del Curso
 
@@ -316,27 +382,22 @@ girafe(code = print(p),
 
 ## Inflación en Colombia
 
-::: columns
-
-:::: column
+::::::::: columns
+::: column
 ![](images/Ministroinflacion.jpeg){width="310px" style="border-radius: 15px;"}
-::::
+:::
 
-:::: column
-
+::::::: column
 ::: fragment
-💰 **"La inflación es temporal"** 
-(Dicho hace 3 años...)
+💰 **"La inflación es temporal"** (Dicho hace 3 años...)
 :::
 
 ::: fragment
-📈 **"Vamos a controlarla rápido"**
-(Spoiler: No lo hicieron)
+📈 **"Vamos a controlarla rápido"** (Spoiler: No lo hicieron)
 :::
 
 ::: fragment
-🤔 **"Es culpa del contexto internacional"**
-(Sí, pero también de nosotros...)
+🤔 **"Es culpa del contexto internacional"** (Sí, pero también de nosotros...)
 :::
 
 ::: fragment
@@ -348,26 +409,21 @@ girafe(code = print(p),
 
 - Tu café cada vez más caro 💰!!
 :::
-
-::::
-
-:::
+:::::::
+:::::::::
 
 ## ¿Quién controla la inflación?
 
 ::: fragment
-🏦 **La junta Banrep: ¿Quién es?**
-Grupo de personas que decide la tasa de política monetaria
+🏦 **La junta Banrep: ¿Quién es?** Grupo de personas que decide la tasa de política monetaria
 :::
 
 ::: fragment
-📈 **¿Qué hacen?**
-Suben o bajan tasas de interés para controlar la inflación
+📈 **¿Qué hacen?** Suben o bajan tasas de interés para controlar la inflación
 :::
 
 ::: fragment
-😅 **El "enredo":**
-- Abril 2026: Subieron tasa a 11.25% (máximo histórico)
+😅 **El "enredo":** - Abril 2026: Subieron tasa a 11.25% (máximo histórico)
 
 - Objetivo: Controlar inflación de 5.56%
 
@@ -375,8 +431,7 @@ Suben o bajan tasas de interés para controlar la inflación
 :::
 
 ::: fragment
-🤔 **La polémica:**
-¿Fue tardío el ajuste? ¿Muy agresivo? Los economistas todavía debaten...
+🤔 **La polémica:** ¿Fue tardío el ajuste? ¿Muy agresivo? Los economistas todavía debaten...
 :::
 
 ##  {background-image="images/fondotriv.png"}
@@ -386,8 +441,7 @@ Suben o bajan tasas de interés para controlar la inflación
 ## Conceptos básicos del desempleo
 
 ::: fragment
-💼 **¿Qué es el desempleo?**
-Personas en edad de trabajar que no tienen empleo pero lo buscan activamente
+💼 **¿Qué es el desempleo?** Personas en edad de trabajar que no tienen empleo pero lo buscan activamente
 :::
 
 ::: fragment
@@ -401,28 +455,21 @@ Personas en edad de trabajar que no tienen empleo pero lo buscan activamente
 :::
 
 ::: fragment
-⚠️ **¿Por qué importa?**
-Afecta ingresos, bienestar y estabilidad social
+⚠️ **¿Por qué importa?** Afecta ingresos, bienestar y estabilidad social
 :::
 
 ## La Curva de Phillips: Inflación vs Desempleo
 
 ::: fragment
-📈 **La relación inversa:**
-Cuando baja desempleo → Sube inflación (más dinero circulando)
-Cuando sube desempleo → Baja inflación (menos consumo)
+📈 **La relación inversa:** Cuando baja desempleo → Sube inflación (más dinero circulando) Cuando sube desempleo → Baja inflación (menos consumo)
 :::
 
 ::: fragment
-🎯 **Lo que hizo el Banco de la República:**
-1. Inflación alta (5.56%) → Subió tasa a 11.25%
-2. Tasa alta → Créditos más caros → Menos consumo y empleo
-3. Resultado esperado: Desempleo sube, inflación baja
+🎯 **Lo que hizo el Banco de la República:** 1. Inflación alta (5.56%) → Subió tasa a 11.25% 2. Tasa alta → Créditos más caros → Menos consumo y empleo 3. Resultado esperado: Desempleo sube, inflación baja
 :::
 
 ::: fragment
-😰 **El dilema:**
-Controlan inflación... pero sacrificando empleos. Bienvenidos a Economía 🎓
+😰 **El dilema:** Controlan inflación... pero sacrificando empleos. Bienvenidos a Economía 🎓
 :::
 
 ##  {background-image="images/tit1.jpg"}
